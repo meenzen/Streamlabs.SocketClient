@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streamlabs.SocketClient", "src\Streamlabs.SocketClient\Streamlabs.SocketClient.csproj", "{1AACCD7A-94C4-4847-8671-531555644406}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streamlabs.SocketClient.Tests", "test\Streamlabs.SocketClient.Tests\Streamlabs.SocketClient.Tests.csproj", "{AE7B98BA-E0DE-4516-B20D-2DA3173267F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streamlabs.EventCapture", "src\Streamlabs.EventCapture\Streamlabs.EventCapture.csproj", "{A84921C4-A950-4E6A-B43B-191A94BD8C4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{1AACCD7A-94C4-4847-8671-531555644406}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AACCD7A-94C4-4847-8671-531555644406}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AACCD7A-94C4-4847-8671-531555644406}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE7B98BA-E0DE-4516-B20D-2DA3173267F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE7B98BA-E0DE-4516-B20D-2DA3173267F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE7B98BA-E0DE-4516-B20D-2DA3173267F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE7B98BA-E0DE-4516-B20D-2DA3173267F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A84921C4-A950-4E6A-B43B-191A94BD8C4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A84921C4-A950-4E6A-B43B-191A94BD8C4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A84921C4-A950-4E6A-B43B-191A94BD8C4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A84921C4-A950-4E6A-B43B-191A94BD8C4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
