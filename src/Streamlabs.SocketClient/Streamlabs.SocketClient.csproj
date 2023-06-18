@@ -12,7 +12,7 @@
         <PackageId>Streamlabs.SocketClient</PackageId>
         <Authors>Samuel Meenzen</Authors>
         <PackageDescription>Unofficial C# client library for the Streamlabs socket API.</PackageDescription>
-        <PackageTags>Twitch;Streamlabs;Streamlabs API;Streamlabs Socket API</PackageTags>
+        <PackageTags>Twitch Streamlabs Streamlabs-API Streamlabs-Socket-API</PackageTags>
         <RepositoryUrl>https://github.com/meenzen/Streamlabs.SocketClient</RepositoryUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageReadmeFile>README.md</PackageReadmeFile>
