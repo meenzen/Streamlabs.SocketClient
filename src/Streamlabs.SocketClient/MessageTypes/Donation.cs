@@ -1,4 +1,3 @@
-using Streamlabs.SocketClient.Converters;
 using System.Text.Json.Serialization;
 
 namespace Streamlabs.SocketClient.MessageTypes;
@@ -18,7 +17,6 @@ public record Donation : StreamlabsMessage, IHasName, IHasMessage
     public required string Name { get; init; }
 
     [JsonPropertyName("amount")]
-    [JsonConverter(typeof(DecimalStringConverter))]
     public required decimal Amount { get; init; }
 
     [JsonPropertyName("formatted_amount")]

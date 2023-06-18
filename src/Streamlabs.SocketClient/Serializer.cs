@@ -1,11 +1,13 @@
 using Streamlabs.SocketClient.MessageTypes;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Streamlabs.SocketClient;
 
 public static class Serializer
 {
-    private static readonly JsonSerializerOptions Options = new JsonSerializerOptions { AllowTrailingCommas = false };
+    private static readonly JsonSerializerOptions Options =
+        new() { AllowTrailingCommas = false, NumberHandling = JsonNumberHandling.AllowReadingFromString };
 
     private static readonly IReadOnlyCollection<StreamlabsEvent> Empty = Array.Empty<StreamlabsEvent>();
 
