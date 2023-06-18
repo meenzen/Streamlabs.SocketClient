@@ -1,5 +1,6 @@
 using Streamlabs.SocketClient;
 using System.Globalization;
+using System.Text;
 using System.Text.Json.Nodes;
 
 IHost host = Host.CreateDefaultBuilder(args)
@@ -53,7 +54,7 @@ host.Services.GetRequiredService<IStreamlabsClient>().OnEventRaw += (sender, jso
 
     logger.LogInformation("Writing event: {{ type: \"{type}\", filename: \"{filename}\" }}", type, filename);
 
-    File.WriteAllText(path, json);
+    File.WriteAllText(path, json, new UTF8Encoding());
 };
 
 host.Run();

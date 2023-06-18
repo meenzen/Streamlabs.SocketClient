@@ -11,7 +11,7 @@ public class MessageTypeTests
     public void MessageTypes_CanBeDeserialized(string fileName, Type expectedType)
     {
         // Arrange
-        string json = File.ReadAllText(Path.Combine("./MessageJson", fileName));
+        string json = File.ReadAllText(Path.Combine("./MessageJson", fileName), Encoding.UTF8);
 
         // Act
         var messages = json.Deserialize();
