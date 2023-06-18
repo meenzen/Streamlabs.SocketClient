@@ -6,6 +6,17 @@
         <Nullable>enable</Nullable>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
         <WarningLevel>9999</WarningLevel>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <NoWarn>$(NoWarn);CS1591</NoWarn>
+
+        <PackageId>Streamlabs.SocketClient</PackageId>
+        <Authors>Samuel Meenzen</Authors>
+        <PackageDescription>Unofficial C# client library for the Streamlabs socket API.</PackageDescription>
+        <PackageTags>Twitch;Streamlabs;Streamlabs API;Streamlabs Socket API</PackageTags>
+        <RepositoryUrl>https://github.com/meenzen/Streamlabs.SocketClient</RepositoryUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
     <ItemGroup>
@@ -19,6 +30,10 @@
 
     <ItemGroup>
         <InternalsVisibleTo Include="$(AssemblyName).Tests" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <None Include="../../README.md" Pack="true" PackagePath="/" />
     </ItemGroup>
 
     <!-- set HUSKY to 0 in CI/CD disable this -->
