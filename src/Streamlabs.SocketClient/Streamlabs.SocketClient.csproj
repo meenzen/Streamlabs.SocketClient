@@ -17,6 +17,10 @@
       <PackageReference Include="SocketIOClient" Version="3.0.8" />
     </ItemGroup>
 
+    <ItemGroup>
+        <InternalsVisibleTo Include="$(AssemblyName).Tests" />
+    </ItemGroup>
+
     <!-- set HUSKY to 0 in CI/CD disable this -->
     <Target Name="husky" BeforeTargets="Restore;CollectPackageReferences" Condition="'$(HUSKY)' != 0">
         <Exec Command="dotnet tool restore" StandardOutputImportance="Low" StandardErrorImportance="High" />

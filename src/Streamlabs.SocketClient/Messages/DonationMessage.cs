@@ -1,14 +1,10 @@
+using Streamlabs.SocketClient.Messages.Abstractions;
+using Streamlabs.SocketClient.Messages.DataTypes;
 using System.Text.Json.Serialization;
 
-namespace Streamlabs.SocketClient.MessageTypes;
+namespace Streamlabs.SocketClient.Messages;
 
-public record Recipient : IHasName
-{
-    [JsonPropertyName("name")]
-    public required string Name { get; init; }
-}
-
-public record Donation : IStreamlabsMessage, IHasId, IHasName, IHasMessage, IHasMessageId
+public sealed record DonationMessage : IStreamlabsMessage, IHasId, IHasName, IHasMessage, IHasMessageId
 {
     [JsonPropertyName("id")]
     public required long Id { get; init; }

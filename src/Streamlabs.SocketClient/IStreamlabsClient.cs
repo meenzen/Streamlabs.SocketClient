@@ -1,4 +1,4 @@
-using Streamlabs.SocketClient.MessageTypes;
+using Streamlabs.SocketClient.Events;
 
 namespace Streamlabs.SocketClient;
 

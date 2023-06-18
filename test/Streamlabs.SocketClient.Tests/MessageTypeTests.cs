@@ -1,4 +1,5 @@
-using Streamlabs.SocketClient.MessageTypes;
+using Streamlabs.SocketClient.Events;
+using Streamlabs.SocketClient.Extensions;
 using System.Text;
 
 namespace Streamlabs.SocketClient.Tests;

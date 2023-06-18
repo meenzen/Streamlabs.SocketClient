@@ -1,7 +1,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Streamlabs.SocketClient;
+namespace Streamlabs.SocketClient.Extensions;
 
 public static class ServiceCollectionExtensions
 {

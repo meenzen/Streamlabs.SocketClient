@@ -1,10 +1,10 @@
-using Streamlabs.SocketClient.MessageTypes;
+using Streamlabs.SocketClient.Events;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Streamlabs.SocketClient;
+namespace Streamlabs.SocketClient.Extensions;
 
-public static class Serializer
+internal static class SerializationExtensions
 {
     private static readonly JsonSerializerOptions Options =
         new() { AllowTrailingCommas = false, NumberHandling = JsonNumberHandling.AllowReadingFromString };

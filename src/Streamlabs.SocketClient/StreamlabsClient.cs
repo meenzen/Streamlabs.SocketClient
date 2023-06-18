@@ -2,7 +2,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using SocketIOClient;
 using SocketIOClient.Transport;
-using Streamlabs.SocketClient.MessageTypes;
+using Streamlabs.SocketClient.Events;
+using Streamlabs.SocketClient.Extensions;
 
 namespace Streamlabs.SocketClient;
 

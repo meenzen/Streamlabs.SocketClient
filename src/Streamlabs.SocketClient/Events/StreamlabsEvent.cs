@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace Streamlabs.SocketClient.MessageTypes;
+namespace Streamlabs.SocketClient.Events;
 
 [JsonPolymorphic(TypeDiscriminatorPropertyName = "type")]
 [JsonDerivedType(typeof(DonationEvent), typeDiscriminator: "donation")]
