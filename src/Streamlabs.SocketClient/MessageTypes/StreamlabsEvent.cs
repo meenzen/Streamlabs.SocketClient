@@ -4,6 +4,7 @@ namespace Streamlabs.SocketClient.MessageTypes;
 
 [JsonPolymorphic(TypeDiscriminatorPropertyName = "type")]
 [JsonDerivedType(typeof(DonationEvent), typeDiscriminator: "donation")]
+[JsonDerivedType(typeof(DonationDeleteEvent), typeDiscriminator: "donationDelete")]
 public record StreamlabsEvent
 {
     [JsonPropertyName("event_id")]

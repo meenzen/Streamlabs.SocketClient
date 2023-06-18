@@ -1,0 +1,9 @@
+[
+  {
+    "type": "donationDelete",
+    "message": {
+      "id": 123456789
+    },
+    "event_id": "evt_abcdef1234567890abcdef1234567890"
+  }
+]

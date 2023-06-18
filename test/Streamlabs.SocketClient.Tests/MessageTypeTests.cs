@@ -1,4 +1,5 @@
 using Streamlabs.SocketClient.MessageTypes;
+using System.Text;
 
 namespace Streamlabs.SocketClient.Tests;
 
@@ -6,6 +7,7 @@ public class MessageTypeTests
 {
     [Theory]
     [InlineData("donation.json", typeof(DonationEvent))]
+    [InlineData("donationDelete.json", typeof(DonationDeleteEvent))]
     public void MessageTypes_CanBeDeserialized(string fileName, Type expectedType)
     {
         // Arrange

@@ -8,7 +8,7 @@ public record Recipient : IHasName
     public required string Name { get; init; }
 }
 
-public record Donation : StreamlabsMessage, IHasName, IHasMessage
+public record Donation : IStreamlabsMessage, IHasId, IHasName, IHasMessage, IHasMessageId
 {
     [JsonPropertyName("id")]
     public required long Id { get; init; }
@@ -53,6 +53,9 @@ public record Donation : StreamlabsMessage, IHasName, IHasMessage
 
     [JsonPropertyName("source")]
     public required string? Source { get; init; }
+
+    [JsonPropertyName("_id")]
+    public required string MessageId { get; init; }
 
     [JsonPropertyName("priority")]
     public required long Priority { get; init; }
