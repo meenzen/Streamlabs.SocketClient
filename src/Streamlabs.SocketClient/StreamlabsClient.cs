@@ -103,6 +103,11 @@ public sealed class StreamlabsClient : IStreamlabsClient
     {
         string json = response.ToString();
 
+        if (_logger.IsEnabled(LogLevel.Debug))
+        {
+            _logger.LogDebug("Streamlabs: Received event - {Event}", json);
+        }
+
         OnEventRaw?.Invoke(this, json);
 
         IReadOnlyCollection<StreamlabsEvent> streamlabsEvents;
