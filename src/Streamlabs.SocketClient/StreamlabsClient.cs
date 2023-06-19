@@ -10,9 +10,9 @@ namespace Streamlabs.SocketClient;
 public sealed class StreamlabsClient : IStreamlabsClient
 {
     private readonly SocketIO _client;
-    private readonly ILogger<StreamlabsWorker> _logger;
+    private readonly ILogger<StreamlabsClient> _logger;
 
-    public StreamlabsClient(ILogger<StreamlabsWorker> logger, IOptions<StreamlabsOptions> options)
+    public StreamlabsClient(ILogger<StreamlabsClient> logger, IOptions<StreamlabsOptions> options)
     {
         _logger = logger;
 
@@ -94,8 +94,10 @@ public sealed class StreamlabsClient : IStreamlabsClient
         _client.On("event", OnEventInternal);
     }
 
-    public event EventHandler<IReadOnlyCollection<StreamlabsEvent>>? OnEvent;
     public event EventHandler<string>? OnEventRaw;
+    public event EventHandler<StreamlabsEvent>? OnEvent;
+    public event EventHandler<DonationEvent>? OnDonation;
+    public event EventHandler<DonationDeleteEvent>? OnDonationDelete;
 
     private void OnEventInternal(SocketIOResponse response)
     {
@@ -103,14 +105,52 @@ public sealed class StreamlabsClient : IStreamlabsClient
 
         OnEventRaw?.Invoke(this, json);
 
+        IReadOnlyCollection<StreamlabsEvent> streamlabsEvents;
         try
         {
-            IReadOnlyCollection<StreamlabsEvent> streamlabsEvents = json.Deserialize();
-            OnEvent?.Invoke(this, streamlabsEvents);
+            streamlabsEvents = json.Deserialize();
         }
         catch (Exception e)
         {
             _logger.LogError(e, "Streamlabs: Error deserializing event - {Event}", json);
+            return;
+        }
+
+        if (streamlabsEvents.Count > 1 && _logger.IsEnabled(LogLevel.Warning))
+        {
+            _logger.LogWarning(
+                "Streamlabs: Multiple events received, normalizing - Count: {Count}",
+                streamlabsEvents.Count
+            );
+        }
+
+        foreach (StreamlabsEvent streamlabsEvent in streamlabsEvents)
+        {
+            Dispatch(streamlabsEvent);
+        }
+    }
+
+    private void Dispatch(StreamlabsEvent streamlabsEvent)
+    {
+        if (_logger.IsEnabled(LogLevel.Information))
+        {
+            _logger.LogInformation(
+                "Streamlabs: Handling event - {{ Type: {Type}, EventId: {EventId} }}",
+                streamlabsEvent.GetType().Name,
+                streamlabsEvent.EventId
+            );
+        }
+
+        OnEvent?.Invoke(this, streamlabsEvent);
+
+        switch (streamlabsEvent)
+        {
+            case DonationEvent donationEvent:
+                OnDonation?.Invoke(this, donationEvent);
+                break;
+            case DonationDeleteEvent donationDeleteEvent:
+                OnDonationDelete?.Invoke(this, donationDeleteEvent);
+                break;
         }
     }
 

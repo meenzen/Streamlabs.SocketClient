@@ -6,6 +6,8 @@ public interface IStreamlabsClient : IDisposable
 {
     Task ConnectAsync();
     Task DisconnectAsync();
-    event EventHandler<IReadOnlyCollection<StreamlabsEvent>>? OnEvent;
     event EventHandler<string>? OnEventRaw;
+    event EventHandler<StreamlabsEvent>? OnEvent;
+    event EventHandler<DonationEvent>? OnDonation;
+    event EventHandler<DonationDeleteEvent>? OnDonationDelete;
 }
