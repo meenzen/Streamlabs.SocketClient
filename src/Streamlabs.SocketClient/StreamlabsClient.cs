@@ -105,7 +105,7 @@ public sealed class StreamlabsClient : IStreamlabsClient
 
         if (_logger.IsEnabled(LogLevel.Debug))
         {
-            _logger.LogDebug("Streamlabs: Received event - {Event}", json);
+            _logger.LogDebug("Streamlabs: Event received - {Payload}", json);
         }
 
         OnEventRaw?.Invoke(this, json);
@@ -117,7 +117,7 @@ public sealed class StreamlabsClient : IStreamlabsClient
         }
         catch (Exception e)
         {
-            _logger.LogError(e, "Streamlabs: Error deserializing event - {Event}", json);
+            _logger.LogError(e, "Streamlabs: Error deserializing event - {Payload}", json);
             return;
         }
 
