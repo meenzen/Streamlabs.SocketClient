@@ -15,6 +15,7 @@
         <PackageTags>Twitch Streamlabs Streamlabs-API Streamlabs-Socket-API</PackageTags>
         <RepositoryUrl>https://github.com/meenzen/Streamlabs.SocketClient</RepositoryUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <Copyright>Copyright (c) 2023 Samuel Meenzen</Copyright>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
