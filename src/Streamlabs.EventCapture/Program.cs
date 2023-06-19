@@ -9,7 +9,7 @@ IHost host = Host.CreateDefaultBuilder(args)
         (context, services) =>
         {
             services.AddStreamlabsClient(context.Configuration.GetRequiredSection("Streamlabs"));
-            services.AddHostedService<StreamlabsWorker>();
+            services.AddHostedService<StreamlabsStartStopWorker>();
         }
     )
     .Build();

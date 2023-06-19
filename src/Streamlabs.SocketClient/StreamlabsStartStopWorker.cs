@@ -5,11 +5,11 @@ namespace Streamlabs.SocketClient;
 /// <summary>
 /// Automatically starts and stops the <see cref="IStreamlabsClient"/> together with the host.
 /// </summary>
-public sealed class StreamlabsWorker : IHostedService
+public sealed class StreamlabsStartStopWorker : IHostedService
 {
     private readonly IStreamlabsClient _client;
 
-    public StreamlabsWorker(IStreamlabsClient client)
+    public StreamlabsStartStopWorker(IStreamlabsClient client)
     {
         _client = client;
     }
