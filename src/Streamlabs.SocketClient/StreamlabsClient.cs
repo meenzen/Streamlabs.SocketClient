@@ -3,7 +3,9 @@ using Microsoft.Extensions.Options;
 using SocketIOClient;
 using SocketIOClient.Transport;
 using Streamlabs.SocketClient.Events;
+using Streamlabs.SocketClient.Events.Abstractions;
 using Streamlabs.SocketClient.Extensions;
+using Streamlabs.SocketClient.Messages;
 
 namespace Streamlabs.SocketClient;
 
@@ -95,14 +97,16 @@ public sealed class StreamlabsClient : IStreamlabsClient
     }
 
     public event EventHandler<string>? OnEventRaw;
-    public event EventHandler<StreamlabsEvent>? OnEvent;
-    public event EventHandler<DonationEvent>? OnDonation;
-    public event EventHandler<DonationDeleteEvent>? OnDonationDelete;
+    public event EventHandler<IStreamlabsEvent>? OnEvent;
+    public event EventHandler<DonationMessage>? OnDonation;
+    public event EventHandler<DonationDeleteMessage>? OnDonationDelete;
+    public event EventHandler<BitsAlertPlayingMessage>? OnBitsAlertPlaying;
+    public event EventHandler<SubscriptionAlertPlayingMessage>? OnSubscriptionAlertPlaying;
 
-    private void OnEventInternal(SocketIOResponse response)
+    private void OnEventInternal(SocketIOResponse response) => Dispatch(response.ToString());
+
+    public void Dispatch(string json)
     {
-        string json = response.ToString();
-
         if (_logger.IsEnabled(LogLevel.Debug))
         {
             _logger.LogDebug("Streamlabs: Event received - {Payload}", json);
@@ -110,7 +114,7 @@ public sealed class StreamlabsClient : IStreamlabsClient
 
         OnEventRaw?.Invoke(this, json);
 
-        IReadOnlyCollection<StreamlabsEvent> streamlabsEvents;
+        IReadOnlyCollection<IStreamlabsEvent> streamlabsEvents;
         try
         {
             streamlabsEvents = json.Deserialize();
@@ -129,20 +133,22 @@ public sealed class StreamlabsClient : IStreamlabsClient
             );
         }
 
-        foreach (StreamlabsEvent streamlabsEvent in streamlabsEvents)
+        foreach (IStreamlabsEvent streamlabsEvent in streamlabsEvents)
         {
             Dispatch(streamlabsEvent);
         }
     }
 
-    private void Dispatch(StreamlabsEvent streamlabsEvent)
+    private void Dispatch(IStreamlabsEvent streamlabsEvent)
     {
         if (_logger.IsEnabled(LogLevel.Information))
         {
+            string? eventId = (streamlabsEvent as IHasEventId)?.EventId;
+
             _logger.LogInformation(
                 "Streamlabs: Handling event - {{ Type: {Type}, EventId: {EventId} }}",
                 streamlabsEvent.GetType().Name,
-                streamlabsEvent.EventId
+                eventId
             );
         }
 
@@ -151,10 +157,33 @@ public sealed class StreamlabsClient : IStreamlabsClient
         switch (streamlabsEvent)
         {
             case DonationEvent donationEvent:
-                OnDonation?.Invoke(this, donationEvent);
+                foreach (DonationMessage message in donationEvent.Messages)
+                {
+                    OnDonation?.Invoke(this, message);
+                }
                 break;
             case DonationDeleteEvent donationDeleteEvent:
-                OnDonationDelete?.Invoke(this, donationDeleteEvent);
+                OnDonationDelete?.Invoke(this, donationDeleteEvent.Message);
+                break;
+            case AlertPlayingEvent alertPlayingEvent:
+                switch (alertPlayingEvent.Message)
+                {
+                    case BitsAlertPlayingMessage bitsAlert:
+                        OnBitsAlertPlaying?.Invoke(this, bitsAlert);
+                        break;
+                    case SubscriptionAlertPlayingMessage subscriptionAlert:
+                        OnSubscriptionAlertPlaying?.Invoke(this, subscriptionAlert);
+                        break;
+                    default:
+                        _logger.LogError(
+                            "Streamlabs: Unsupported AlertPlayingMessage type - {Type}",
+                            alertPlayingEvent.Message.GetType().Name
+                        );
+                        break;
+                }
+                break;
+            default:
+                _logger.LogError("Streamlabs: Unsupported event type - {Type}", streamlabsEvent.GetType().Name);
                 break;
         }
     }

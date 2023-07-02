@@ -1,0 +1,27 @@
+[
+  {
+    "type": "alertPlaying",
+    "message": {
+      "priority": 10,
+      "_id": "1234567890abcdef1234567890abcdef12345678",
+      "from": "Tester",
+      "from_display_name": "Tester",
+      "amount": "100",
+      "message": "Cheer100 Test message",
+      "currency": "",
+      "payload": {},
+      "name": "Tester",
+      "display_name": "Tester",
+      "repeat": false,
+      "isTest": false,
+      "platform": "twitch_account",
+      "createdAt": "2023-07-02 13:07:08",
+      "createdAtTimestamp": 1688303228846,
+      "type": "bits",
+      "style": "100",
+      "hash": "bits:tester:Cheer100 Test message:100",
+      "emotes": null,
+      "read": false
+    }
+  }
+]

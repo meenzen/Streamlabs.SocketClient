@@ -1,6 +1,6 @@
 namespace Streamlabs.SocketClient.Messages.Abstractions;
 
-public interface IHasId
+public interface IHasEmotes
 {
-    long Id { get; init; }
+    string? Emotes { get; init; }
 }

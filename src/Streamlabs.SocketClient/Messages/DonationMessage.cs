@@ -4,7 +4,14 @@ using System.Text.Json.Serialization;
 
 namespace Streamlabs.SocketClient.Messages;
 
-public sealed record DonationMessage : IStreamlabsMessage, IHasId, IHasName, IHasMessage, IHasMessageId
+public sealed record DonationMessage
+    : IStreamlabsMessage,
+        IHasId,
+        IHasName,
+        IHasMessage,
+        IHasFrom,
+        IHasMessageId,
+        IHasPriority
 {
     [JsonPropertyName("id")]
     public required long Id { get; init; }

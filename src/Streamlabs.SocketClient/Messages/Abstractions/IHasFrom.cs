@@ -1,6 +1,6 @@
 namespace Streamlabs.SocketClient.Messages.Abstractions;
 
-public interface IHasId
+public interface IHasFrom
 {
-    long Id { get; init; }
+    string From { get; init; }
 }

@@ -4,5 +4,5 @@ namespace Streamlabs.SocketClient.Messages.Abstractions;
 
 public interface IHasFor
 {
-    public ServiceType For { get; init; }
+    ServiceType For { get; init; }
 }

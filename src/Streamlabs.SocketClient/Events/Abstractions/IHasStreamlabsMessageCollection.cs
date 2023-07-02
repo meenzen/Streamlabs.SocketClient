@@ -5,5 +5,5 @@ namespace Streamlabs.SocketClient.Events.Abstractions;
 public interface IHasStreamlabsMessageCollection<TMessage>
     where TMessage : IStreamlabsMessage
 {
-    public IReadOnlyCollection<TMessage> Messages { get; init; }
+    IReadOnlyCollection<TMessage> Messages { get; init; }
 }
