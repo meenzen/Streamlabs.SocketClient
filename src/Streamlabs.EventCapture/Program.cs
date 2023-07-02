@@ -1,61 +1,39 @@
-using Streamlabs.SocketClient;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Spectre.Console;
+using Spectre.Console.Cli;
+using SpectreConsoleLogger;
+using Streamlabs.EventCapture.Commands;
+using Streamlabs.EventCapture.Infrastructure;
 using Streamlabs.SocketClient.Extensions;
-using System.Globalization;
-using System.Text;
-using System.Text.Json.Nodes;
 
-IHost host = Host.CreateDefaultBuilder(args)
-    .ConfigureServices(
-        (context, services) =>
-        {
-            services.AddStreamlabsClient(context.Configuration.GetRequiredSection("Streamlabs"));
-            services.AddHostedService<StreamlabsStartStopWorker>();
-        }
-    )
+DirectoryInfo directory = Directory.CreateDirectory("events");
+
+IConfiguration configuration = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+    .AddUserSecrets<Program>()
+    .AddEnvironmentVariables()
     .Build();
 
-string directory = Directory.CreateDirectory("events").FullName;
-ILogger<Program> logger = host.Services.GetRequiredService<ILogger<Program>>();
+var services = new ServiceCollection();
 
-host.Services.GetRequiredService<IStreamlabsClient>().OnEventRaw += (sender, json) =>
+services.AddStreamlabsClient(configuration.GetSection("Streamlabs"));
+services.AddLogging(builder => builder.AddSpectreConsole());
+services.AddSingleton(directory);
+services.AddSingleton<CaptureCommand>();
+
+var app = new CommandApp<CaptureCommand>(new TypeRegistrar(services));
+
+app.Configure(config =>
 {
-    // [{"type":"foo", "data": "bar"}]
-
-    JsonNode? node = JsonNode.Parse(json);
-
-    if (node is null)
+    config.SetApplicationName("Streamlabs Event Capture");
+    config.Settings.ExceptionHandler = exception =>
     {
-        logger.LogWarning("Event is not valid JSON: {json}", json);
-    }
+        AnsiConsole.WriteException(exception);
+        return 1;
+    };
+    config.AddCommand<CaptureCommand>("capture");
+});
 
-    bool unexpected = false;
-    int? count = node?.AsArray().Count;
-    if (count is not 1)
-    {
-        unexpected = true;
-        logger.LogWarning("Event has unexpected object count: {count} - {json}", count, json);
-    }
-
-    string? type = node?[0]?["type"]?.GetValue<string>();
-
-    if (type is null)
-    {
-        logger.LogWarning("Event has no type: {json}", json);
-        type = "unknown";
-    }
-
-    if (unexpected)
-    {
-        type = "unexpected";
-    }
-
-    string filename = $"{DateTime.UtcNow.ToString("yyyy-MM-ddTHH-mm-ss-fff", CultureInfo.InvariantCulture)}.json";
-    string typeDirectory = Directory.CreateDirectory(Path.Combine(directory, type)).FullName;
-    string path = Path.Combine(typeDirectory, filename);
-
-    logger.LogInformation("Writing event: {{ type: \"{type}\", filename: \"{filename}\" }}", type, filename);
-
-    File.WriteAllText(path, json, new UTF8Encoding());
-};
-
-host.Run();
+return await app.RunAsync(args);
