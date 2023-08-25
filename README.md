@@ -1,3 +1,8 @@
+[![GitHub](https://img.shields.io/github/license/meenzen/Streamlabs.SocketClient.svg)](https://github.com/meenzen/Streamlabs.SocketClient/blob/main/LICENSE)
+[![codecov](https://codecov.io/gh/meenzen/Streamlabs.SocketClient/graph/badge.svg?token=OCF8O5TR2I)](https://codecov.io/gh/meenzen/Streamlabs.SocketClient)
+[![NuGet](https://img.shields.io/nuget/v/Streamlabs.SocketClient.svg)](https://www.nuget.org/packages/Streamlabs.SocketClient)
+[![NuGet](https://img.shields.io/nuget/dt/Streamlabs.SocketClient.svg)](https://www.nuget.org/packages/Streamlabs.SocketClient)
+
 # Streamlabs.SocketClient
 
 Unofficial C# client library for the Streamlabs socket API. Allows you to receive events from Streamlabs in real-time.
@@ -13,7 +18,7 @@ dotnet add package Streamlabs.SocketClient --prerelease
 ## Usage
 
 Step-by-step instructions will be added here once the API is stable. For now you can use the
-[Event Capture](https://github.com/meenzen/Streamlabs.SocketClient/tree/main/src/Streamlabs.EventCapture) project 
+[Event Capture](https://github.com/meenzen/Streamlabs.SocketClient/tree/main/src/Streamlabs.EventCapture) project
 as a reference.
 
 ## Contributing
