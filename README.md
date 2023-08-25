@@ -2,6 +2,7 @@
 [![codecov](https://codecov.io/gh/meenzen/Streamlabs.SocketClient/graph/badge.svg?token=OCF8O5TR2I)](https://codecov.io/gh/meenzen/Streamlabs.SocketClient)
 [![NuGet](https://img.shields.io/nuget/v/Streamlabs.SocketClient.svg)](https://www.nuget.org/packages/Streamlabs.SocketClient)
 [![NuGet](https://img.shields.io/nuget/dt/Streamlabs.SocketClient.svg)](https://www.nuget.org/packages/Streamlabs.SocketClient)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmeenzen%2FStreamlabs.SocketClient.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmeenzen%2FStreamlabs.SocketClient?ref=badge_shield)
 
 # Streamlabs.SocketClient
 
@@ -40,3 +41,6 @@ tool to capture events and save them to a file.
 ## License
 
 Distributed under the [MIT License](https://choosealicense.com/licenses/mit/). See `LICENSE` for more information.
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmeenzen%2FStreamlabs.SocketClient.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmeenzen%2FStreamlabs.SocketClient?ref=badge_large)
