@@ -1,6 +1,7 @@
 namespace Streamlabs.SocketClient.Messages.Abstractions;
 
-public interface IHasId
+public interface IHasId<TId>
+    where TId : notnull
 {
-    long Id { get; init; }
+    TId Id { get; init; }
 }

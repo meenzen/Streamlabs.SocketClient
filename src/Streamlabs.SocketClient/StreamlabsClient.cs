@@ -99,6 +99,7 @@ public sealed class StreamlabsClient : IStreamlabsClient
     public event EventHandler<string>? OnEventRaw;
     public event EventHandler<IStreamlabsEvent>? OnEvent;
     public event EventHandler<DonationMessage>? OnDonation;
+    public event EventHandler<BitsMessage>? OnBits;
     public event EventHandler<DonationDeleteMessage>? OnDonationDelete;
     public event EventHandler<BitsAlertPlayingMessage>? OnBitsAlertPlaying;
     public event EventHandler<SubscriptionAlertPlayingMessage>? OnSubscriptionAlertPlaying;
@@ -160,6 +161,12 @@ public sealed class StreamlabsClient : IStreamlabsClient
                 foreach (DonationMessage message in donationEvent.Messages)
                 {
                     OnDonation?.Invoke(this, message);
+                }
+                break;
+            case BitsEvent bitsEvent:
+                foreach (BitsMessage message in bitsEvent.Messages)
+                {
+                    OnBits?.Invoke(this, message);
                 }
                 break;
             case DonationDeleteEvent donationDeleteEvent:

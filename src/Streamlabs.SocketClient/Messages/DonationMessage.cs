@@ -6,8 +6,9 @@ namespace Streamlabs.SocketClient.Messages;
 
 public sealed record DonationMessage
     : IStreamlabsMessage,
-        IHasId,
+        IHasId<long>,
         IHasName,
+        IHasAmount<decimal>,
         IHasMessage,
         IHasFrom,
         IHasMessageId,

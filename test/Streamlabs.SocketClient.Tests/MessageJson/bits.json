@@ -1,0 +1,18 @@
+[
+  {
+    "type": "bits",
+    "message": [
+      {
+        "id": "9cb40fb6-6c87-4c6f-83b5-a820c27aff9b",
+        "name": "Tester",
+        "display_name": "Tester",
+        "amount": "100",
+        "emotes": null,
+        "message": "Cheer100 Take this!",
+        "_id": "1234567890abcdef1234567890abcdef",
+        "event_id": "1234567890abcdef1234567890abcdef"
+      }
+    ],
+    "for": "twitch_account"
+  }
+]

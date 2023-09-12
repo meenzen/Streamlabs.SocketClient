@@ -10,6 +10,7 @@ public class MessageTypeTests
 {
     [Theory]
     [InlineData("donation.json", typeof(DonationEvent))]
+    [InlineData("bits.json", typeof(BitsEvent))]
     [InlineData("donationDelete.json", typeof(DonationDeleteEvent))]
     [InlineData("alertPlaying_subscription.json", typeof(AlertPlayingEvent))]
     [InlineData("alertPlaying_bits.json", typeof(AlertPlayingEvent))]
