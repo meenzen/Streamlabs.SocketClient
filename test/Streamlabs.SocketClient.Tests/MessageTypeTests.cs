@@ -14,6 +14,7 @@ public class MessageTypeTests
     [InlineData("donationDelete.json", typeof(DonationDeleteEvent))]
     [InlineData("alertPlaying_subscription.json", typeof(AlertPlayingEvent))]
     [InlineData("alertPlaying_bits.json", typeof(AlertPlayingEvent))]
+    [InlineData("follow.json", typeof(FollowEvent))]
     public void MessageTypes_CanBeDeserialized(string fileName, Type expectedType)
     {
         // Arrange

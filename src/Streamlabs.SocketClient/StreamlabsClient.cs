@@ -103,6 +103,7 @@ public sealed class StreamlabsClient : IStreamlabsClient
     public event EventHandler<DonationDeleteMessage>? OnDonationDelete;
     public event EventHandler<BitsAlertPlayingMessage>? OnBitsAlertPlaying;
     public event EventHandler<SubscriptionAlertPlayingMessage>? OnSubscriptionAlertPlaying;
+    public event EventHandler<FollowMessage>? OnFollow;
 
     private void OnEventInternal(SocketIOResponse response) => Dispatch(response.ToString());
 
@@ -171,6 +172,12 @@ public sealed class StreamlabsClient : IStreamlabsClient
                 break;
             case DonationDeleteEvent donationDeleteEvent:
                 OnDonationDelete?.Invoke(this, donationDeleteEvent.Message);
+                break;
+            case FollowEvent followEvent:
+                foreach (FollowMessage message in followEvent.Messages)
+                {
+                    OnFollow?.Invoke(this, message);
+                }
                 break;
             case AlertPlayingEvent alertPlayingEvent:
                 switch (alertPlayingEvent.Message)
