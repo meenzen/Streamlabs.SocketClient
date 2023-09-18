@@ -17,7 +17,9 @@ public interface IStreamlabsClient : IDisposable
     event EventHandler<string>? OnEventRaw;
     event EventHandler<IStreamlabsEvent>? OnEvent;
     event EventHandler<DonationMessage>? OnDonation;
+    event EventHandler<BitsMessage>? OnBits;
     event EventHandler<DonationDeleteMessage>? OnDonationDelete;
     event EventHandler<BitsAlertPlayingMessage>? OnBitsAlertPlaying;
     event EventHandler<SubscriptionAlertPlayingMessage>? OnSubscriptionAlertPlaying;
+    event EventHandler<FollowMessage>? OnFollow;
 }
