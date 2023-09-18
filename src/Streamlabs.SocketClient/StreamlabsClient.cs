@@ -1,5 +1,6 @@
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using SocketIO.Core;
 using SocketIOClient;
 using SocketIOClient.Transport;
 using Streamlabs.SocketClient.Events;
@@ -11,14 +12,14 @@ namespace Streamlabs.SocketClient;
 
 public sealed class StreamlabsClient : IStreamlabsClient
 {
-    private readonly SocketIO _client;
+    private readonly SocketIOClient.SocketIO _client;
     private readonly ILogger<StreamlabsClient> _logger;
 
     public StreamlabsClient(ILogger<StreamlabsClient> logger, IOptions<StreamlabsOptions> options)
     {
         _logger = logger;
 
-        _client = new SocketIO(
+        _client = new SocketIOClient.SocketIO(
             options.Value.Url,
             new SocketIOOptions
             {
