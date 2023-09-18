@@ -2,7 +2,7 @@ using Streamlabs.SocketClient.Events.Abstractions;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Streamlabs.SocketClient.Extensions;
+namespace Streamlabs.SocketClient.InternalExtensions;
 
 internal static class SerializationExtensions
 {

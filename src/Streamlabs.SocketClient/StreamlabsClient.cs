@@ -5,7 +5,7 @@ using SocketIOClient;
 using SocketIOClient.Transport;
 using Streamlabs.SocketClient.Events;
 using Streamlabs.SocketClient.Events.Abstractions;
-using Streamlabs.SocketClient.Extensions;
+using Streamlabs.SocketClient.InternalExtensions;
 using Streamlabs.SocketClient.Messages;
 
 namespace Streamlabs.SocketClient;

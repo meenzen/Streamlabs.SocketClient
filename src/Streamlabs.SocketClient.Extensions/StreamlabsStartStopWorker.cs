@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Hosting;
 
-namespace Streamlabs.SocketClient;
+namespace Streamlabs.SocketClient.Extensions;
 
 /// <summary>
 /// Automatically starts and stops the <see cref="IStreamlabsClient"/> together with the host.

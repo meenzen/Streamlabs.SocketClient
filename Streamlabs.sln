@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streamlabs.SocketClient.Tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streamlabs.EventCapture", "src\Streamlabs.EventCapture\Streamlabs.EventCapture.csproj", "{A84921C4-A950-4E6A-B43B-191A94BD8C4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streamlabs.SocketClient.Extensions", "src\Streamlabs.SocketClient.Extensions\Streamlabs.SocketClient.Extensions.csproj", "{C5CC927D-444B-45E6-9F2F-BAC7FE2E1CBF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{A84921C4-A950-4E6A-B43B-191A94BD8C4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A84921C4-A950-4E6A-B43B-191A94BD8C4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A84921C4-A950-4E6A-B43B-191A94BD8C4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5CC927D-444B-45E6-9F2F-BAC7FE2E1CBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5CC927D-444B-45E6-9F2F-BAC7FE2E1CBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5CC927D-444B-45E6-9F2F-BAC7FE2E1CBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5CC927D-444B-45E6-9F2F-BAC7FE2E1CBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

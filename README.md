@@ -16,6 +16,23 @@ This library is not ready for general use yet. Alpha releases are available on N
 dotnet add package Streamlabs.SocketClient --prerelease
 ```
 
+If you use Dependency Injection, you can use the [Streamlabs.SocketClient.Extensions](https://www.nuget.org/packages/Streamlabs.SocketClient.Extensions) package for easier setup.
+
+```bash
+dotnet add package Streamlabs.SocketClient.Extensions --prerelease
+```
+
+```csharp
+// provide the token directly
+builder.Services.AddStreamlabsClient(options => options.Token = "store your token somewhere safe");
+
+// or use a configuration section
+builder.Services.AddStreamlabsClient(configuration.GetSection("Streamlabs"));
+
+// automatically start and stop the client with the application
+builder.Services.AddHostedService<StreamlabsStartStopWorker>();
+```
+
 ## Usage
 
 Step-by-step instructions will be added here once the API is stable. For now you can use the

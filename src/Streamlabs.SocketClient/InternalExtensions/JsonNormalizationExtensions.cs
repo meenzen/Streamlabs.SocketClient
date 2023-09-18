@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Text.Json;
 
-namespace Streamlabs.SocketClient.Extensions;
+namespace Streamlabs.SocketClient.InternalExtensions;
 
 internal static class JsonNormalizationExtensions
 {

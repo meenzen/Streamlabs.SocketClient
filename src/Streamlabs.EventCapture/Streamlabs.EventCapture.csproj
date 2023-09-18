@@ -21,6 +21,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Streamlabs.SocketClient.Extensions\Streamlabs.SocketClient.Extensions.csproj" />
       <ProjectReference Include="..\Streamlabs.SocketClient\Streamlabs.SocketClient.csproj" />
     </ItemGroup>
 </Project>

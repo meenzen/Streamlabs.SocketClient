@@ -1,7 +1,5 @@
 using Streamlabs.SocketClient.Events;
-using Streamlabs.SocketClient.Events.Abstractions;
-using Streamlabs.SocketClient.Extensions;
-using Streamlabs.SocketClient.Messages;
+using Streamlabs.SocketClient.InternalExtensions;
 using System.Text;
 
 namespace Streamlabs.SocketClient.Tests;
