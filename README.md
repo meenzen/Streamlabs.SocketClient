@@ -35,8 +35,8 @@ tool to capture events and save them to a file.
 ## Acknowledgements
 
 - [Streamlabs API Documentation](https://dev.streamlabs.com/docs/socket-api)
-- [SocketIOClient](https://github.com/doghappy/socket.io-client-csharp) by @doghappy is a great library for working with SocketIO servers in C#.
-- [Streamlabs-Events-Receiver](https://github.com/ocgineer/Streamlabs-Events-Receiver) by @ocgineer is a similar project that served as inspiration for this one.
+- [SocketIOClient](https://github.com/doghappy/socket.io-client-csharp) by [@doghappy](https://github.com/doghappy) is a great library for working with SocketIO servers in C#.
+- [Streamlabs-Events-Receiver](https://github.com/ocgineer/Streamlabs-Events-Receiver) by [@ocgineer](https://github.com/ocgineer) is a similar project that served as inspiration for this one.
 
 ## License
 
