@@ -8,4 +8,5 @@ namespace Streamlabs.SocketClient.Events.Abstractions;
 [JsonDerivedType(typeof(AlertPlayingEvent), typeDiscriminator: "alertPlaying")]
 [JsonDerivedType(typeof(BitsEvent), typeDiscriminator: "bits")]
 [JsonDerivedType(typeof(FollowEvent), typeDiscriminator: "follow")]
+[JsonDerivedType(typeof(RaidEvent), typeDiscriminator: "raid")]
 public interface IStreamlabsEvent { }

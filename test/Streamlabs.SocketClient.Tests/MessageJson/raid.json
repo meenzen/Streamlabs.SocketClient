@@ -1,0 +1,16 @@
+[
+  {
+    "type": "raid",
+    "message": [
+      {
+        "id": "7a7575e3-f5a9-46b1-b422-af80711a8bd4",
+        "name": "tester",
+        "display_name": "Tester",
+        "raiders": "42",
+        "_id": "7a7575e3-f5a9-46b1-b422-af80711a8bd4",
+        "event_id": "7a7575e3-f5a9-46b1-b422-af80711a8bd4"
+      }
+    ],
+    "for": "twitch_account"
+  }
+]

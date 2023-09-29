@@ -105,6 +105,7 @@ public sealed class StreamlabsClient : IStreamlabsClient
     public event EventHandler<BitsAlertPlayingMessage>? OnBitsAlertPlaying;
     public event EventHandler<SubscriptionAlertPlayingMessage>? OnSubscriptionAlertPlaying;
     public event EventHandler<FollowMessage>? OnFollow;
+    public event EventHandler<RaidMessage>? OnRaid;
 
     private void OnEventInternal(SocketIOResponse response) => Dispatch(response.ToString());
 
@@ -169,6 +170,12 @@ public sealed class StreamlabsClient : IStreamlabsClient
                 foreach (BitsMessage message in bitsEvent.Messages)
                 {
                     OnBits?.Invoke(this, message);
+                }
+                break;
+            case RaidEvent raidEvent:
+                foreach (RaidMessage message in raidEvent.Messages)
+                {
+                    OnRaid?.Invoke(this, message);
                 }
                 break;
             case DonationDeleteEvent donationDeleteEvent:
