@@ -106,6 +106,7 @@ public sealed class StreamlabsClient : IStreamlabsClient
     public event EventHandler<SubscriptionAlertPlayingMessage>? OnSubscriptionAlertPlaying;
     public event EventHandler<FollowMessage>? OnFollow;
     public event EventHandler<RaidMessage>? OnRaid;
+    public event EventHandler<RollEndCreditsMessage>? OnRollEndCredits;
 
     private void OnEventInternal(SocketIOResponse response) => Dispatch(response.ToString());
 
@@ -186,6 +187,9 @@ public sealed class StreamlabsClient : IStreamlabsClient
                 {
                     OnFollow?.Invoke(this, message);
                 }
+                break;
+            case RollEndCreditsEvent rollEndCreditsEvent:
+                OnRollEndCredits?.Invoke(this, rollEndCreditsEvent.Message);
                 break;
             case AlertPlayingEvent alertPlayingEvent:
                 switch (alertPlayingEvent.Message)

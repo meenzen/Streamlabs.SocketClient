@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 
 namespace Streamlabs.SocketClient.Events;
 
-public class RaidEvent : IStreamlabsEvent, IHasStreamlabsMessageCollection<RaidMessage>
+public sealed record RaidEvent : IStreamlabsEvent, IHasStreamlabsMessageCollection<RaidMessage>
 {
     [JsonPropertyName("message")]
     public required IReadOnlyCollection<RaidMessage> Messages { get; init; }

@@ -4,4 +4,4 @@ using System.Diagnostics.CodeAnalysis;
 namespace Streamlabs.SocketClient.Messages.DataTypes;
 
 [SuppressMessage("Minor Code Smell", "S2094:Classes should not be empty")]
-public record EmptyPayload : IPayload;
+public sealed record EmptyPayload : IPayload;

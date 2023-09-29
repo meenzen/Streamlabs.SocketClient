@@ -1,0 +1,79 @@
+[
+  {
+    "type": "rollEndCredits",
+    "message": {
+      "types": {
+        "donations": {
+          "label": "Donor",
+          "values": [
+            "tester"
+          ]
+        },
+        "bits": {
+          "label": "Cheers",
+          "values": [
+            "tester"
+          ]
+        },
+        "moderators": {
+          "label": "Moderators",
+          "values": [
+            "tester"
+          ]
+        },
+        "followers": {
+          "label": "Followers",
+          "values": []
+        },
+        "subscribers": {
+          "label": "Subscribers &amp; Resubs",
+          "values": [
+            "tester"
+          ]
+        },
+        "_id": "1234567890abcdef1234567890abcdef",
+        "priority": 10
+      },
+      "credit_title": "Awesome Stream Supporters",
+      "credit_subtitle": "Thank you for being awesome!",
+      "settings": {
+        "theme": "stars",
+        "donations": true,
+        "credit_title": "Awesome Stream Supporters",
+        "credit_subtitle": "Thank you for being awesome!",
+        "donor_change": "Donor",
+        "loop_credits": true,
+        "delay_time": 1,
+        "roll_speed": 1,
+        "background_color": "#1078B4",
+        "font": "Open Sans",
+        "font_color": "#000000",
+        "font_size": 70,
+        "roll_time": 30,
+        "roll_options": "speed",
+        "custom_enabled": false,
+        "custom_html": "",
+        "custom_css": "",
+        "custom_js": "",
+        "custom_json": null,
+        "show_amounts": false,
+        "roll_credits_on_load": true,
+        "followers": true,
+        "subscribers": true,
+        "bits": true,
+        "moderators": true,
+        "raids": false,
+        "hosts": false,
+        "followers_change": "Followers",
+        "subscribers_change": "Subscribers &amp; Resubs",
+        "bits_change": "Cheers",
+        "mods_change": "Moderators",
+        "raids_change": "Raids",
+        "hosts_change": "Hosts",
+        "_id": "1234567890abcdef1234567890abcdef",
+        "priority": 10
+      }
+    },
+    "event_id": "evt_abcdef1234567890abcdef1234567890"
+  }
+]

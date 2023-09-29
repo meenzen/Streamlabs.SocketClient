@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace Streamlabs.SocketClient.Messages;
 
-public class RaidMessage : IStreamlabsMessage, IHasId<Guid>, IHasName, IHasDisplayName
+public sealed record RaidMessage : IStreamlabsMessage, IHasId<Guid>, IHasName, IHasDisplayName
 {
     [JsonPropertyName("id")]
     public required Guid Id { get; init; }
