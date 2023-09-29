@@ -1,10 +1,9 @@
-using Streamlabs.SocketClient.Events.Abstractions;
 using Streamlabs.SocketClient.Messages.Abstractions;
 using System.Text.Json.Serialization;
 
 namespace Streamlabs.SocketClient.Messages;
 
-public class RaidMessage : IStreamlabsMessage, IHasId<Guid>, IHasName, IHasDisplayName, IHasMessageId, IHasEventId
+public class RaidMessage : IStreamlabsMessage, IHasId<Guid>, IHasName, IHasDisplayName
 {
     [JsonPropertyName("id")]
     public required Guid Id { get; init; }
@@ -28,8 +27,8 @@ public class RaidMessage : IStreamlabsMessage, IHasId<Guid>, IHasName, IHasDispl
     public required int Raiders { get; init; }
 
     [JsonPropertyName("_id")]
-    public required string MessageId { get; init; }
+    public required Guid MessageId { get; init; }
 
     [JsonPropertyName("event_id")]
-    public required string EventId { get; init; }
+    public required Guid EventId { get; init; }
 }
