@@ -24,4 +24,5 @@ public interface IStreamlabsClient : IDisposable
     event EventHandler<FollowMessage>? OnFollow;
     event EventHandler<RaidMessage>? OnRaid;
     event EventHandler<RollEndCreditsMessage>? OnRollEndCredits;
+    event EventHandler<StreamlabelsMessage>? OnStreamlabelsMessage;
 }
