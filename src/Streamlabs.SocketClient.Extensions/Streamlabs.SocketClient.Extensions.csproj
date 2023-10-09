@@ -16,9 +16,9 @@
     <ItemGroup>
       <ProjectReference Include="..\Streamlabs.SocketClient\Streamlabs.SocketClient.csproj" />
     </ItemGroup>
-    
+
     <ItemGroup>
-        <None Include="../../README.md" Pack="true" PackagePath="/" />
+        <None Include="README.md" Pack="true" PackagePath="/" />
     </ItemGroup>
 
 </Project>
