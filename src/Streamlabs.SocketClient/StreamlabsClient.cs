@@ -105,6 +105,9 @@ public sealed class StreamlabsClient : IStreamlabsClient
     public event EventHandler<BitsAlertPlayingMessage>? OnBitsAlertPlaying;
     public event EventHandler<SubscriptionAlertPlayingMessage>? OnSubscriptionAlertPlaying;
     public event EventHandler<FollowMessage>? OnFollow;
+    public event EventHandler<RaidMessage>? OnRaid;
+    public event EventHandler<RollEndCreditsMessage>? OnRollEndCredits;
+    public event EventHandler<StreamlabelsMessage>? OnStreamlabelsMessage;
 
     private void OnEventInternal(SocketIOResponse response) => Dispatch(response.ToString());
 
@@ -171,6 +174,12 @@ public sealed class StreamlabsClient : IStreamlabsClient
                     OnBits?.Invoke(this, message);
                 }
                 break;
+            case RaidEvent raidEvent:
+                foreach (RaidMessage message in raidEvent.Messages)
+                {
+                    OnRaid?.Invoke(this, message);
+                }
+                break;
             case DonationDeleteEvent donationDeleteEvent:
                 OnDonationDelete?.Invoke(this, donationDeleteEvent.Message);
                 break;
@@ -179,6 +188,12 @@ public sealed class StreamlabsClient : IStreamlabsClient
                 {
                     OnFollow?.Invoke(this, message);
                 }
+                break;
+            case RollEndCreditsEvent rollEndCreditsEvent:
+                OnRollEndCredits?.Invoke(this, rollEndCreditsEvent.Message);
+                break;
+            case StreamlabelsEvent streamlabelsEvent:
+                OnStreamlabelsMessage?.Invoke(this, streamlabelsEvent.Message);
                 break;
             case AlertPlayingEvent alertPlayingEvent:
                 switch (alertPlayingEvent.Message)

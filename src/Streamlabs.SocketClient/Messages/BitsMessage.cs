@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace Streamlabs.SocketClient.Messages;
 
-public class BitsMessage
+public sealed record BitsMessage
     : IStreamlabsMessage,
         IHasId<Guid>,
         IHasName,

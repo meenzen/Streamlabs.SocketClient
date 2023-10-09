@@ -4,14 +4,11 @@ using System.Text.Json.Serialization;
 
 namespace Streamlabs.SocketClient.Events;
 
-public sealed record FollowEvent : IStreamlabsEvent, IHasStreamlabsMessageCollection<FollowMessage>, IHasEventId
+public sealed record RaidEvent : IStreamlabsEvent, IHasStreamlabsMessageCollection<RaidMessage>
 {
     [JsonPropertyName("message")]
-    public required IReadOnlyCollection<FollowMessage> Messages { get; init; }
+    public required IReadOnlyCollection<RaidMessage> Messages { get; init; }
 
     [JsonPropertyName("for")]
     public required string For { get; init; }
-
-    [JsonPropertyName("event_id")]
-    public required string EventId { get; init; }
 }
