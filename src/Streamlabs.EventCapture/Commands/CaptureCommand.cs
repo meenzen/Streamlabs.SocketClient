@@ -1,14 +1,14 @@
+using System.Globalization;
+using System.Text;
+using System.Text.Json.Nodes;
 using Microsoft.Extensions.Logging;
 using Spectre.Console;
 using Spectre.Console.Cli;
 using Streamlabs.SocketClient;
-using System.Globalization;
-using System.Text;
-using System.Text.Json.Nodes;
 
 namespace Streamlabs.EventCapture.Commands;
 
-internal sealed class CaptureCommand : AsyncCommand
+internal sealed class CaptureCommand : AsyncCommand, IDisposable
 {
     private readonly DirectoryInfo _directory;
     private readonly IStreamlabsClient _client;
@@ -104,5 +104,11 @@ internal sealed class CaptureCommand : AsyncCommand
         _logger.LogInformation("Writing event: {{ type: \"{type}\", filename: \"{filename}\" }}", type, filename);
 
         File.WriteAllText(path, json, new UTF8Encoding());
+    }
+
+    public void Dispose()
+    {
+        _cancellationTokenSource.Dispose();
+        _client.Dispose();
     }
 }
