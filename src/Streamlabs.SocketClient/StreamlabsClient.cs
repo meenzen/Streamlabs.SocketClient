@@ -108,6 +108,7 @@ public sealed class StreamlabsClient : IStreamlabsClient
     public event EventHandler<RaidMessage>? OnRaid;
     public event EventHandler<RollEndCreditsMessage>? OnRollEndCredits;
     public event EventHandler<StreamlabelsMessage>? OnStreamlabelsMessage;
+    public event EventHandler<StreamlabelsUnderlyingMessage>? OnStreamlabelsUnderlyingMessage;
 
     private void OnEventInternal(SocketIOResponse response) => Dispatch(response.ToString());
 
@@ -194,6 +195,9 @@ public sealed class StreamlabsClient : IStreamlabsClient
                 break;
             case StreamlabelsEvent streamlabelsEvent:
                 OnStreamlabelsMessage?.Invoke(this, streamlabelsEvent.Message);
+                break;
+            case StreamlabelsUnderlyingEvent streamlabelsUnderlyingEvent:
+                OnStreamlabelsUnderlyingMessage?.Invoke(this, streamlabelsUnderlyingEvent.Message);
                 break;
             case AlertPlayingEvent alertPlayingEvent:
                 switch (alertPlayingEvent.Message)

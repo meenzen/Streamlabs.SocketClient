@@ -4,6 +4,9 @@ using System.Text.Json.Serialization;
 
 namespace Streamlabs.SocketClient.Converters;
 
+/// <summary>
+/// Converts strings with thousands separators to integers.
+/// </summary>
 internal sealed class IntStringConverter : JsonConverter<int>
 {
     public override int Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)

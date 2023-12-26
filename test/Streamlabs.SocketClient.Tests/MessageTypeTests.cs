@@ -1,6 +1,6 @@
+using System.Text;
 using Streamlabs.SocketClient.Events;
 using Streamlabs.SocketClient.InternalExtensions;
-using System.Text;
 
 namespace Streamlabs.SocketClient.Tests;
 
@@ -16,6 +16,7 @@ public class MessageTypeTests
     [InlineData("raid.json", typeof(RaidEvent))]
     [InlineData("rollEndCredits.json", typeof(RollEndCreditsEvent))]
     [InlineData("streamlabels.json", typeof(StreamlabelsEvent))]
+    [InlineData("streamlabelsUnderlying.json", typeof(StreamlabelsUnderlyingEvent))]
     public void MessageTypes_CanBeDeserialized(string fileName, Type expectedType)
     {
         // Arrange
