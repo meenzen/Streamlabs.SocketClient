@@ -1,5 +1,5 @@
-using Streamlabs.SocketClient.Messages.Abstractions;
 using System.Diagnostics.CodeAnalysis;
+using Streamlabs.SocketClient.Messages.Abstractions;
 
 namespace Streamlabs.SocketClient.Messages.DataTypes;
 

@@ -1,6 +1,6 @@
-using Streamlabs.SocketClient.Events.Abstractions;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using Streamlabs.SocketClient.Events.Abstractions;
 
 namespace Streamlabs.SocketClient.InternalExtensions;
 
