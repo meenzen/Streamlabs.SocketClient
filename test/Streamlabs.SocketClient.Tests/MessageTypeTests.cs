@@ -40,6 +40,7 @@ public class MessageTypeTests
             new("rollEndCredits.json", typeof(RollEndCreditsEvent)),
             new("streamlabels.json", typeof(StreamlabelsEvent)),
             new("streamlabelsUnderlying.json", typeof(StreamlabelsUnderlyingEvent)),
+            new("subMysteryGift.json", typeof(SubMysteryGiftEvent)),
         };
 
     public static TheoryData<JsonFile> GetTheoryData()

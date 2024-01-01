@@ -1,0 +1,18 @@
+[
+  {
+    "type": "subMysteryGift",
+    "message": [
+      {
+        "sub_plan": "1000",
+        "sub_type": "submysterygift",
+        "gifter": "anonymous",
+        "gifter_display_name": "Anonymous",
+        "name": "Anonymous",
+        "amount": "2",
+        "_id": "1234567890abcdef1234567890abcdef",
+        "event_id": "1234567890abcdef1234567890abcdef"
+      }
+    ],
+    "for": "twitch_account"
+  }
+]

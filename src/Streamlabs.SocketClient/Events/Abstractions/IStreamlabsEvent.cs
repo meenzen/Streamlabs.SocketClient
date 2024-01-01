@@ -12,4 +12,5 @@ namespace Streamlabs.SocketClient.Events.Abstractions;
 [JsonDerivedType(typeof(RollEndCreditsEvent), typeDiscriminator: "rollEndCredits")]
 [JsonDerivedType(typeof(StreamlabelsEvent), typeDiscriminator: "streamlabels")]
 [JsonDerivedType(typeof(StreamlabelsUnderlyingEvent), typeDiscriminator: "streamlabels.underlying")]
+[JsonDerivedType(typeof(SubMysteryGiftEvent), typeDiscriminator: "subMysteryGift")]
 public interface IStreamlabsEvent { }

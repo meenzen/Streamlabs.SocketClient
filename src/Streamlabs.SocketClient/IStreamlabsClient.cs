@@ -41,4 +41,5 @@ public interface IStreamlabsClient : IDisposable
     event EventHandler<RollEndCreditsMessage>? OnRollEndCredits;
     event EventHandler<StreamlabelsMessage>? OnStreamlabels;
     event EventHandler<StreamlabelsUnderlyingMessage>? OnStreamlabelsUnderlying;
+    event EventHandler<SubMysteryGiftMessage>? OnSubMysteryGift;
 }
