@@ -13,13 +13,13 @@ Unofficial C# client library for the Streamlabs socket API. Allows you to receiv
 This library is not ready for general use yet. Alpha releases are available on NuGet, but the API should not be considered stable until version 1.0.0.
 
 ```bash
-dotnet add package Streamlabs.SocketClient --prerelease
+dotnet add package Streamlabs.SocketClient
 ```
 
 If you use Dependency Injection, you can use the [Streamlabs.SocketClient.Extensions](https://www.nuget.org/packages/Streamlabs.SocketClient.Extensions) package for easier setup.
 
 ```bash
-dotnet add package Streamlabs.SocketClient.Extensions --prerelease
+dotnet add package Streamlabs.SocketClient.Extensions
 ```
 
 ```csharp
