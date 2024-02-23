@@ -41,6 +41,9 @@ public class MessageTypeTests
             new("streamlabels.json", typeof(StreamlabelsEvent)),
             new("streamlabelsUnderlying.json", typeof(StreamlabelsUnderlyingEvent)),
             new("subMysteryGift.json", typeof(SubMysteryGiftEvent)),
+            new("subscription.json", typeof(SubscriptionEvent)),
+            new("subscription2.json", typeof(SubscriptionEvent)),
+            new("subscription3.json", typeof(SubscriptionEvent)),
         };
 
     public static TheoryData<JsonFile> GetTheoryData()

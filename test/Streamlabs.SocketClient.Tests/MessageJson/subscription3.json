@@ -1,0 +1,23 @@
+[
+  {
+    "type": "subscription",
+    "message": [
+      {
+        "name": "anonymous",
+        "display_name": "Anonymous",
+        "months": "19",
+        "message": "Yay! 19 months!",
+        "emotes": "123456789:0-10",
+        "sub_plan": "Prime",
+        "sub_plan_name": "Joining\\sthe\\sClub!\\s(cool_twitch_channel_name))",
+        "sub_type": "resub",
+        "gifter": null,
+        "subscriber_twitch_id": "114197391",
+        "streak_months": null,
+        "_id": "1234567890abcdef1234567890abcdef",
+        "event_id": "1234567890abcdef1234567890abcdef"
+      }
+    ],
+    "for": "twitch_account"
+  }
+]

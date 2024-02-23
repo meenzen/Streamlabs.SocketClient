@@ -110,6 +110,7 @@ public sealed class StreamlabsClient : IStreamlabsClient
     public event EventHandler<StreamlabelsMessage>? OnStreamlabels;
     public event EventHandler<StreamlabelsUnderlyingMessage>? OnStreamlabelsUnderlying;
     public event EventHandler<SubMysteryGiftMessage>? OnSubMysteryGift;
+    public event EventHandler<SubscriptionMessage>? OnSubscription;
 
     private void OnEventInternal(SocketIOResponse response) => Dispatch(response.ToString());
 
@@ -204,6 +205,12 @@ public sealed class StreamlabsClient : IStreamlabsClient
                 foreach (SubMysteryGiftMessage message in subMysteryGiftEvent.Messages)
                 {
                     OnSubMysteryGift?.Invoke(this, message);
+                }
+                break;
+            case SubscriptionEvent subscriptionEvent:
+                foreach (SubscriptionMessage message in subscriptionEvent.Messages)
+                {
+                    OnSubscription?.Invoke(this, message);
                 }
                 break;
             case AlertPlayingEvent alertPlayingEvent:

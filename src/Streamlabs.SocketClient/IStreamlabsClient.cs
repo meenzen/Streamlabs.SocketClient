@@ -42,4 +42,5 @@ public interface IStreamlabsClient : IDisposable
     event EventHandler<StreamlabelsMessage>? OnStreamlabels;
     event EventHandler<StreamlabelsUnderlyingMessage>? OnStreamlabelsUnderlying;
     event EventHandler<SubMysteryGiftMessage>? OnSubMysteryGift;
+    event EventHandler<SubscriptionMessage>? OnSubscription;
 }

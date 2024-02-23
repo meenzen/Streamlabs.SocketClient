@@ -1,0 +1,25 @@
+[
+  {
+    "type": "subscription",
+    "message": [
+      {
+        "name": "anonymous",
+        "display_name": "Anonymous",
+        "months": "1",
+        "message": null,
+        "emotes": null,
+        "sub_plan": "1000",
+        "sub_plan_name": "Joining\\sthe\\sClub!\\s(cool_twitch_channel_name)",
+        "sub_type": "subgift",
+        "gifter": "anonymousgifter",
+        "gifter_display_name": "AnonymousGifter",
+        "streak_months": null,
+        "gifter_twitch_id": "12345678",
+        "subscriber_twitch_id": "12345678",
+        "_id": "1234567890abcdef1234567890abcdef",
+        "event_id": "1234567890abcdef1234567890abcdef"
+      }
+    ],
+    "for": "twitch_account"
+  }
+]
