@@ -105,6 +105,7 @@ public sealed class StreamlabsClient : IStreamlabsClient
     public event EventHandler<BitsAlertPlayingMessage>? OnBitsAlertPlaying;
     public event EventHandler<SubscriptionAlertPlayingMessage>? OnSubscriptionAlertPlaying;
     public event EventHandler<SubMysteryGiftAlertPlayingMessage>? OnSubMysteryGiftAlertPlaying;
+    public event EventHandler<RaidAlertPlayingMessage>? OnRaidAlertPlaying;
     public event EventHandler<FollowMessage>? OnFollow;
     public event EventHandler<RaidMessage>? OnRaid;
     public event EventHandler<RollEndCreditsMessage>? OnRollEndCredits;
@@ -232,6 +233,9 @@ public sealed class StreamlabsClient : IStreamlabsClient
                         break;
                     case SubMysteryGiftAlertPlayingMessage subMysteryGiftAlert:
                         OnSubMysteryGiftAlertPlaying?.Invoke(this, subMysteryGiftAlert);
+                        break;
+                    case RaidAlertPlayingMessage raidAlert:
+                        OnRaidAlertPlaying?.Invoke(this, raidAlert);
                         break;
                     default:
                         _logger.LogError(

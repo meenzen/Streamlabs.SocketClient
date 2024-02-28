@@ -1,0 +1,22 @@
+[
+  {
+    "type": "alertPlaying",
+    "message": {
+      "priority": 10,
+      "_id": "1234567890abcdef1234567890abcdef12345678",
+      "from": "anonymous",
+      "raiders": "8",
+      "payload": {},
+      "name": "anonymous",
+      "repeat": false,
+      "isTest": false,
+      "createdAt": "2023-07-02 16:08:50",
+      "createdAtTimestamp": 1688314130874,
+      "platform": "twitch_account",
+      "type": "raid",
+      "hash": "raid:anonymous:anonymous",
+      "read": false,
+      "count": 8
+    }
+  }
+]

@@ -8,15 +8,8 @@ namespace Streamlabs.SocketClient.Messages;
 [JsonDerivedType(typeof(SubscriptionAlertPlayingMessage), typeDiscriminator: "subscription")]
 [JsonDerivedType(typeof(BitsAlertPlayingMessage), typeDiscriminator: "bits")]
 [JsonDerivedType(typeof(SubMysteryGiftAlertPlayingMessage), typeDiscriminator: "subMysteryGift")]
-public record AlertPlayingMessage
-    : IStreamlabsMessage,
-        IHasPriority,
-        IHasMessageId,
-        IHasFrom,
-        IHasEmotes,
-        IHasMessage,
-        IHasName,
-        IHasDisplayName
+[JsonDerivedType(typeof(RaidAlertPlayingMessage), typeDiscriminator: "raid")]
+public record AlertPlayingMessage : IStreamlabsMessage, IHasPriority, IHasMessageId, IHasFrom, IHasEmotes, IHasName
 {
     [JsonPropertyName("priority")]
     public required long Priority { get; init; }
@@ -28,19 +21,19 @@ public record AlertPlayingMessage
     public required string From { get; init; }
 
     [JsonPropertyName("from_display_name")]
-    public required string FromDisplayName { get; init; }
+    public string? FromDisplayName { get; init; }
 
     [JsonPropertyName("emotes")]
-    public required string? Emotes { get; init; }
+    public string? Emotes { get; init; }
 
     [JsonPropertyName("message")]
-    public required string Message { get; init; }
+    public string? Message { get; init; }
 
     [JsonPropertyName("name")]
     public required string Name { get; init; }
 
     [JsonPropertyName("display_name")]
-    public required string DisplayName { get; init; }
+    public string? DisplayName { get; init; }
 
     [JsonPropertyName("repeat")]
     public required bool Repeat { get; init; }

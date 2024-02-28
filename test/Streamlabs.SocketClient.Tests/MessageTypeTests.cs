@@ -36,6 +36,7 @@ public class MessageTypeTests
             new("alertPlaying_subscription.json", typeof(AlertPlayingEvent), "SubscriptionAlertPlaying"),
             new("alertPlaying_bits.json", typeof(AlertPlayingEvent), "BitsAlertPlaying"),
             new("alertPlaying_subMysteryGift.json", typeof(AlertPlayingEvent), "SubMysteryGiftAlertPlaying"),
+            new("alertPlaying_raid.json", typeof(AlertPlayingEvent), "RaidAlertPlaying"),
             new("follow.json", typeof(FollowEvent)),
             new("raid.json", typeof(RaidEvent)),
             new("rollEndCredits.json", typeof(RollEndCreditsEvent)),
