@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using Streamlabs.SocketClient.Converters;
 using Streamlabs.SocketClient.Messages.Abstractions;
 
 namespace Streamlabs.SocketClient.Messages.DataTypes;
@@ -195,13 +196,16 @@ public sealed record StreamlabelsUnderlyingMessageData : IHasMessageId, IHasPrio
     public required Count SessionSubscriberScore { get; init; }
 
     [JsonPropertyName("most_recent_cheerer")]
-    public required Cheerer MostRecentCheerer { get; init; }
+    [JsonConverter(typeof(EmptyStringToNullConverter<Cheerer>))]
+    public required Cheerer? MostRecentCheerer { get; init; }
 
     [JsonPropertyName("session_most_recent_cheerer")]
-    public required Cheerer SessionMostRecentCheerer { get; init; }
+    [JsonConverter(typeof(EmptyStringToNullConverter<Cheerer>))]
+    public required Cheerer? SessionMostRecentCheerer { get; init; }
 
     [JsonPropertyName("session_cheerers")]
-    public required IReadOnlyCollection<Cheerer> SessionCheerers { get; init; }
+    [JsonConverter(typeof(EmptyStringToNullConverter<IReadOnlyCollection<Cheerer>>))]
+    public required IReadOnlyCollection<Cheerer>? SessionCheerers { get; init; }
 
     [JsonPropertyName("total_cheer_amount")]
     public required Amount TotalCheerAmount { get; init; }
@@ -219,49 +223,64 @@ public sealed record StreamlabelsUnderlyingMessageData : IHasMessageId, IHasPrio
     public required Amount SessionCheerAmount { get; init; }
 
     [JsonPropertyName("all_time_top_cheerer")]
-    public required TopCheerer AllTimeTopCheerer { get; init; }
+    [JsonConverter(typeof(EmptyStringToNullConverter<TopCheerer>))]
+    public required TopCheerer? AllTimeTopCheerer { get; init; }
 
     [JsonPropertyName("monthly_top_cheerer")]
-    public required TopCheerer MonthlyTopCheerer { get; init; }
+    [JsonConverter(typeof(EmptyStringToNullConverter<TopCheerer>))]
+    public required TopCheerer? MonthlyTopCheerer { get; init; }
 
     [JsonPropertyName("weekly_top_cheerer")]
-    public required TopCheerer WeeklyTopCheerer { get; init; }
+    [JsonConverter(typeof(EmptyStringToNullConverter<TopCheerer>))]
+    public required TopCheerer? WeeklyTopCheerer { get; init; }
 
     [JsonPropertyName("30day_top_cheerer")]
-    public required TopCheerer ThirtyDayTopCheerer { get; init; }
+    [JsonConverter(typeof(EmptyStringToNullConverter<TopCheerer>))]
+    public required TopCheerer? ThirtyDayTopCheerer { get; init; }
 
     [JsonPropertyName("session_top_cheerer")]
-    public required TopCheerer SessionTopCheerer { get; init; }
+    [JsonConverter(typeof(EmptyStringToNullConverter<TopCheerer>))]
+    public required TopCheerer? SessionTopCheerer { get; init; }
 
     [JsonPropertyName("all_time_top_cheerers")]
-    public required IReadOnlyCollection<TopCheerer> AllTimeTopCheerers { get; init; }
+    [JsonConverter(typeof(EmptyStringToNullConverter<IReadOnlyCollection<TopCheerer>>))]
+    public required IReadOnlyCollection<TopCheerer>? AllTimeTopCheerers { get; init; }
 
     [JsonPropertyName("monthly_top_cheerers")]
-    public required IReadOnlyCollection<TopCheerer> MonthlyTopCheerers { get; init; }
+    [JsonConverter(typeof(EmptyStringToNullConverter<IReadOnlyCollection<TopCheerer>>))]
+    public required IReadOnlyCollection<TopCheerer>? MonthlyTopCheerers { get; init; }
 
     [JsonPropertyName("weekly_top_cheerers")]
-    public required IReadOnlyCollection<TopCheerer> WeeklyTopCheerers { get; init; }
+    [JsonConverter(typeof(EmptyStringToNullConverter<IReadOnlyCollection<TopCheerer>>))]
+    public required IReadOnlyCollection<TopCheerer>? WeeklyTopCheerers { get; init; }
 
     [JsonPropertyName("30day_top_cheerers")]
-    public required IReadOnlyCollection<TopCheerer> ThirtyDayTopCheerers { get; init; }
+    [JsonConverter(typeof(EmptyStringToNullConverter<IReadOnlyCollection<TopCheerer>>))]
+    public required IReadOnlyCollection<TopCheerer>? ThirtyDayTopCheerers { get; init; }
 
     [JsonPropertyName("session_top_cheerers")]
-    public required IReadOnlyCollection<TopCheerer> SessionTopCheerers { get; init; }
+    [JsonConverter(typeof(EmptyStringToNullConverter<IReadOnlyCollection<TopCheerer>>))]
+    public required IReadOnlyCollection<TopCheerer>? SessionTopCheerers { get; init; }
 
     [JsonPropertyName("all_time_top_cheers")]
-    public required IReadOnlyCollection<Cheerer> AllTimeTopCheers { get; init; }
+    [JsonConverter(typeof(EmptyStringToNullConverter<IReadOnlyCollection<Cheerer>>))]
+    public required IReadOnlyCollection<Cheerer>? AllTimeTopCheers { get; init; }
 
     [JsonPropertyName("monthly_top_cheers")]
-    public required IReadOnlyCollection<Cheerer> MonthlyTopCheers { get; init; }
+    [JsonConverter(typeof(EmptyStringToNullConverter<IReadOnlyCollection<Cheerer>>))]
+    public required IReadOnlyCollection<Cheerer>? MonthlyTopCheers { get; init; }
 
     [JsonPropertyName("30day_top_cheers")]
-    public required IReadOnlyCollection<Cheerer> ThirtyDayTopCheers { get; init; }
+    [JsonConverter(typeof(EmptyStringToNullConverter<IReadOnlyCollection<Cheerer>>))]
+    public required IReadOnlyCollection<Cheerer>? ThirtyDayTopCheers { get; init; }
 
     [JsonPropertyName("weekly_top_cheers")]
-    public required IReadOnlyCollection<Cheerer> WeeklyTopCheers { get; init; }
+    [JsonConverter(typeof(EmptyStringToNullConverter<IReadOnlyCollection<Cheerer>>))]
+    public required IReadOnlyCollection<Cheerer>? WeeklyTopCheers { get; init; }
 
     [JsonPropertyName("session_top_cheers")]
-    public required IReadOnlyCollection<Cheerer> SessionTopCheers { get; init; }
+    [JsonConverter(typeof(EmptyStringToNullConverter<IReadOnlyCollection<Cheerer>>))]
+    public required IReadOnlyCollection<Cheerer>? SessionTopCheers { get; init; }
 
     [JsonPropertyName("all_time_top_sub_gifters")]
     public required IReadOnlyCollection<TopGifter> AllTimeTopSubGifters { get; init; }
@@ -288,19 +307,24 @@ public sealed record StreamlabelsUnderlyingMessageData : IHasMessageId, IHasPrio
     public required Name SessionMostRecentSubGifter { get; init; }
 
     [JsonPropertyName("all_time_top_sub_gifter")]
-    public required TopGifter AllTimeTopSubGifter { get; init; }
+    [JsonConverter(typeof(EmptyStringToNullConverter<TopGifter>))]
+    public required TopGifter? AllTimeTopSubGifter { get; init; }
 
     [JsonPropertyName("monthly_top_sub_gifter")]
-    public required TopGifter MonthlyTopSubGifter { get; init; }
+    [JsonConverter(typeof(EmptyStringToNullConverter<TopGifter>))]
+    public required TopGifter? MonthlyTopSubGifter { get; init; }
 
     [JsonPropertyName("weekly_top_sub_gifter")]
-    public required TopGifter WeeklyTopSubGifter { get; init; }
+    [JsonConverter(typeof(EmptyStringToNullConverter<TopGifter>))]
+    public required TopGifter? WeeklyTopSubGifter { get; init; }
 
     [JsonPropertyName("30day_top_sub_gifter")]
-    public required TopGifter ThirtyDayTopSubGifter { get; init; }
+    [JsonConverter(typeof(EmptyStringToNullConverter<TopGifter>))]
+    public required TopGifter? ThirtyDayTopSubGifter { get; init; }
 
     [JsonPropertyName("session_top_sub_gifter")]
-    public required TopGifter SessionTopSubGifter { get; init; }
+    [JsonConverter(typeof(EmptyStringToNullConverter<TopGifter>))]
+    public required TopGifter? SessionTopSubGifter { get; init; }
 
     [JsonPropertyName("monthly_top_subscriber")]
     public required Subscriber MonthlyTopSubscriber { get; init; }
