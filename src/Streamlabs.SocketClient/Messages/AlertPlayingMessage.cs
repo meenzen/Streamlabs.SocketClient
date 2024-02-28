@@ -9,6 +9,7 @@ namespace Streamlabs.SocketClient.Messages;
 [JsonDerivedType(typeof(BitsAlertPlayingMessage), typeDiscriminator: "bits")]
 [JsonDerivedType(typeof(SubMysteryGiftAlertPlayingMessage), typeDiscriminator: "subMysteryGift")]
 [JsonDerivedType(typeof(RaidAlertPlayingMessage), typeDiscriminator: "raid")]
+[JsonDerivedType(typeof(FollowAlertPlayingMessage), typeDiscriminator: "follow")]
 public record AlertPlayingMessage : IStreamlabsMessage, IHasPriority, IHasMessageId, IHasFrom, IHasEmotes, IHasName
 {
     [JsonPropertyName("priority")]

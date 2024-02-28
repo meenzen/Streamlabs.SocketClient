@@ -1,0 +1,28 @@
+[
+  {
+    "type": "alertPlaying",
+    "message": {
+      "priority": 10,
+      "_id": "1234567890abcdef1234567890abcdef",
+      "from": "Anonymous",
+      "to": "",
+      "message": "",
+      "payload": {
+        "_id": "1234567890abcdef1234567890abcdef",
+        "id": "12345678",
+        "name": "Anonymous",
+        "priority": 10
+      },
+      "name": "Anonymous",
+      "repeat": false,
+      "isTest": false,
+      "createdAt": "2023-07-02 16:09:05",
+      "createdAtTimestamp": 1688314145330,
+      "platform": "twitch_account",
+      "type": "follow",
+      "hash": "follow:Anonymous:",
+      "read": false,
+      "wotcCode": null
+    }
+  }
+]
