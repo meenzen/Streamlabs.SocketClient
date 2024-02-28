@@ -1,0 +1,51 @@
+[
+  {
+    "type": "alertPlaying",
+    "message": {
+      "priority": 10,
+      "_id": "1234567890abcdef1234567890abcdef12345678",
+      "from": "Tester",
+      "from_display_name": "Tester",
+      "emotes": null,
+      "months": 1,
+      "streak_months": null,
+      "message": "",
+      "payload": {
+        "sub_plan": "1000",
+        "sub_type": "submysterygift",
+        "gifter": "anonymous",
+        "gifter_display_name": "Anonymous",
+        "name": "Anonymous",
+        "amount": "5",
+        "_id": "1234567890abcdef1234567890abcdef",
+        "event_id": "1234567890abcdef1234567890abcdef"
+      },
+      "name": "anonymous",
+      "display_name": "Anonymous",
+      "subPlan": "1000",
+      "sub_plan": "1000",
+      "subscriber_twitch_id": null,
+      "gifter": "anonymous",
+      "gifter_display_name": null,
+      "count": 1,
+      "repeat": false,
+      "isTest": false,
+      "createdAt": "2023-07-02 13:06:03",
+      "createdAtTimestamp": 1688303163786,
+      "platform": "twitch_account",
+      "planName": "",
+      "type": "subMysteryGift",
+      "sub_type": "submysterygift",
+      "hash": "subMysteryGift::",
+      "read": false,
+      "amount": "5",
+      "membershipLevel": null,
+      "membershipLevelName": null,
+      "membershipGift": null,
+      "membershipGiftMessageId": null,
+      "massSubGiftChildAlerts": [],
+      "isSubgiftExpanded": true,
+      "benefit_end_month": null
+    }
+  }
+]

@@ -11,4 +11,7 @@ public enum SubType
 
     [EnumMember(Value = "subgift")]
     SubGift,
+
+    [EnumMember(Value = "submysterygift")]
+    SubMysteryGift,
 }

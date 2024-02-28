@@ -40,6 +40,12 @@ public sealed record AlertPayload
     [JsonPropertyName("gifter")]
     public required string? Gifter { get; init; }
 
+    [JsonPropertyName("gifter_display_name")]
+    public string? GifterDisplayName { get; init; }
+
+    [JsonPropertyName("gifter_twitch_id")]
+    public string? GifterTwitchId { get; init; }
+
     [JsonPropertyName("subscriber_twitch_id")]
     public required string SubscriberTwitchId { get; init; }
 

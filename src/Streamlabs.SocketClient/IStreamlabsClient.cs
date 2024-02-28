@@ -36,6 +36,7 @@ public interface IStreamlabsClient : IDisposable
     event EventHandler<DonationDeleteMessage>? OnDonationDelete;
     event EventHandler<BitsAlertPlayingMessage>? OnBitsAlertPlaying;
     event EventHandler<SubscriptionAlertPlayingMessage>? OnSubscriptionAlertPlaying;
+    event EventHandler<SubMysteryGiftAlertPlayingMessage>? OnSubMysteryGiftAlertPlaying;
     event EventHandler<FollowMessage>? OnFollow;
     event EventHandler<RaidMessage>? OnRaid;
     event EventHandler<RollEndCreditsMessage>? OnRollEndCredits;

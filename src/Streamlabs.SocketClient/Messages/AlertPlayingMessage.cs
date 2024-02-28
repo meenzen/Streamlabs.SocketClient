@@ -7,6 +7,7 @@ namespace Streamlabs.SocketClient.Messages;
 [JsonPolymorphic(TypeDiscriminatorPropertyName = "type")]
 [JsonDerivedType(typeof(SubscriptionAlertPlayingMessage), typeDiscriminator: "subscription")]
 [JsonDerivedType(typeof(BitsAlertPlayingMessage), typeDiscriminator: "bits")]
+[JsonDerivedType(typeof(SubMysteryGiftAlertPlayingMessage), typeDiscriminator: "subMysteryGift")]
 public record AlertPlayingMessage
     : IStreamlabsMessage,
         IHasPriority,
