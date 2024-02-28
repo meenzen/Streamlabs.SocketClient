@@ -46,4 +46,7 @@ public interface IStreamlabsClient : IDisposable
     event EventHandler<StreamlabelsUnderlyingMessage>? OnStreamlabelsUnderlying;
     event EventHandler<SubMysteryGiftMessage>? OnSubMysteryGift;
     event EventHandler<SubscriptionMessage>? OnSubscription;
+
+    [Obsolete("Use the specific AlertPlaying events instead.")]
+    event EventHandler<AlertPlayingMessage>? OnSubscriptionPlaying;
 }

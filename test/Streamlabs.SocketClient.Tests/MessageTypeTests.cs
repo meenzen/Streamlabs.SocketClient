@@ -47,6 +47,7 @@ public class MessageTypeTests
             new("subscription.json", typeof(SubscriptionEvent)),
             new("subscription2.json", typeof(SubscriptionEvent)),
             new("subscription3.json", typeof(SubscriptionEvent)),
+            new("subscriptionPlaying.json", typeof(SubscriptionPlayingEvent), "SubscriptionPlaying"),
         };
 
     public static TheoryData<JsonFile> GetTheoryData()

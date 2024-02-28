@@ -14,4 +14,5 @@ namespace Streamlabs.SocketClient.Events.Abstractions;
 [JsonDerivedType(typeof(StreamlabelsUnderlyingEvent), typeDiscriminator: "streamlabels.underlying")]
 [JsonDerivedType(typeof(SubMysteryGiftEvent), typeDiscriminator: "subMysteryGift")]
 [JsonDerivedType(typeof(SubscriptionEvent), typeDiscriminator: "subscription")]
+[JsonDerivedType(typeof(SubscriptionPlayingEvent), typeDiscriminator: "subscription-playing")]
 public interface IStreamlabsEvent { }
