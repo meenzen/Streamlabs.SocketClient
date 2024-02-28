@@ -130,7 +130,8 @@ public sealed class StreamlabsClient : IStreamlabsClient
         }
         catch (Exception e)
         {
-            _logger.LogError(e, "Streamlabs: Error deserializing event - {Payload}", json);
+            _logger.LogError(e, "Streamlabs: {Message}", e.Message);
+            _logger.LogError("Streamlabs: Error deserializing event - {Payload}", json);
             return;
         }
 
@@ -170,18 +171,21 @@ public sealed class StreamlabsClient : IStreamlabsClient
                 {
                     OnDonation?.Invoke(this, message);
                 }
+
                 break;
             case BitsEvent bitsEvent:
                 foreach (BitsMessage message in bitsEvent.Messages)
                 {
                     OnBits?.Invoke(this, message);
                 }
+
                 break;
             case RaidEvent raidEvent:
                 foreach (RaidMessage message in raidEvent.Messages)
                 {
                     OnRaid?.Invoke(this, message);
                 }
+
                 break;
             case DonationDeleteEvent donationDeleteEvent:
                 OnDonationDelete?.Invoke(this, donationDeleteEvent.Message);
@@ -191,6 +195,7 @@ public sealed class StreamlabsClient : IStreamlabsClient
                 {
                     OnFollow?.Invoke(this, message);
                 }
+
                 break;
             case RollEndCreditsEvent rollEndCreditsEvent:
                 OnRollEndCredits?.Invoke(this, rollEndCreditsEvent.Message);
@@ -206,12 +211,14 @@ public sealed class StreamlabsClient : IStreamlabsClient
                 {
                     OnSubMysteryGift?.Invoke(this, message);
                 }
+
                 break;
             case SubscriptionEvent subscriptionEvent:
                 foreach (SubscriptionMessage message in subscriptionEvent.Messages)
                 {
                     OnSubscription?.Invoke(this, message);
                 }
+
                 break;
             case AlertPlayingEvent alertPlayingEvent:
                 switch (alertPlayingEvent.Message)
@@ -229,6 +236,7 @@ public sealed class StreamlabsClient : IStreamlabsClient
                         );
                         break;
                 }
+
                 break;
             default:
                 _logger.LogError("Streamlabs: Unsupported event type - {Type}", streamlabsEvent.GetType().Name);
