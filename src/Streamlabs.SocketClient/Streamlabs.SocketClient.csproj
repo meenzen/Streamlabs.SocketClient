@@ -9,7 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
         <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
         <PackageReference Include="PolySharp" Version="1.14.1">
           <PrivateAssets>all</PrivateAssets>
@@ -17,7 +17,7 @@
         </PackageReference>
         <PackageReference Include="SocketIOClient" Version="3.1.1" />
         <!-- The rc version of System.Text.Json is required because we need the feature JsonUnmappedMemberHandling.Disallow -->
-        <PackageReference Include="System.Text.Json" Version="8.0.2" />
+        <PackageReference Include="System.Text.Json" Version="8.0.3" />
     </ItemGroup>
 
     <ItemGroup>
