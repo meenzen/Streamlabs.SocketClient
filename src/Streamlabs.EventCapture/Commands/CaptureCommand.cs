@@ -73,7 +73,7 @@ internal sealed class CaptureCommand : AsyncCommand, IDisposable
 
         if (node is null)
         {
-            _logger.LogWarning("Event is not valid JSON: {json}", json);
+            _logger.LogWarning("Event is not valid JSON: {Json}", json);
         }
 
         bool unexpected = false;
@@ -81,14 +81,14 @@ internal sealed class CaptureCommand : AsyncCommand, IDisposable
         if (count is not 1)
         {
             unexpected = true;
-            _logger.LogWarning("Event has unexpected object count: {count} - {json}", count, json);
+            _logger.LogWarning("Event has unexpected object count: {Count} - {Json}", count, json);
         }
 
         string? type = node?[0]?["type"]?.GetValue<string>();
 
         if (type is null)
         {
-            _logger.LogWarning("Event has no type: {json}", json);
+            _logger.LogWarning("Event has no type: {Json}", json);
             type = "unknown";
         }
 
@@ -101,7 +101,7 @@ internal sealed class CaptureCommand : AsyncCommand, IDisposable
         string typeDirectory = Directory.CreateDirectory(Path.Combine(_directory.FullName, type)).FullName;
         string path = Path.Combine(typeDirectory, filename);
 
-        _logger.LogInformation("Writing event: {{ type: \"{type}\", filename: \"{filename}\" }}", type, filename);
+        _logger.LogInformation("Writing event: {{ type: \"{Type}\", filename: \"{Filename}\" }}", type, filename);
 
         File.WriteAllText(path, json, new UTF8Encoding());
     }
