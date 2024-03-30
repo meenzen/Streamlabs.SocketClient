@@ -301,9 +301,11 @@ public sealed record StreamlabelsUnderlyingMessageData : IHasMessageId, IHasPrio
     public required Name MostRecentSubGifter { get; init; }
 
     [JsonPropertyName("session_sub_gifters")]
-    public required IReadOnlyCollection<Name> SessionSubGifters { get; init; }
+    [JsonConverter(typeof(EmptyStringToNullConverter<IReadOnlyCollection<Name>>))]
+    public required IReadOnlyCollection<Name>? SessionSubGifters { get; init; }
 
     [JsonPropertyName("session_most_recent_sub_gifter")]
+    [JsonConverter(typeof(EmptyStringToNullConverter<Name>))]
     public required Name SessionMostRecentSubGifter { get; init; }
 
     [JsonPropertyName("all_time_top_sub_gifter")]

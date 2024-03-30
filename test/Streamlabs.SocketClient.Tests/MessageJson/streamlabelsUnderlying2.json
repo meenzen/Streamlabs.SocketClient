@@ -1,0 +1,572 @@
+[
+  {
+    "type": "streamlabels.underlying",
+    "message": {
+      "hash": "ad0c4e72823f912e33a10a893ac355bd",
+      "data": {
+        "donation_goal": "",
+        "most_recent_donator": {
+          "name": "SimplyGhastly",
+          "amount": "$21.93",
+          "message": "I can do this now since I got my paypal back though! Happy Anniversary",
+          "created_at": "2024-01-13 17:34:40"
+        },
+        "session_most_recent_donator": "",
+        "session_donators": "",
+        "total_donation_amount": {
+          "amount": "$998.87"
+        },
+        "monthly_donation_amount": {
+          "amount": "$0.00"
+        },
+        "weekly_donation_amount": {
+          "amount": "$0.00"
+        },
+        "30day_donation_amount": {
+          "amount": "$0.00"
+        },
+        "session_donation_amount": {
+          "amount": "$0.00"
+        },
+        "all_time_top_donator": {
+          "name": "NXMEE",
+          "amount": "$241.75"
+        },
+        "monthly_top_donator": "",
+        "weekly_top_donator": "",
+        "30day_top_donator": "",
+        "session_top_donator": "",
+        "all_time_top_donators": [
+          {
+            "name": "NXMEE",
+            "amount": "$241.75"
+          },
+          {
+            "name": "AndrewAubury",
+            "amount": "$134.52"
+          },
+          {
+            "name": "SimplyGhastly",
+            "amount": "$88.21"
+          },
+          {
+            "name": "Adas_boksininkas_LTU",
+            "amount": "$82.76"
+          },
+          {
+            "name": "qMatrix",
+            "amount": "$73.72"
+          },
+          {
+            "name": "Adas_boksininkas_LTU",
+            "amount": "$69.00"
+          },
+          {
+            "name": "Blizkoal",
+            "amount": "$60.00"
+          },
+          {
+            "name": "PeterTheMostlyOK",
+            "amount": "$58.62"
+          },
+          {
+            "name": "X",
+            "amount": "$50.47"
+          },
+          {
+            "name": "rcjrulz",
+            "amount": "$50.00"
+          }
+        ],
+        "monthly_top_donators": "",
+        "weekly_top_donators": "",
+        "30day_top_donators": "",
+        "session_top_donators": "",
+        "all_time_top_donations": [
+          {
+            "name": "nxmee",
+            "amount": "$100.00",
+            "message": "Finally, finally you finished the game! Well done"
+          },
+          {
+            "name": "AndrewAubury",
+            "amount": "$53.88",
+            "message": "Have some direct loving rather than let twitch take a massive chunk. Thank you for being an amazing person and cant wait for the next \u0022Lads on Tour\u0022!"
+          },
+          {
+            "name": "Have_a_guess",
+            "amount": "$53.22",
+            "message": "Get Well soon "
+          },
+          {
+            "name": "qMatrix",
+            "amount": "$51.73",
+            "message": "Congrats, amazing feat! 48 hours next time ;)"
+          },
+          {
+            "name": "Blizkoal",
+            "amount": "$50.00",
+            "message": "Last thing I\u0027m doing muhahaha"
+          },
+          {
+            "name": "rcjrulz",
+            "amount": "$50.00",
+            "message": "Belated Happy Birthday Ches!!. Stumbled on your twitch through Discord and its good to see you doing this. Thought ill make a twitch id just to say Hi and drop in some cents to help you on this journey. Have fun and stay safe!. \nJoe (GW2 , raid noob XD)"
+          },
+          {
+            "name": "SimplyGhastly",
+            "amount": "$38.11",
+            "message": "More monster hunter funds!"
+          },
+          {
+            "name": "Adas_boksininkas_LTU",
+            "amount": "$30.00",
+            "message": "Time for the final push, Thank you for what you did during this stream and I hope you can get so \u0022new\u0022 \u0022normal\u0022 schedule and can at the same time find time for yourself. this has been a blast, probably will screw with our sleep schedule but still a blast!"
+          },
+          {
+            "name": "AndrewAubury",
+            "amount": "$26.68",
+            "message": "Put this towards your next \u0022Lads On Tour\u2122\u0022"
+          },
+          {
+            "name": "X",
+            "amount": "$24.00",
+            "message": "Begin the final quest, then stop the stream"
+          }
+        ],
+        "monthly_top_donations": [],
+        "weekly_top_donations": [],
+        "30day_top_donations": [],
+        "session_top_donations": [],
+        "all_time_top_monthly_donator": {
+          "name": "Adas_boksininkas_LTU",
+          "amount": "$10.00"
+        },
+        "monthly_top_monthly_donator": "",
+        "weekly_top_monthly_donator": "",
+        "30day_top_monthly_donator": "",
+        "session_top_monthly_donator": "",
+        "all_time_top_monthly_donators": [
+          {
+            "name": "Adas_boksininkas_LTU",
+            "amount": "$10.00"
+          }
+        ],
+        "monthly_top_monthly_donators": "",
+        "weekly_top_monthly_donators": "",
+        "30day_top_monthly_donators": "",
+        "session_top_monthly_donators": "",
+        "total_monthly_donator_count": {
+          "count": "0"
+        },
+        "monthly_monthly_donator_count": {
+          "count": "0"
+        },
+        "weekly_monthly_donator_count": {
+          "count": "0"
+        },
+        "30day_monthly_donator_count": {
+          "count": "0"
+        },
+        "session_monthly_donator_count": {
+          "count": "0"
+        },
+        "most_recent_monthly_donator": {
+          "name": "Adas_boksininkas_LTU",
+          "amount": "$5.00",
+          "message": "We still love you whatever you try to say and do to us",
+          "created_at": "2023-03-25 12:46:24"
+        },
+        "session_monthly_donators": "",
+        "session_most_recent_monthly_donator": "",
+        "cloudbot_counter_deaths": {
+          "name": "deaths",
+          "count": 468
+        },
+        "monthly_subscriber_count": {
+          "count": "5"
+        },
+        "weekly_subscriber_count": {
+          "count": "5"
+        },
+        "30day_subscriber_count": {
+          "count": "5"
+        },
+        "session_subscriber_count": {
+          "count": "5"
+        },
+        "session_follower_count": {
+          "count": "1"
+        },
+        "session_most_recent_follower": {
+          "name": "shamanwolf13"
+        },
+        "session_most_recent_subscriber": {
+          "name": "The_Red_Doctor",
+          "months": 23
+        },
+        "session_most_recent_resubscriber": {
+          "name": "The_Red_Doctor",
+          "months": 23
+        },
+        "session_subscribers": [
+          {
+            "name": "The_Red_Doctor",
+            "months": 23
+          },
+          {
+            "name": "RobowolfofYT",
+            "months": 9
+          },
+          {
+            "name": "NXMEE",
+            "months": 28
+          },
+          {
+            "name": "Adas_boksininkas_LTU",
+            "months": 29
+          },
+          {
+            "name": "SimplyGhastly",
+            "months": 38
+          }
+        ],
+        "session_followers": [
+          {
+            "name": "shamanwolf13"
+          }
+        ],
+        "most_recent_follower": {
+          "name": "shamanwolf13"
+        },
+        "most_recent_subscriber": {
+          "name": "the_red_doctor",
+          "months": 23
+        },
+        "most_recent_resubscriber": {
+          "name": "The_Red_Doctor",
+          "months": 23
+        },
+        "total_follower_count": {
+          "count": "1,059"
+        },
+        "total_subscriber_count": {
+          "count": "11"
+        },
+        "total_subscriber_score": {
+          "count": "12"
+        },
+        "monthly_subscriber_score": {
+          "count": "0"
+        },
+        "weekly_subscriber_score": {
+          "count": "0"
+        },
+        "30day_subscriber_score": {
+          "count": "0"
+        },
+        "session_subscriber_score": {
+          "count": "0"
+        },
+        "most_recent_cheerer": {
+          "name": "MissCovie",
+          "amount": 100,
+          "message": "ShowLove100"
+        },
+        "session_most_recent_cheerer": "",
+        "session_cheerers": "",
+        "total_cheer_amount": {
+          "amount": "109082"
+        },
+        "monthly_cheer_amount": {
+          "amount": 0
+        },
+        "weekly_cheer_amount": {
+          "amount": 0
+        },
+        "30day_cheer_amount": {
+          "amount": 0
+        },
+        "session_cheer_amount": {
+          "amount": 0
+        },
+        "all_time_top_cheerer": {
+          "name": "SimplyGhastly",
+          "amount": 61596
+        },
+        "monthly_top_cheerer": "",
+        "weekly_top_cheerer": "",
+        "30day_top_cheerer": "",
+        "session_top_cheerer": "",
+        "all_time_top_cheerers": [
+          {
+            "name": "SimplyGhastly",
+            "amount": 61596
+          },
+          {
+            "name": "woodenshoe9",
+            "amount": 27823
+          },
+          {
+            "name": "pega3",
+            "amount": 11414
+          },
+          {
+            "name": "AndrewAubury",
+            "amount": 9261
+          },
+          {
+            "name": "Adas_boksininkas_LTU",
+            "amount": 4383
+          },
+          {
+            "name": "jumpscaresrus",
+            "amount": 2200
+          },
+          {
+            "name": "qMatrix",
+            "amount": 1993
+          },
+          {
+            "name": "newstateofmin",
+            "amount": 1700
+          },
+          {
+            "name": "farah_cruft",
+            "amount": 1600
+          },
+          {
+            "name": "kingflava101",
+            "amount": 1463
+          }
+        ],
+        "monthly_top_cheerers": "",
+        "weekly_top_cheerers": "",
+        "30day_top_cheerers": "",
+        "session_top_cheerers": "",
+        "all_time_top_cheers": [
+          {
+            "name": "pega3",
+            "amount": 1766,
+            "message": "party1766 Happy Birthday!"
+          },
+          {
+            "name": "AndrewAubury",
+            "amount": 1500,
+            "message": "ShowLove1500 Just fixing some things up"
+          },
+          {
+            "name": "farah_cruft",
+            "amount": 1500,
+            "message": "Cheer1500 how much camels can we add to the army LUL"
+          },
+          {
+            "name": "SimplyGhastly",
+            "amount": 1200,
+            "message": "ShowLove100 ShowLove100 ShowLove100 ShowLove100 ShowLove100 ShowLove100 New emote pls chop chop ShowLove100 ShowLove100 ShowLove100 ShowLove100 ShowLove100 ShowLove100"
+          },
+          {
+            "name": "SimplyGhastly",
+            "amount": 1000,
+            "message": "Party100 Party100 Party100 Party100 Party100 Party100 Party100 Party100 Party100 Party100"
+          },
+          {
+            "name": "Big_Mikes1994",
+            "amount": 1000,
+            "message": "Party1000 HAPPY BIRTHDAY Cheshires!! cheshi36Yay cheshi36Yay cheshi36Hug"
+          },
+          {
+            "name": "pega3",
+            "amount": 1000,
+            "message": "cheer1000"
+          },
+          {
+            "name": "iheartskittles7901",
+            "amount": 1000,
+            "message": "cheerwhal1000"
+          },
+          {
+            "name": "AndrewAubury",
+            "amount": 700,
+            "message": "MrDestructoid700  I AM THE ONE WHO BITS!"
+          },
+          {
+            "name": "SimplyGhastly",
+            "amount": 600,
+            "message": "Party100 Party100 Party100 I couldn\u0027t find anywhere to give bits during the game so here\u0027s some for finishing it LUL Party100 Party100 Party100"
+          }
+        ],
+        "monthly_top_cheers": [],
+        "30day_top_cheers": [],
+        "weekly_top_cheers": [],
+        "session_top_cheers": [],
+        "all_time_top_sub_gifters": [
+          {
+            "name": "SimplyGhastly",
+            "count": 218
+          },
+          {
+            "name": "woodenshoe9",
+            "count": 168
+          },
+          {
+            "name": "The_Red_Doctor",
+            "count": 121
+          },
+          {
+            "name": "AndrewAubury",
+            "count": 118
+          },
+          {
+            "name": "Jemima91",
+            "count": 54
+          },
+          {
+            "name": "Nxmee",
+            "count": 45
+          },
+          {
+            "name": "qMatrix",
+            "count": 41
+          },
+          {
+            "name": "Adas_boksininkas_LTU",
+            "count": 19
+          },
+          {
+            "name": "pega3",
+            "count": 19
+          },
+          {
+            "name": "Blizkoal",
+            "count": 15
+          }
+        ],
+        "monthly_top_sub_gifters": [],
+        "weekly_top_sub_gifters": [],
+        "30day_top_sub_gifters": [],
+        "session_top_sub_gifters": [],
+        "most_recent_sub_gifter": {
+          "name": "The_Red_Doctor"
+        },
+        "session_sub_gifters": "",
+        "session_most_recent_sub_gifter": "",
+        "all_time_top_sub_gifter": {
+          "name": "SimplyGhastly",
+          "count": 218
+        },
+        "monthly_top_sub_gifter": "",
+        "weekly_top_sub_gifter": "",
+        "30day_top_sub_gifter": "",
+        "session_top_sub_gifter": "",
+        "monthly_top_subscriber": {
+          "name": "SimplyGhastly",
+          "months": 38
+        },
+        "weekly_top_subscriber": {
+          "name": "SimplyGhastly",
+          "months": 38
+        },
+        "30day_top_subscriber": {
+          "name": "SimplyGhastly",
+          "months": 38
+        },
+        "session_top_subscriber": {
+          "name": "SimplyGhastly",
+          "months": 38
+        },
+        "monthly_top_subscribers": [
+          {
+            "name": "SimplyGhastly",
+            "months": 38
+          },
+          {
+            "name": "Adas_boksininkas_LTU",
+            "months": 29
+          },
+          {
+            "name": "NXMEE",
+            "months": 28
+          },
+          {
+            "name": "The_Red_Doctor",
+            "months": 23
+          },
+          {
+            "name": "RobowolfofYT",
+            "months": 9
+          }
+        ],
+        "weekly_top_subscribers": [
+          {
+            "name": "SimplyGhastly",
+            "months": 38
+          },
+          {
+            "name": "Adas_boksininkas_LTU",
+            "months": 29
+          },
+          {
+            "name": "NXMEE",
+            "months": 28
+          },
+          {
+            "name": "The_Red_Doctor",
+            "months": 23
+          },
+          {
+            "name": "RobowolfofYT",
+            "months": 9
+          }
+        ],
+        "30day_top_subscribers": [
+          {
+            "name": "SimplyGhastly",
+            "months": 38
+          },
+          {
+            "name": "Adas_boksininkas_LTU",
+            "months": 29
+          },
+          {
+            "name": "NXMEE",
+            "months": 28
+          },
+          {
+            "name": "The_Red_Doctor",
+            "months": 23
+          },
+          {
+            "name": "RobowolfofYT",
+            "months": 9
+          }
+        ],
+        "session_top_subscribers": [
+          {
+            "name": "SimplyGhastly",
+            "months": 38
+          },
+          {
+            "name": "Adas_boksininkas_LTU",
+            "months": 29
+          },
+          {
+            "name": "NXMEE",
+            "months": 28
+          },
+          {
+            "name": "The_Red_Doctor",
+            "months": 23
+          },
+          {
+            "name": "RobowolfofYT",
+            "months": 9
+          }
+        ],
+        "_id": "899efdaa28ed8c03de6647dbd1b99c4c",
+        "priority": 10
+      }
+    },
+    "event_id": "evt_c76258f471ac5748c144aaaf71c18807"
+  }
+]
