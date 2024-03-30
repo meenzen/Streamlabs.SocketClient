@@ -5,7 +5,7 @@ namespace Streamlabs.SocketClient.Messages;
 
 public sealed record BitsMessage
     : IStreamlabsMessage,
-        IHasId<Guid>,
+        IHasId<string>,
         IHasName,
         IHasDisplayName,
         IHasAmount<int>,
@@ -13,8 +13,11 @@ public sealed record BitsMessage
         IHasMessage,
         IHasMessageId
 {
+    /// <summary>
+    /// This id is a UUID sometimes. Other times it is just a random string. No idea why.
+    /// </summary>
     [JsonPropertyName("id")]
-    public required Guid Id { get; init; }
+    public required string Id { get; init; }
 
     [JsonPropertyName("name")]
     public required string Name { get; init; }
@@ -37,4 +40,7 @@ public sealed record BitsMessage
     [JsonPropertyName("event_id")]
     [Obsolete("Use MessageId instead.")]
     public string EventId { get; init; } = string.Empty;
+
+    [JsonPropertyName("priority")]
+    public long? Priority { get; init; }
 }

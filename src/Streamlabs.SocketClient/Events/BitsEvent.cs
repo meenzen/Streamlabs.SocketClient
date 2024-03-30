@@ -11,4 +11,7 @@ public sealed record BitsEvent : IStreamlabsEvent, IHasStreamlabsMessageCollecti
 
     [JsonPropertyName("for")]
     public required string For { get; init; }
+
+    [JsonPropertyName("event_id")]
+    public string? EventId { get; init; }
 }

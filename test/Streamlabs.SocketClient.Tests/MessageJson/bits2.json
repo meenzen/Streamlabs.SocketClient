@@ -1,0 +1,20 @@
+[
+  {
+    "type": "bits",
+    "for": "twitch_account",
+    "message": [
+      {
+        "id": "nJp4ruT_nkGF7V-3a7qbjKsqYYUwhG7xgDCHoWSuOUM=",
+        "name": "the_red_doctor",
+        "display_name": "The_Red_Doctor",
+        "amount": 100,
+        "message": "Cheer100",
+        "emotes": "",
+        "_id": "877b541a93c15487c0f5baa93c398638",
+        "event_id": "6b1ba05e5a05164a3b54046bda103a6e",
+        "priority": 10
+      }
+    ],
+    "event_id": "evt_fc3939fe376f82680306b0537ec1e510"
+  }
+]
