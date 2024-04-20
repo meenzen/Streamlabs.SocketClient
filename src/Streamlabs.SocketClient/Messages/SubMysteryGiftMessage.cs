@@ -12,6 +12,10 @@ public sealed record SubMysteryGiftMessage : IStreamlabsMessage, IHasName, IHasA
     [JsonPropertyName("sub_plan")]
     public required int SubPlan { get; init; }
 
+    [JsonPropertyName("subPlan")]
+    [Obsolete("Use SubPlan instead.")]
+    public int? SubPlanDuplicate { get; init; }
+
     /// <summary>
     /// The type of subscription.
     /// </summary>
@@ -41,4 +45,7 @@ public sealed record SubMysteryGiftMessage : IStreamlabsMessage, IHasName, IHasA
     [JsonPropertyName("event_id")]
     [Obsolete("Use MessageId instead.")]
     public string EventId { get; init; } = string.Empty;
+
+    [JsonPropertyName("priority")]
+    public long? Priority { get; init; }
 }

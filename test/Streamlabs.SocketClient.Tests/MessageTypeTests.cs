@@ -47,6 +47,7 @@ public class MessageTypeTests
             new("streamlabelsUnderlying.json", typeof(StreamlabelsUnderlyingEvent)),
             new("streamlabelsUnderlying2.json", typeof(StreamlabelsUnderlyingEvent)),
             new("subMysteryGift.json", typeof(SubMysteryGiftEvent)),
+            new("subMysteryGift1.json", typeof(SubMysteryGiftEvent)),
             new("subscription.json", typeof(SubscriptionEvent)),
             new("subscription2.json", typeof(SubscriptionEvent)),
             new("subscription3.json", typeof(SubscriptionEvent)),
