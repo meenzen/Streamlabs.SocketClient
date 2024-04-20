@@ -34,6 +34,7 @@ public class MessageTypeTests
             new("bits.json", typeof(BitsEvent)),
             new("bits2.json", typeof(BitsEvent)),
             new("donationDelete.json", typeof(DonationDeleteEvent)),
+            new("alertPlaying.json", typeof(AlertPlayingEvent), "FollowAlertPlaying"),
             new("alertPlaying_subscription.json", typeof(AlertPlayingEvent), "SubscriptionAlertPlaying"),
             new("alertPlaying_bits.json", typeof(AlertPlayingEvent), "BitsAlertPlaying"),
             new("alertPlaying_subMysteryGift.json", typeof(AlertPlayingEvent), "SubMysteryGiftAlertPlaying"),

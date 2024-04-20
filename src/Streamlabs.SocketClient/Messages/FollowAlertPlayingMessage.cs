@@ -1,5 +1,4 @@
 using System.Text.Json.Serialization;
-using Streamlabs.SocketClient.Converters;
 using Streamlabs.SocketClient.Messages.Abstractions;
 using Streamlabs.SocketClient.Messages.DataTypes;
 
@@ -14,5 +13,5 @@ public sealed record FollowAlertPlayingMessage : AlertPlayingMessage, IHasPayloa
     public required FollowAlertPayload Payload { get; init; }
 
     [JsonPropertyName("wotcCode")]
-    public required string? WotcCode { get; init; }
+    public string? WotcCode { get; init; }
 }

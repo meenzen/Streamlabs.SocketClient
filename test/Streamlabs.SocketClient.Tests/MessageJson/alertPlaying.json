@@ -1,0 +1,27 @@
+[
+  {
+    "type": "alertPlaying",
+    "message": {
+      "priority": 10,
+      "_id": "215d438bedcf3f5f19adae6103e7c014",
+      "from": "bram12334",
+      "to": "",
+      "message": "",
+      "payload": {
+        "_id": "215d438bedcf3f5f19adae6103e7c014",
+        "id": "974905413",
+        "name": "bram12334",
+        "priority": 10
+      },
+      "name": "bram12334",
+      "repeat": false,
+      "isTest": false,
+      "createdAt": "2024-04-20 11:09:51",
+      "createdAtTimestamp": 1713611391717,
+      "platform": "twitch_account",
+      "type": "follow",
+      "hash": "follow:bram12334:",
+      "read": false
+    }
+  }
+]
