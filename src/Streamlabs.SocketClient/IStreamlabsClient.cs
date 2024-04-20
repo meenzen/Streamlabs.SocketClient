@@ -1,3 +1,4 @@
+using Streamlabs.SocketClient.Events;
 using Streamlabs.SocketClient.Events.Abstractions;
 using Streamlabs.SocketClient.Messages;
 
@@ -49,4 +50,6 @@ public interface IStreamlabsClient : IDisposable
 
     [Obsolete("Use the specific AlertPlaying events instead.")]
     event EventHandler<AlertPlayingMessage>? OnSubscriptionPlaying;
+
+    event EventHandler<MuteVolumeEvent> OnMuteVolume;
 }

@@ -30,17 +30,18 @@ public class MessageTypeTests
     public static IReadOnlyCollection<JsonFile> All { get; } =
         new List<JsonFile>
         {
-            new("donation.json", typeof(DonationEvent)),
-            new("bits.json", typeof(BitsEvent)),
-            new("bits2.json", typeof(BitsEvent)),
-            new("donationDelete.json", typeof(DonationDeleteEvent)),
             new("alertPlaying.json", typeof(AlertPlayingEvent), "FollowAlertPlaying"),
             new("alertPlaying_subscription.json", typeof(AlertPlayingEvent), "SubscriptionAlertPlaying"),
             new("alertPlaying_bits.json", typeof(AlertPlayingEvent), "BitsAlertPlaying"),
             new("alertPlaying_subMysteryGift.json", typeof(AlertPlayingEvent), "SubMysteryGiftAlertPlaying"),
             new("alertPlaying_raid.json", typeof(AlertPlayingEvent), "RaidAlertPlaying"),
             new("alertPlaying_follow.json", typeof(AlertPlayingEvent), "FollowAlertPlaying"),
+            new("bits.json", typeof(BitsEvent)),
+            new("bits2.json", typeof(BitsEvent)),
+            new("donation.json", typeof(DonationEvent)),
+            new("donationDelete.json", typeof(DonationDeleteEvent)),
             new("follow.json", typeof(FollowEvent)),
+            new("muteVolume.json", typeof(MuteVolumeEvent)),
             new("raid.json", typeof(RaidEvent)),
             new("rollEndCredits.json", typeof(RollEndCreditsEvent)),
             new("streamlabels.json", typeof(StreamlabelsEvent)),

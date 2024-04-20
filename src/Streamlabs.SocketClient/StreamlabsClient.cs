@@ -115,6 +115,7 @@ public sealed class StreamlabsClient : IStreamlabsClient
     public event EventHandler<SubMysteryGiftMessage>? OnSubMysteryGift;
     public event EventHandler<SubscriptionMessage>? OnSubscription;
     public event EventHandler<AlertPlayingMessage>? OnSubscriptionPlaying;
+    public event EventHandler<MuteVolumeEvent>? OnMuteVolume;
 
     private void OnEventInternal(SocketIOResponse response) => Dispatch(response.ToString());
 
@@ -210,6 +211,9 @@ public sealed class StreamlabsClient : IStreamlabsClient
             case StreamlabelsUnderlyingEvent streamlabelsUnderlyingEvent:
                 OnStreamlabelsUnderlying?.Invoke(this, streamlabelsUnderlyingEvent.Message);
                 break;
+            case MuteVolumeEvent muteVolumeEvent:
+                OnMuteVolume?.Invoke(this, muteVolumeEvent);
+                break;
             case SubMysteryGiftEvent subMysteryGiftEvent:
                 foreach (SubMysteryGiftMessage message in subMysteryGiftEvent.Messages)
                 {
@@ -252,8 +256,8 @@ public sealed class StreamlabsClient : IStreamlabsClient
                         );
                         break;
                 }
-
                 break;
+
             default:
                 _logger.LogError("Streamlabs: Unsupported event type - {Type}", streamlabsEvent.GetType().Name);
                 break;
