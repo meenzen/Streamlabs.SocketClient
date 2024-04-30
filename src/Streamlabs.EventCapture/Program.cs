@@ -28,7 +28,7 @@ var app = new CommandApp<CaptureCommand>(new TypeRegistrar(services));
 app.Configure(config =>
 {
     config.SetApplicationName("Streamlabs Event Capture");
-    config.Settings.ExceptionHandler = exception =>
+    config.Settings.ExceptionHandler = (exception, _) =>
     {
         AnsiConsole.WriteException(exception);
         return 1;
