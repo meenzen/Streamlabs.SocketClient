@@ -15,7 +15,7 @@
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="SocketIOClient" Version="3.1.1" />
+        <PackageReference Include="SocketIOClient" Version="3.1.2" />
         <!-- The rc version of System.Text.Json is required because we need the feature JsonUnmappedMemberHandling.Disallow -->
         <PackageReference Include="System.Text.Json" Version="8.0.4" />
     </ItemGroup>
