@@ -11,7 +11,7 @@ public class EmptyStringToNullConverter<T> : JsonConverter<T>
         {
             _ when typeToConvert == typeof(T) => true,
             not null when typeToConvert == typeof(string) => true,
-            _ => false
+            _ => false,
         };
     }
 

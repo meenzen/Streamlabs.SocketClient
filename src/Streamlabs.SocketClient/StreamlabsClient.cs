@@ -26,7 +26,7 @@ public sealed class StreamlabsClient : IStreamlabsClient
                 Transport = TransportProtocol.WebSocket,
                 EIO = EngineIO.V3,
                 Query = new[] { new KeyValuePair<string, string>("token", options.Value.Token) },
-                Reconnection = options.Value.Reconnection
+                Reconnection = options.Value.Reconnection,
             }
         );
 

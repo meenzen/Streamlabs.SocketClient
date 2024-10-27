@@ -10,8 +10,6 @@ Unofficial C# client library for the Streamlabs socket API. Allows you to receiv
 
 ## Installation
 
-This library is not ready for general use yet. Alpha releases are available on NuGet, but the API should not be considered stable until version 1.0.0.
-
 ```bash
 dotnet add package Streamlabs.SocketClient
 ```
@@ -29,15 +27,25 @@ builder.Services.AddStreamlabsClient(options => options.Token = "store your toke
 // or use a configuration section
 builder.Services.AddStreamlabsClient(configuration.GetSection("Streamlabs"));
 
-// automatically start and stop the client with the application
+// automatically connect and disconnect the client
 builder.Services.AddHostedService<StreamlabsStartStopWorker>();
+
+// get the client via DI and use it
+var client = serviceProvider.GetRequiredService<IStreamlabsClient>();
+client.OnDonation += (sender, message) => Console.WriteLine($"Donation Received: {message.FormattedAmount}");
 ```
 
 ## Usage
 
-Step-by-step instructions will be added here once the API is stable. For now you can use the
-[Event Capture](https://github.com/meenzen/Streamlabs.SocketClient/tree/main/src/Streamlabs.EventCapture) project
-as a reference.
+First, you'll need to grab your `Socket API Token` from the [Streamlabs Dashboard](https://streamlabs.com/dashboard/settings/api-settings).
+
+Open the Dashboard, then navigate to `Avatar Menu` → `Account Settings` → `API Settings` → `API Tokens`.
+You will find the token in the field `Your Socket API Token`.
+
+Now you're ready to set up the client. These examples show how to set up the client and listen for events:
+
+- [Basic Example](https://github.com/meenzen/Streamlabs.SocketClient/tree/main/src/Streamlabs.SocketClient.Example/Program.cs)
+- [Advanced Example (Worker Service with DI)](https://github.com/meenzen/Streamlabs.SocketClient/tree/main/src/Streamlabs.SocketClient.AdvancedExample)
 
 ## Contributing
 

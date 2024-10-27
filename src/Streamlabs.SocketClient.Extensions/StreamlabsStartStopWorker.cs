@@ -3,7 +3,7 @@ using Microsoft.Extensions.Hosting;
 namespace Streamlabs.SocketClient.Extensions;
 
 /// <summary>
-/// Automatically starts and stops the <see cref="IStreamlabsClient"/> together with the host.
+/// Automatically connects and disconnects the <see cref="IStreamlabsClient"/> together with the application.
 /// </summary>
 public sealed class StreamlabsStartStopWorker : IHostedService
 {

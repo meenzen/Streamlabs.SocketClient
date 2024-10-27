@@ -17,5 +17,5 @@ public enum ServiceType
 
     [EnumMember(Value = "mixer_account")]
     [Obsolete("Mixer does not exist anymore, but it is still listed as an option in the Streamlabs documentation.")]
-    MixerAccount
+    MixerAccount,
 }

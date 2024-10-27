@@ -11,7 +11,7 @@ internal static class SerializationExtensions
         {
             AllowTrailingCommas = false,
             NumberHandling = JsonNumberHandling.AllowReadingFromString,
-            UnmappedMemberHandling = JsonUnmappedMemberHandling.Disallow
+            UnmappedMemberHandling = JsonUnmappedMemberHandling.Disallow,
         };
 
     private static readonly IReadOnlyCollection<IStreamlabsEvent> Empty = Array.Empty<IStreamlabsEvent>();
