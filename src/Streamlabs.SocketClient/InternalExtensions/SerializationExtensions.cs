@@ -6,13 +6,12 @@ namespace Streamlabs.SocketClient.InternalExtensions;
 
 internal static class SerializationExtensions
 {
-    private static readonly JsonSerializerOptions Options =
-        new()
-        {
-            AllowTrailingCommas = false,
-            NumberHandling = JsonNumberHandling.AllowReadingFromString,
-            UnmappedMemberHandling = JsonUnmappedMemberHandling.Disallow,
-        };
+    private static readonly JsonSerializerOptions Options = new()
+    {
+        AllowTrailingCommas = false,
+        NumberHandling = JsonNumberHandling.AllowReadingFromString,
+        UnmappedMemberHandling = JsonUnmappedMemberHandling.Disallow,
+    };
 
     private static readonly IReadOnlyCollection<IStreamlabsEvent> Empty = Array.Empty<IStreamlabsEvent>();
 
