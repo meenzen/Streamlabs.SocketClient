@@ -1,8 +1,7 @@
 using System.Text;
-using FluentAssertions.Events;
+using AwesomeAssertions.Events;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using NSubstitute;
 using Streamlabs.SocketClient.Events;
 using Streamlabs.SocketClient.InternalExtensions;
 using Xunit.Abstractions;
