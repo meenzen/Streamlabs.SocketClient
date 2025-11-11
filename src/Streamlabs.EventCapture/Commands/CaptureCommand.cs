@@ -13,7 +13,7 @@ internal sealed class CaptureCommand : AsyncCommand, IDisposable
     private readonly DirectoryInfo _directory;
     private readonly IStreamlabsClient _client;
     private readonly ILogger<CaptureCommand> _logger;
-    private readonly CancellationTokenSource _cancellationTokenSource = new();
+    private CancellationTokenSource? _cancellationTokenSource;
 
     public CaptureCommand(DirectoryInfo directory, IStreamlabsClient client, ILogger<CaptureCommand> logger)
     {
@@ -22,9 +22,10 @@ internal sealed class CaptureCommand : AsyncCommand, IDisposable
         _logger = logger;
     }
 
-    public override async Task<int> ExecuteAsync(CommandContext context)
+    public override async Task<int> ExecuteAsync(CommandContext context, CancellationToken cancellationToken)
     {
-        var cancellationToken = _cancellationTokenSource.Token;
+        _cancellationTokenSource = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
+        cancellationToken = _cancellationTokenSource.Token;
 
         Console.CancelKeyPress += (sender, args) =>
         {
@@ -108,7 +109,7 @@ internal sealed class CaptureCommand : AsyncCommand, IDisposable
 
     public void Dispose()
     {
-        _cancellationTokenSource.Dispose();
+        _cancellationTokenSource?.Dispose();
         _client.Dispose();
     }
 }
