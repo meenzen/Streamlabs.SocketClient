@@ -4,8 +4,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-
+  build-and-publish:
+    permissions:
+      id-token: write
     runs-on: ubuntu-latest
     environment: production
 
@@ -24,7 +25,12 @@ jobs:
         run: dotnet restore
       - name: Build
         run: dotnet build -c Release --no-restore /p:PublicRelease=true
-      - name: Push to nuget.org
-        env:
-          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
-        run: dotnet nuget push "src/*/bin/Release/*.nupkg" --api-key "$NUGET_API_KEY" --skip-duplicate --source https://api.nuget.org/v3/index.json
+
+      - name: NuGet login (OIDC → temp API key)
+        uses: NuGet/login@v1
+        id: login
+        with:
+          user: meenzen
+
+      - name: NuGet push
+        run: dotnet nuget push "src/*/bin/Release/*.nupkg" --api-key ${{steps.login.outputs.NUGET_API_KEY}} --skip-duplicate --source https://api.nuget.org/v3/index.json
