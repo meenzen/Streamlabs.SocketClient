@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net8.0;net9.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net8.0;net9.0;net10.0</TargetFrameworks>
     <PackageId>Streamlabs.SocketClient</PackageId>
     <PackageDescription>Unofficial C# client library for the Streamlabs socket API.</PackageDescription>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -14,6 +14,11 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.11" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.11" />
     <PackageReference Include="System.Text.Json" Version="9.0.11" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.0" />
+    <PackageReference Include="System.Text.Json" Version="10.0.0" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="PolySharp" Version="1.15.0">

@@ -1,73 +1,60 @@
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
+using AwesomeAssertions;
 using AwesomeAssertions.Events;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Streamlabs.SocketClient.Events;
 using Streamlabs.SocketClient.InternalExtensions;
-using Xunit.Abstractions;
 
 namespace Streamlabs.SocketClient.Tests;
 
+[SuppressMessage("Style", "VSTHRD200:Use \"Async\" suffix for async methods")]
 public class MessageTypeTests
 {
     private const string CaptureDirectory = "../../../../../src/Streamlabs.EventCapture/events";
     private const string TestJsonDirectory = "./MessageJson";
 
-    private readonly ITestOutputHelper _output;
     private readonly ILogger<StreamlabsClient> _logger = new ThrowingLogger<StreamlabsClient>(LogLevel.Error);
-
-    public MessageTypeTests(ITestOutputHelper output)
-    {
-        _output = output;
-    }
 
     public sealed record JsonFile(string FileName, Type ExpectedType, string? EventName = null)
     {
         public string GetJson() => File.ReadAllText(Path.Combine(TestJsonDirectory, FileName), Encoding.UTF8);
     };
 
-    public static IReadOnlyCollection<JsonFile> All { get; } =
-        new List<JsonFile>
-        {
-            new("alertPlaying.json", typeof(AlertPlayingEvent), "FollowAlertPlaying"),
-            new("alertPlaying_subscription.json", typeof(AlertPlayingEvent), "SubscriptionAlertPlaying"),
-            new("alertPlaying_bits.json", typeof(AlertPlayingEvent), "BitsAlertPlaying"),
-            new("alertPlaying_subMysteryGift.json", typeof(AlertPlayingEvent), "SubMysteryGiftAlertPlaying"),
-            new("alertPlaying_raid.json", typeof(AlertPlayingEvent), "RaidAlertPlaying"),
-            new("alertPlaying_follow.json", typeof(AlertPlayingEvent), "FollowAlertPlaying"),
-            new("bits.json", typeof(BitsEvent)),
-            new("bits2.json", typeof(BitsEvent)),
-            new("donation.json", typeof(DonationEvent)),
-            new("donationDelete.json", typeof(DonationDeleteEvent)),
-            new("follow.json", typeof(FollowEvent)),
-            new("muteVolume.json", typeof(MuteVolumeEvent)),
-            new("raid.json", typeof(RaidEvent)),
-            new("rollEndCredits.json", typeof(RollEndCreditsEvent)),
-            new("streamlabels.json", typeof(StreamlabelsEvent)),
-            new("streamlabelsUnderlying.json", typeof(StreamlabelsUnderlyingEvent)),
-            new("streamlabelsUnderlying2.json", typeof(StreamlabelsUnderlyingEvent)),
-            new("subMysteryGift.json", typeof(SubMysteryGiftEvent)),
-            new("subMysteryGift1.json", typeof(SubMysteryGiftEvent)),
-            new("subscription.json", typeof(SubscriptionEvent)),
-            new("subscription2.json", typeof(SubscriptionEvent)),
-            new("subscription3.json", typeof(SubscriptionEvent)),
-            new("subscriptionPlaying.json", typeof(SubscriptionPlayingEvent), "SubscriptionPlaying"),
-        };
-
-    public static TheoryData<JsonFile> GetTheoryData()
+    public static IEnumerable<Func<JsonFile>> GetData()
     {
-        var data = new TheoryData<JsonFile>();
-        foreach (var jsonFile in All)
-        {
-            data.Add(jsonFile);
-        }
-
-        return data;
+        yield return () => new JsonFile("alertPlaying.json", typeof(AlertPlayingEvent), "FollowAlertPlaying");
+        yield return () =>
+            new JsonFile("alertPlaying_subscription.json", typeof(AlertPlayingEvent), "SubscriptionAlertPlaying");
+        yield return () => new JsonFile("alertPlaying_bits.json", typeof(AlertPlayingEvent), "BitsAlertPlaying");
+        yield return () =>
+            new JsonFile("alertPlaying_subMysteryGift.json", typeof(AlertPlayingEvent), "SubMysteryGiftAlertPlaying");
+        yield return () => new JsonFile("alertPlaying_raid.json", typeof(AlertPlayingEvent), "RaidAlertPlaying");
+        yield return () => new JsonFile("alertPlaying_follow.json", typeof(AlertPlayingEvent), "FollowAlertPlaying");
+        yield return () => new JsonFile("bits.json", typeof(BitsEvent));
+        yield return () => new JsonFile("bits2.json", typeof(BitsEvent));
+        yield return () => new JsonFile("donation.json", typeof(DonationEvent));
+        yield return () => new JsonFile("donationDelete.json", typeof(DonationDeleteEvent));
+        yield return () => new JsonFile("follow.json", typeof(FollowEvent));
+        yield return () => new JsonFile("muteVolume.json", typeof(MuteVolumeEvent));
+        yield return () => new JsonFile("raid.json", typeof(RaidEvent));
+        yield return () => new JsonFile("rollEndCredits.json", typeof(RollEndCreditsEvent));
+        yield return () => new JsonFile("streamlabels.json", typeof(StreamlabelsEvent));
+        yield return () => new JsonFile("streamlabelsUnderlying.json", typeof(StreamlabelsUnderlyingEvent));
+        yield return () => new JsonFile("streamlabelsUnderlying2.json", typeof(StreamlabelsUnderlyingEvent));
+        yield return () => new JsonFile("subMysteryGift.json", typeof(SubMysteryGiftEvent));
+        yield return () => new JsonFile("subMysteryGift1.json", typeof(SubMysteryGiftEvent));
+        yield return () => new JsonFile("subscription.json", typeof(SubscriptionEvent));
+        yield return () => new JsonFile("subscription2.json", typeof(SubscriptionEvent));
+        yield return () => new JsonFile("subscription3.json", typeof(SubscriptionEvent));
+        yield return () =>
+            new JsonFile("subscriptionPlaying.json", typeof(SubscriptionPlayingEvent), "SubscriptionPlaying");
     }
 
-    [Theory]
-    [MemberData(nameof(GetTheoryData))]
-    public void MessageTypes_CanBeDeserialized(JsonFile file)
+    [Test]
+    [MethodDataSource(nameof(GetData))]
+    public async Task MessageTypes_CanBeDeserialized(JsonFile file)
     {
         // Arrange
         string json = file.GetJson();
@@ -76,12 +63,12 @@ public class MessageTypeTests
         var messages = json.Deserialize();
 
         // Assert
-        messages.Should().HaveCount(1);
-        messages.Should().AllBeOfType(file.ExpectedType);
+        await Assert.That(messages).HasCount(1);
+        await Assert.That(messages).All().Satisfy(x => x.IsOfType(file.ExpectedType));
     }
 
-    [Theory]
-    [MemberData(nameof(GetTheoryData))]
+    [Test]
+    [MethodDataSource(nameof(GetData))]
     public void Events_AreRaised_WhenMessageIsDispatched(JsonFile file)
     {
         // Arrange
@@ -103,14 +90,16 @@ public class MessageTypeTests
     /// <summary>
     /// This test replays all events captured by the Streamlabs.EventCapture tool.
     /// </summary>
-    [Fact]
+    [Test]
     public void ReplayingCapturedEvents_IsSuccessful()
     {
         DirectoryInfo directoryInfo = new(CaptureDirectory);
 
         if (!directoryInfo.Exists)
         {
-            _output.WriteLine("Capture directory does not exist. Run Streamlabs.EventCapture to capture events.");
+            TestContext.Current?.OutputWriter.WriteLine(
+                "Capture directory does not exist. Run Streamlabs.EventCapture to capture events."
+            );
             return;
         }
 
@@ -118,14 +107,16 @@ public class MessageTypeTests
 
         if (files.Length == 0)
         {
-            _output.WriteLine("No events found. Run Streamlabs.EventCapture to capture events.");
+            TestContext.Current?.OutputWriter.WriteLine(
+                "No events found. Run Streamlabs.EventCapture to capture events."
+            );
             return;
         }
 
         foreach (FileInfo file in files)
         {
             string fileName = file.FullName.Replace(directoryInfo.FullName, string.Empty).TrimStart('/');
-            _output.WriteLine($"Replaying: {fileName}");
+            TestContext.Current?.OutputWriter.WriteLine($"Replaying: {fileName}");
 
             // Arrange
             var options = new StreamlabsOptions();

@@ -9,6 +9,15 @@ on:
   pull_request:
     branches: [ "main" ]
 
+env:
+  HUSKY: 0
+
+permissions:
+  contents: read
+  issues: read
+  checks: write
+  pull-requests: write
+
 jobs:
   build:
 
@@ -24,13 +33,22 @@ jobs:
           dotnet-version: |
             8.0.x
             9.0.x
+            10.0.x
       - name: Restore dependencies
         run: dotnet restore
       - name: Build
         run: dotnet build --no-restore
       - name: Test
-        run: dotnet test --no-build --verbosity normal /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+        run: dotnet test --no-build --report-trx --coverage --coverage-output-format cobertura --coverage-output cobertura.xml --results-directory TestResults
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        with:
+          files: ./TestResults/cobertura.xml
+      - name: Publish Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v2
+        if: (!cancelled())
+        with:
+          files: |
+            TestResults/*.trx
