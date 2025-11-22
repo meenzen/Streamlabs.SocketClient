@@ -4,14 +4,17 @@ using Streamlabs.SocketClient.Messages.DataTypes;
 
 namespace Streamlabs.SocketClient.Messages;
 
-public sealed record BitsAlertPlayingMessage : AlertPlayingMessage, IHasPayload<EmptyPayload>
+public sealed record BitsAlertPlayingMessage : AlertPlayingMessage, IHasPayload<BitsAlertPayload>
 {
     [JsonPropertyName("currency")]
     public required string Currency { get; init; }
 
     [JsonPropertyName("payload")]
-    public required EmptyPayload Payload { get; init; }
+    public required BitsAlertPayload Payload { get; init; }
 
     [JsonPropertyName("style")]
     public required string Style { get; init; }
+
+    [JsonPropertyName("isPreview")]
+    public bool? IsPreview { get; init; }
 }

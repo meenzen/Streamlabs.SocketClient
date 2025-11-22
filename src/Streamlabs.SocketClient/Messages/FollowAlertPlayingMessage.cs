@@ -14,4 +14,7 @@ public sealed record FollowAlertPlayingMessage : AlertPlayingMessage, IHasPayloa
 
     [JsonPropertyName("wotcCode")]
     public string? WotcCode { get; init; }
+
+    [JsonPropertyName("isPreview")]
+    public bool? IsPreview { get; init; }
 }

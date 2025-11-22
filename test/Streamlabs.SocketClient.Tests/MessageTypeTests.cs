@@ -87,11 +87,7 @@ public class MessageTypeTests
         sut.Should().Raise($"On{eventName}");
     }
 
-    /// <summary>
-    /// This test replays all events captured by the Streamlabs.EventCapture tool.
-    /// </summary>
-    [Test]
-    public void ReplayingCapturedEvents_IsSuccessful()
+    public static IEnumerable<Func<string>> GetCapturedEvents()
     {
         DirectoryInfo directoryInfo = new(CaptureDirectory);
 
@@ -100,7 +96,7 @@ public class MessageTypeTests
             TestContext.Current?.OutputWriter.WriteLine(
                 "Capture directory does not exist. Run Streamlabs.EventCapture to capture events."
             );
-            return;
+            yield break;
         }
 
         FileInfo[] files = directoryInfo.GetFiles("*.json", SearchOption.AllDirectories);
@@ -110,26 +106,33 @@ public class MessageTypeTests
             TestContext.Current?.OutputWriter.WriteLine(
                 "No events found. Run Streamlabs.EventCapture to capture events."
             );
-            return;
+            yield break;
         }
 
         foreach (FileInfo file in files)
         {
-            string fileName = file.FullName.Replace(directoryInfo.FullName, string.Empty).TrimStart('/');
-            TestContext.Current?.OutputWriter.WriteLine($"Replaying: {fileName}");
-
-            // Arrange
-            var options = new StreamlabsOptions();
-            var client = new StreamlabsClient(_logger, new OptionsWrapper<StreamlabsOptions>(options));
-            using IMonitor<StreamlabsClient> sut = client.Monitor();
-            string json = File.ReadAllText(file.FullName, Encoding.UTF8);
-
-            // Act
-            client.Dispatch(json);
-
-            // Assert
-            sut.Should().Raise(nameof(client.OnEventRaw));
-            sut.Should().Raise(nameof(client.OnEvent));
+            yield return () => file.FullName;
         }
+    }
+
+    /// <summary>
+    /// This test replays all events captured by the Streamlabs.EventCapture tool.
+    /// </summary>
+    [Test]
+    [MethodDataSource(nameof(GetCapturedEvents))]
+    public void ReplayingCapturedEvents_IsSuccessful(string filePath)
+    {
+        // Arrange
+        var options = new StreamlabsOptions();
+        var client = new StreamlabsClient(_logger, new OptionsWrapper<StreamlabsOptions>(options));
+        using IMonitor<StreamlabsClient> sut = client.Monitor();
+        string json = File.ReadAllText(filePath, Encoding.UTF8);
+
+        // Act
+        client.Dispatch(json);
+
+        // Assert
+        sut.Should().Raise(nameof(client.OnEventRaw));
+        sut.Should().Raise(nameof(client.OnEvent));
     }
 }
