@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="src/Streamlabs.EventCapture/Streamlabs.EventCapture.csproj" />
+  <Project Path="src/Streamlabs.SocketClient.AdvancedExample/Streamlabs.SocketClient.AdvancedExample.csproj" />
+  <Project Path="src/Streamlabs.SocketClient.Example/Streamlabs.SocketClient.Example.csproj" />
+  <Project Path="src/Streamlabs.SocketClient.Extensions/Streamlabs.SocketClient.Extensions.csproj" />
+  <Project Path="src/Streamlabs.SocketClient/Streamlabs.SocketClient.csproj" />
+  <Project Path="test/Streamlabs.SocketClient.Tests/Streamlabs.SocketClient.Tests.csproj" />
+</Solution>
