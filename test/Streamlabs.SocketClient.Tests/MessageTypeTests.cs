@@ -63,7 +63,7 @@ public class MessageTypeTests
         var messages = json.Deserialize();
 
         // Assert
-        await Assert.That(messages).HasCount(1);
+        await Assert.That(messages).Count().IsEqualTo(1);
         await Assert.That(messages).All().Satisfy(x => x.IsOfType(file.ExpectedType));
     }
 
