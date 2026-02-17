@@ -138,7 +138,7 @@ public sealed record StreamlabelsMessageData : IHasMessageId, IHasPriority
     public required string SessionMostRecentMonthlyDonator { get; init; }
 
     [JsonPropertyName("cloudbot_counter_deaths")]
-    public required string CloudbotCounterDeaths { get; init; }
+    public string CloudbotCounterDeaths { get; init; } // this property might not be present
 
     [JsonPropertyName("monthly_subscriber_count")]
     [JsonConverter(typeof(IntStringConverter))]
