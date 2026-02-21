@@ -43,6 +43,7 @@ public class MessageTypeTests
         yield return () => new JsonFile("streamlabels.json", typeof(StreamlabelsEvent));
         yield return () => new JsonFile("streamlabelsUnderlying.json", typeof(StreamlabelsUnderlyingEvent));
         yield return () => new JsonFile("streamlabelsUnderlying2.json", typeof(StreamlabelsUnderlyingEvent));
+        yield return () => new JsonFile("streamlabelsUnderlying3.json", typeof(StreamlabelsUnderlyingEvent));
         yield return () => new JsonFile("subMysteryGift.json", typeof(SubMysteryGiftEvent));
         yield return () => new JsonFile("subMysteryGift1.json", typeof(SubMysteryGiftEvent));
         yield return () => new JsonFile("subscription.json", typeof(SubscriptionEvent));

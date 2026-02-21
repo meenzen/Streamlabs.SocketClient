@@ -1,0 +1,1329 @@
+[
+    {
+        "type": "streamlabels.underlying",
+        "message": {
+            "hash": "d6b35f97e11c4926503ec48c63bffc56",
+            "data": {
+                "donation_goal": {
+                    "title": "Stream Goal!",
+                    "currentAmount": "$170.00",
+                    "goalAmount": "$200.00"
+                },
+                "most_recent_donator": {
+                    "name": "donTIsingTO",
+                    "amount": "$10.00",
+                    "message": "So we end up on a good note\nhttps://youtu.be/r6L-GUOAhGo?si=y9hv0B2I53XgM63w",
+                    "created_at": "2026-02-09 23:53:14"
+                },
+                "session_most_recent_donator": {
+                    "name": "donTIsingTO",
+                    "amount": "$10.00",
+                    "message": "So we end up on a good note\nhttps://youtu.be/r6L-GUOAhGo?si=y9hv0B2I53XgM63w",
+                    "created_at": "2026-02-09 23:53:14"
+                },
+                "session_donators": [
+                    {
+                        "name": "donTIsingTO",
+                        "amount": "$10.00",
+                        "message": "So we end up on a good note\nhttps://youtu.be/r6L-GUOAhGo?si=y9hv0B2I53XgM63w",
+                        "created_at": "2026-02-09 23:53:14"
+                    },
+                    {
+                        "name": "Dieuctunantifa",
+                        "amount": "$10.00",
+                        "message": "If you have fan of Primus listen to this... Is a band from Quebec Canada  sorry they have mask...\nhttps://youtu.be/t7OIc-DBRXM?si=to78DUB-T7G2SdoB",
+                        "created_at": "2026-02-09 23:14:47"
+                    },
+                    {
+                        "name": "donTIsingTO",
+                        "amount": "$10.00",
+                        "message": "Eeey! still in my old job\nhttps://youtu.be/QPoHXvYE7-0?si=xzv_op__B-nrQcf1",
+                        "created_at": "2026-02-09 23:07:03"
+                    },
+                    {
+                        "name": "HitmanptZ",
+                        "amount": "$10.00",
+                        "message": "https://www.youtube.com/watch?v=4F0vGVu1xlc",
+                        "created_at": "2026-02-09 22:30:56"
+                    },
+                    {
+                        "name": "halfgodhalfdevil",
+                        "amount": "$10.00",
+                        "message": "https://www.youtube.com/watch?v=jH1cyyae2ws",
+                        "created_at": "2026-02-09 22:25:32"
+                    },
+                    {
+                        "name": "dpxcz",
+                        "amount": "$10.00",
+                        "message": "https://youtu.be/DvD8y1IdYgs",
+                        "created_at": "2026-02-09 22:21:13"
+                    },
+                    {
+                        "name": "lostpoetstories",
+                        "amount": "$10.00",
+                        "message": "https://youtu.be/EHhRpWF6wi4",
+                        "created_at": "2026-02-09 22:20:55"
+                    },
+                    {
+                        "name": "livingwave17",
+                        "amount": "$10.00",
+                        "message": "https://www.youtube.com/watch?v=LvkyAYIaLdQ",
+                        "created_at": "2026-02-09 21:59:16"
+                    },
+                    {
+                        "name": "metaltvtwitch",
+                        "amount": "$10.00",
+                        "message": "https://www.youtube.com/watch?v=oCLPIAUJlSA&list=PLD-NPUxVuvUo37bNo9aWTyM14pxVw7Vfl&index=178",
+                        "created_at": "2026-02-09 21:49:24"
+                    },
+                    {
+                        "name": "N0ko_WOT",
+                        "amount": "$10.00",
+                        "message": "https://www.youtube.com/watch?v=4cW0qtMFKs0",
+                        "created_at": "2026-02-09 21:47:41"
+                    },
+                    {
+                        "name": "metaltvtwitch",
+                        "amount": "$10.00",
+                        "message": "https://www.youtube.com/watch?v=b1Mw5VwDvPQ",
+                        "created_at": "2026-02-09 21:47:35"
+                    },
+                    {
+                        "name": "dpxcz",
+                        "amount": "$10.00",
+                        "message": "https://youtu.be/h5xRjHwH0xg",
+                        "created_at": "2026-02-09 21:42:30"
+                    },
+                    {
+                        "name": "SchilluminumFoil",
+                        "amount": "$5.00",
+                        "message": "5 on top of the other 25 for 3 requests\n\nhttps://youtu.be/IJgCvnvO3Bc?si=dmR1xHPTImFUXWmy\n\nhttps://youtu.be/waQ9BKMacII?si=EVDQ94GeA9oAGOxV\n\nhttps://youtu.be/VoSjxKBT3CA?si=SVshHywnYLuE5eH1",
+                        "created_at": "2026-02-09 21:30:24"
+                    },
+                    {
+                        "name": "x_x_madmaxx",
+                        "amount": "$10.00",
+                        "message": "",
+                        "created_at": "2026-02-09 21:24:22"
+                    },
+                    {
+                        "name": "baldmikes",
+                        "amount": "$10.00",
+                        "message": "https://www.youtube.com/watch?v=rv-4AliPi6Q",
+                        "created_at": "2026-02-09 21:21:56"
+                    },
+                    {
+                        "name": "SchilluminumFoil",
+                        "amount": "$25.00",
+                        "message": "Lez go!",
+                        "created_at": "2026-02-09 21:20:10"
+                    },
+                    {
+                        "name": "Necroblitz",
+                        "amount": "$18.27",
+                        "message": "Phew. Glad I caught you before you ended stream. :)",
+                        "created_at": "2026-02-02 23:54:48"
+                    },
+                    {
+                        "name": "andreidan37",
+                        "amount": "$10.00",
+                        "message": "",
+                        "created_at": "2026-02-02 23:16:18"
+                    },
+                    {
+                        "name": "BR",
+                        "amount": "$10.00",
+                        "message": "Yee haw",
+                        "created_at": "2026-02-02 22:43:23"
+                    },
+                    {
+                        "name": "x_x_madmaxx",
+                        "amount": "$10.00",
+                        "message": "",
+                        "created_at": "2026-02-02 21:58:34"
+                    },
+                    {
+                        "name": "metaltvtwitch",
+                        "amount": "$10.00",
+                        "message": "",
+                        "created_at": "2026-02-02 21:39:49"
+                    },
+                    {
+                        "name": "N0ko_WOT",
+                        "amount": "$10.00",
+                        "message": "",
+                        "created_at": "2026-02-02 21:34:40"
+                    },
+                    {
+                        "name": "QuietStorm90",
+                        "amount": "$50.00",
+                        "message": "If you get shot and run to the cop, you not like V\nYou ain't got no work on the block, you not like V\nIt's hot, you ain't got no drop, you not like V",
+                        "created_at": "2026-02-02 21:20:48"
+                    },
+                    {
+                        "name": "SchilluminumFoil",
+                        "amount": "$25.00",
+                        "message": "Lets gooooo",
+                        "created_at": "2026-02-02 21:13:39"
+                    },
+                    {
+                        "name": "dpxcz",
+                        "amount": "$10.00",
+                        "message": "",
+                        "created_at": "2026-01-26 21:32:21"
+                    },
+                    {
+                        "name": "dpxcz",
+                        "amount": "$20.00",
+                        "message": "",
+                        "created_at": "2026-01-26 21:26:57"
+                    }
+                ],
+                "total_donation_amount": {
+                    "amount": "$66,678.93"
+                },
+                "monthly_donation_amount": {
+                    "amount": "$313.27"
+                },
+                "weekly_donation_amount": {
+                    "amount": "$0.00"
+                },
+                "30day_donation_amount": {
+                    "amount": "$393.27"
+                },
+                "session_donation_amount": {
+                    "amount": "$393.27"
+                },
+                "all_time_top_donator": {
+                    "name": "EOYVickyStream",
+                    "amount": "$11,304.00"
+                },
+                "monthly_top_donator": {
+                    "name": "SchilluminumFoil",
+                    "amount": "$55.00"
+                },
+                "weekly_top_donator": "",
+                "30day_top_donator": {
+                    "name": "SchilluminumFoil",
+                    "amount": "$65.00"
+                },
+                "session_top_donator": {
+                    "name": "SchilluminumFoil",
+                    "amount": "$65.00"
+                },
+                "all_time_top_donators": [
+                    {
+                        "name": "EOYVickyStream",
+                        "amount": "$11,304.00"
+                    },
+                    {
+                        "name": "Guy_in_kitchen",
+                        "amount": "$6,071.28"
+                    },
+                    {
+                        "name": "SaBiN666999",
+                        "amount": "$4,910.75"
+                    },
+                    {
+                        "name": "MatthewDyffryn",
+                        "amount": "$3,250.55"
+                    },
+                    {
+                        "name": "chains",
+                        "amount": "$2,237.58"
+                    },
+                    {
+                        "name": "philipk170",
+                        "amount": "$2,221.81"
+                    },
+                    {
+                        "name": "Thereceptor1",
+                        "amount": "$2,100.58"
+                    },
+                    {
+                        "name": "QuietStorm90",
+                        "amount": "$2,076.00"
+                    },
+                    {
+                        "name": "RLC1389",
+                        "amount": "$1,621.00"
+                    },
+                    {
+                        "name": "TaverenTech",
+                        "amount": "$1,385.00"
+                    }
+                ],
+                "monthly_top_donators": [
+                    {
+                        "name": "SchilluminumFoil",
+                        "amount": "$55.00"
+                    },
+                    {
+                        "name": "QuietStorm90",
+                        "amount": "$50.00"
+                    },
+                    {
+                        "name": "donTIsingTO",
+                        "amount": "$20.00"
+                    },
+                    {
+                        "name": "dpxcz",
+                        "amount": "$20.00"
+                    },
+                    {
+                        "name": "metaltvtwitch",
+                        "amount": "$20.00"
+                    },
+                    {
+                        "name": "N0ko_WOT",
+                        "amount": "$20.00"
+                    },
+                    {
+                        "name": "x_x_madmaxx",
+                        "amount": "$20.00"
+                    },
+                    {
+                        "name": "Necroblitz",
+                        "amount": "$18.27"
+                    },
+                    {
+                        "name": "Dieuctunantifa",
+                        "amount": "$10.00"
+                    },
+                    {
+                        "name": "HitmanptZ",
+                        "amount": "$10.00"
+                    }
+                ],
+                "weekly_top_donators": "",
+                "30day_top_donators": [
+                    {
+                        "name": "SchilluminumFoil",
+                        "amount": "$65.00"
+                    },
+                    {
+                        "name": "dpxcz",
+                        "amount": "$50.00"
+                    },
+                    {
+                        "name": "QuietStorm90",
+                        "amount": "$50.00"
+                    },
+                    {
+                        "name": "andreidan37",
+                        "amount": "$30.00"
+                    },
+                    {
+                        "name": "donTIsingTO",
+                        "amount": "$20.00"
+                    },
+                    {
+                        "name": "metaltvtwitch",
+                        "amount": "$20.00"
+                    },
+                    {
+                        "name": "N0ko_WOT",
+                        "amount": "$20.00"
+                    },
+                    {
+                        "name": "x_x_madmaxx",
+                        "amount": "$20.00"
+                    },
+                    {
+                        "name": "Necroblitz",
+                        "amount": "$18.27"
+                    },
+                    {
+                        "name": "Dieuctunantifa",
+                        "amount": "$10.00"
+                    }
+                ],
+                "session_top_donators": [
+                    {
+                        "name": "SchilluminumFoil",
+                        "amount": "$65.00"
+                    },
+                    {
+                        "name": "dpxcz",
+                        "amount": "$50.00"
+                    },
+                    {
+                        "name": "QuietStorm90",
+                        "amount": "$50.00"
+                    },
+                    {
+                        "name": "andreidan37",
+                        "amount": "$30.00"
+                    },
+                    {
+                        "name": "donTIsingTO",
+                        "amount": "$20.00"
+                    },
+                    {
+                        "name": "metaltvtwitch",
+                        "amount": "$20.00"
+                    },
+                    {
+                        "name": "N0ko_WOT",
+                        "amount": "$20.00"
+                    },
+                    {
+                        "name": "x_x_madmaxx",
+                        "amount": "$20.00"
+                    },
+                    {
+                        "name": "Necroblitz",
+                        "amount": "$18.27"
+                    },
+                    {
+                        "name": "Dieuctunantifa",
+                        "amount": "$10.00"
+                    }
+                ],
+                "all_time_top_donations": [
+                    {
+                        "name": "chainsofthought",
+                        "amount": "$2,056.00",
+                        "message": "From your Patrons. We wish only the best for you, and love your work."
+                    },
+                    {
+                        "name": "vickypsarakis",
+                        "amount": "$2,000.00",
+                        "message": ""
+                    },
+                    {
+                        "name": "TaverenTech",
+                        "amount": "$1,000.00",
+                        "message": "I hereby sponsor one whole song, preferably the heaviest and/or darkest on of the next LP that you will do on tour in 2024!~"
+                    },
+                    {
+                        "name": "vikingdude78",
+                        "amount": "$1,000.00",
+                        "message": "Have some money. Thanks for putting up with me. Lots of love! - Jan"
+                    },
+                    {
+                        "name": "KeyboardVicky",
+                        "amount": "$1,000.00",
+                        "message": "I’m so good at what i do I would be ashamed if I admitted it."
+                    },
+                    {
+                        "name": "Oreo",
+                        "amount": "$1,000.00",
+                        "message": "Yes mom. You earned it."
+                    },
+                    {
+                        "name": "Vickypsarakis",
+                        "amount": "$1,000.00",
+                        "message": ""
+                    },
+                    {
+                        "name": "Pedrocavaleiro",
+                        "amount": "$1,000.00",
+                        "message": ""
+                    },
+                    {
+                        "name": "vickypsarakis",
+                        "amount": "$1,000.00",
+                        "message": ""
+                    },
+                    {
+                        "name": "vickypsarakis",
+                        "amount": "$950.00",
+                        "message": ""
+                    }
+                ],
+                "monthly_top_donations": [
+                    {
+                        "name": "QuietStorm90",
+                        "amount": "$50.00",
+                        "message": "If you get shot and run to the cop, you not like V\nYou ain't got no work on the block, you not like V\nIt's hot, you ain't got no drop, you not like V"
+                    },
+                    {
+                        "name": "SchilluminumFoil",
+                        "amount": "$25.00",
+                        "message": "Lez go!"
+                    },
+                    {
+                        "name": "SchilluminumFoil",
+                        "amount": "$25.00",
+                        "message": "Lets gooooo"
+                    },
+                    {
+                        "name": "Necroblitz",
+                        "amount": "$18.27",
+                        "message": "Phew. Glad I caught you before you ended stream. :)"
+                    },
+                    {
+                        "name": "dpxcz",
+                        "amount": "$10.00",
+                        "message": "https://youtu.be/DvD8y1IdYgs"
+                    },
+                    {
+                        "name": "livingwave17",
+                        "amount": "$10.00",
+                        "message": "https://www.youtube.com/watch?v=LvkyAYIaLdQ"
+                    },
+                    {
+                        "name": "andreidan37",
+                        "amount": "$10.00",
+                        "message": ""
+                    },
+                    {
+                        "name": "metaltvtwitch",
+                        "amount": "$10.00",
+                        "message": "https://www.youtube.com/watch?v=b1Mw5VwDvPQ"
+                    },
+                    {
+                        "name": "N0ko_WOT",
+                        "amount": "$10.00",
+                        "message": "https://www.youtube.com/watch?v=4cW0qtMFKs0"
+                    },
+                    {
+                        "name": "x_x_madmaxx",
+                        "amount": "$10.00",
+                        "message": ""
+                    }
+                ],
+                "weekly_top_donations": [],
+                "30day_top_donations": [
+                    {
+                        "name": "QuietStorm90",
+                        "amount": "$50.00",
+                        "message": "If you get shot and run to the cop, you not like V\nYou ain't got no work on the block, you not like V\nIt's hot, you ain't got no drop, you not like V"
+                    },
+                    {
+                        "name": "SchilluminumFoil",
+                        "amount": "$25.00",
+                        "message": "Lez go!"
+                    },
+                    {
+                        "name": "SchilluminumFoil",
+                        "amount": "$25.00",
+                        "message": "Lets gooooo"
+                    },
+                    {
+                        "name": "dpxcz",
+                        "amount": "$20.00",
+                        "message": ""
+                    },
+                    {
+                        "name": "andreidan37",
+                        "amount": "$20.00",
+                        "message": "Take this for your morning coffee!"
+                    },
+                    {
+                        "name": "Necroblitz",
+                        "amount": "$18.27",
+                        "message": "Phew. Glad I caught you before you ended stream. :)"
+                    },
+                    {
+                        "name": "dpxcz",
+                        "amount": "$10.00",
+                        "message": ""
+                    },
+                    {
+                        "name": "dpxcz",
+                        "amount": "$10.00",
+                        "message": "https://youtu.be/DvD8y1IdYgs"
+                    },
+                    {
+                        "name": "livingwave17",
+                        "amount": "$10.00",
+                        "message": "https://www.youtube.com/watch?v=LvkyAYIaLdQ"
+                    },
+                    {
+                        "name": "craigstanley",
+                        "amount": "$10.00",
+                        "message": "For The Better - When Darkness Falls"
+                    }
+                ],
+                "session_top_donations": [
+                    {
+                        "name": "QuietStorm90",
+                        "amount": "$50.00",
+                        "message": "If you get shot and run to the cop, you not like V\nYou ain't got no work on the block, you not like V\nIt's hot, you ain't got no drop, you not like V"
+                    },
+                    {
+                        "name": "SchilluminumFoil",
+                        "amount": "$25.00",
+                        "message": "Lez go!"
+                    },
+                    {
+                        "name": "SchilluminumFoil",
+                        "amount": "$25.00",
+                        "message": "Lets gooooo"
+                    },
+                    {
+                        "name": "dpxcz",
+                        "amount": "$20.00",
+                        "message": ""
+                    },
+                    {
+                        "name": "andreidan37",
+                        "amount": "$20.00",
+                        "message": "Take this for your morning coffee!"
+                    },
+                    {
+                        "name": "Necroblitz",
+                        "amount": "$18.27",
+                        "message": "Phew. Glad I caught you before you ended stream. :)"
+                    },
+                    {
+                        "name": "dpxcz",
+                        "amount": "$10.00",
+                        "message": ""
+                    },
+                    {
+                        "name": "dpxcz",
+                        "amount": "$10.00",
+                        "message": "https://youtu.be/DvD8y1IdYgs"
+                    },
+                    {
+                        "name": "livingwave17",
+                        "amount": "$10.00",
+                        "message": "https://www.youtube.com/watch?v=LvkyAYIaLdQ"
+                    },
+                    {
+                        "name": "craigstanley",
+                        "amount": "$10.00",
+                        "message": "For The Better - When Darkness Falls"
+                    }
+                ],
+                "all_time_top_monthly_donator": {
+                    "name": "OGmagZz",
+                    "amount": "$10.00"
+                },
+                "monthly_top_monthly_donator": "",
+                "weekly_top_monthly_donator": "",
+                "30day_top_monthly_donator": "",
+                "session_top_monthly_donator": "",
+                "all_time_top_monthly_donators": [
+                    {
+                        "name": "OGmagZz",
+                        "amount": "$10.00"
+                    }
+                ],
+                "monthly_top_monthly_donators": "",
+                "weekly_top_monthly_donators": "",
+                "30day_top_monthly_donators": "",
+                "session_top_monthly_donators": "",
+                "total_monthly_donator_count": {
+                    "count": "0"
+                },
+                "monthly_monthly_donator_count": {
+                    "count": "0"
+                },
+                "weekly_monthly_donator_count": {
+                    "count": "0"
+                },
+                "30day_monthly_donator_count": {
+                    "count": "0"
+                },
+                "session_monthly_donator_count": {
+                    "count": "0"
+                },
+                "most_recent_monthly_donator": {
+                    "name": "OGmagZz",
+                    "amount": "$10.00",
+                    "message": "https://www.youtube.com/watch?v=iJzDaKixsWg",
+                    "created_at": "2023-10-02 20:04:46"
+                },
+                "session_monthly_donators": "",
+                "session_most_recent_monthly_donator": "",
+                "monthly_subscriber_count": {
+                    "count": "11"
+                },
+                "weekly_subscriber_count": {
+                    "count": "1"
+                },
+                "30day_subscriber_count": {
+                    "count": "17"
+                },
+                "session_subscriber_count": {
+                    "count": "17"
+                },
+                "session_follower_count": {
+                    "count": "51"
+                },
+                "session_most_recent_follower": {
+                    "name": "heavymetalnerds"
+                },
+                "session_most_recent_subscriber": {
+                    "name": "austros99",
+                    "months": 1
+                },
+                "session_most_recent_resubscriber": {
+                    "name": "StateOfRageNGrace",
+                    "months": 50
+                },
+                "session_subscribers": [
+                    {
+                        "name": "austros99",
+                        "months": 1
+                    },
+                    {
+                        "name": "LostBandit",
+                        "months": 1
+                    },
+                    {
+                        "name": "StateOfRageNGrace",
+                        "months": 50
+                    },
+                    {
+                        "name": "metaltvtwitch",
+                        "months": 48
+                    },
+                    {
+                        "name": "niksthekicks",
+                        "months": 61
+                    },
+                    {
+                        "name": "Tim_Volkihar",
+                        "months": 55
+                    },
+                    {
+                        "name": "DefinitelyNotBR",
+                        "months": 34
+                    },
+                    {
+                        "name": "mis0_13",
+                        "months": 23
+                    },
+                    {
+                        "name": "tokyoraven83",
+                        "months": 1
+                    },
+                    {
+                        "name": "QuietStorm90",
+                        "months": 61
+                    },
+                    {
+                        "name": "tonimackerz",
+                        "months": 51
+                    },
+                    {
+                        "name": "GiannisSatanas",
+                        "months": 57
+                    },
+                    {
+                        "name": "Radio_Hatice",
+                        "months": 55
+                    },
+                    {
+                        "name": "EtilenoMiope",
+                        "months": 46
+                    },
+                    {
+                        "name": "HitmanptZ",
+                        "months": 60
+                    },
+                    {
+                        "name": "jokhsg_",
+                        "months": 20
+                    },
+                    {
+                        "name": "tonimackerz",
+                        "months": 50
+                    }
+                ],
+                "session_followers": [
+                    {
+                        "name": "heavymetalnerds"
+                    },
+                    {
+                        "name": "lewiesell6605"
+                    },
+                    {
+                        "name": "jeffreyvee"
+                    },
+                    {
+                        "name": "Borghil_"
+                    },
+                    {
+                        "name": "Onyxine"
+                    },
+                    {
+                        "name": "MisterFribbles"
+                    },
+                    {
+                        "name": "dieuctunantifa"
+                    },
+                    {
+                        "name": "thatdudedaniel_"
+                    },
+                    {
+                        "name": "coelhinhopistola"
+                    },
+                    {
+                        "name": "modestmao"
+                    },
+                    {
+                        "name": "walleeezz"
+                    },
+                    {
+                        "name": "neil_blas"
+                    },
+                    {
+                        "name": "watfordred"
+                    },
+                    {
+                        "name": "Nikkeeeew"
+                    },
+                    {
+                        "name": "ronelracing"
+                    },
+                    {
+                        "name": "HeelMatt06"
+                    },
+                    {
+                        "name": "TheInnocent040"
+                    },
+                    {
+                        "name": "Golihat"
+                    },
+                    {
+                        "name": "halfgodhalfdevil666"
+                    },
+                    {
+                        "name": "plantewhore"
+                    },
+                    {
+                        "name": "Neshura"
+                    },
+                    {
+                        "name": "CulannsHound"
+                    },
+                    {
+                        "name": "borisbuch84"
+                    },
+                    {
+                        "name": "Xzylez"
+                    },
+                    {
+                        "name": "DashKetchumGaming"
+                    },
+                    {
+                        "name": "dgorj34"
+                    },
+                    {
+                        "name": "deucalion289"
+                    },
+                    {
+                        "name": "mrmiiata"
+                    },
+                    {
+                        "name": "BlearyLine7"
+                    },
+                    {
+                        "name": "eid_al_wriman"
+                    },
+                    {
+                        "name": "Eberhauer"
+                    },
+                    {
+                        "name": "grafforever"
+                    },
+                    {
+                        "name": "Sjelefred_"
+                    },
+                    {
+                        "name": "envoy0815"
+                    },
+                    {
+                        "name": "Linesmilefjees"
+                    },
+                    {
+                        "name": "93veronika"
+                    },
+                    {
+                        "name": "boristhekrockodilian"
+                    },
+                    {
+                        "name": "aekoenic"
+                    },
+                    {
+                        "name": "LailaMelodie"
+                    },
+                    {
+                        "name": "PyreBlight_08"
+                    },
+                    {
+                        "name": "tokyoraven83"
+                    },
+                    {
+                        "name": "613sFinest"
+                    },
+                    {
+                        "name": "syst3t1c"
+                    },
+                    {
+                        "name": "PurplProto"
+                    },
+                    {
+                        "name": "hellbringer788"
+                    },
+                    {
+                        "name": "jesse_541"
+                    },
+                    {
+                        "name": "Lawnce"
+                    },
+                    {
+                        "name": "MuchaMagia"
+                    },
+                    {
+                        "name": "catladyniki"
+                    },
+                    {
+                        "name": "annalininred23"
+                    },
+                    {
+                        "name": "LostBandit"
+                    }
+                ],
+                "most_recent_follower": {
+                    "name": "heavymetalnerds"
+                },
+                "most_recent_subscriber": {
+                    "name": "austros99",
+                    "months": 1
+                },
+                "most_recent_resubscriber": {
+                    "name": "StateOfRageNGrace",
+                    "months": 50
+                },
+                "total_follower_count": {
+                    "count": "10,229"
+                },
+                "total_subscriber_count": {
+                    "count": "49"
+                },
+                "total_subscriber_score": {
+                    "count": "61"
+                },
+                "monthly_subscriber_score": {
+                    "count": "3"
+                },
+                "weekly_subscriber_score": {
+                    "count": "1"
+                },
+                "30day_subscriber_score": {
+                    "count": "3"
+                },
+                "session_subscriber_score": {
+                    "count": "3"
+                },
+                "most_recent_cheerer": {
+                    "name": "joXuahardylee",
+                    "amount": 10,
+                    "message": "ShowLove10 how are you Vicky? ??? I'm Happy to see you again"
+                },
+                "session_most_recent_cheerer": {
+                    "name": "joXuahardylee",
+                    "amount": 10,
+                    "message": null
+                },
+                "session_cheerers": [
+                    {
+                        "name": "joXuahardylee",
+                        "amount": 10,
+                        "message": null
+                    }
+                ],
+                "total_cheer_amount": {
+                    "amount": "1362891"
+                },
+                "monthly_cheer_amount": {
+                    "amount": 0
+                },
+                "weekly_cheer_amount": {
+                    "amount": 0
+                },
+                "30day_cheer_amount": {
+                    "amount": 10
+                },
+                "session_cheer_amount": {
+                    "amount": 10
+                },
+                "all_time_top_cheerer": {
+                    "name": "RLC1389",
+                    "amount": 267749
+                },
+                "monthly_top_cheerer": "",
+                "weekly_top_cheerer": "",
+                "30day_top_cheerer": {
+                    "name": "joXuahardylee",
+                    "amount": 10
+                },
+                "session_top_cheerer": {
+                    "name": "joXuahardylee",
+                    "amount": 10
+                },
+                "all_time_top_cheerers": [
+                    {
+                        "name": "RLC1389",
+                        "amount": 267749
+                    },
+                    {
+                        "name": "VikingDude78",
+                        "amount": 189466
+                    },
+                    {
+                        "name": "lostmyshirts",
+                        "amount": 182836
+                    },
+                    {
+                        "name": "AmaranthineMemories",
+                        "amount": 119550
+                    },
+                    {
+                        "name": "SaBiN666999",
+                        "amount": 55913
+                    },
+                    {
+                        "name": "QuietStorm90",
+                        "amount": 46000
+                    },
+                    {
+                        "name": "Radio_Hatice",
+                        "amount": 38400
+                    },
+                    {
+                        "name": "chainsofthought",
+                        "amount": 37667
+                    },
+                    {
+                        "name": "swedish1975",
+                        "amount": 31300
+                    },
+                    {
+                        "name": "HitmanptZ",
+                        "amount": 30045
+                    }
+                ],
+                "monthly_top_cheerers": "",
+                "weekly_top_cheerers": "",
+                "30day_top_cheerers": [
+                    {
+                        "name": "joXuahardylee",
+                        "amount": 10
+                    }
+                ],
+                "session_top_cheerers": [
+                    {
+                        "name": "joXuahardylee",
+                        "amount": 10
+                    }
+                ],
+                "all_time_top_cheers": [
+                    {
+                        "name": "Radio_Hatice",
+                        "amount": 20000,
+                        "message": "Party10000 Party10000"
+                    },
+                    {
+                        "name": "jdbandshirts",
+                        "amount": 15000,
+                        "message": "Cheer10000 Cheer5000"
+                    },
+                    {
+                        "name": "AmaranthineMemories",
+                        "amount": 12000,
+                        "message": "cheer12000 absolutely love that song"
+                    },
+                    {
+                        "name": "jdbandshirts",
+                        "amount": 10000,
+                        "message": "Cheer10000"
+                    },
+                    {
+                        "name": "AmaranthineMemories",
+                        "amount": 10000,
+                        "message": "Cheer10000 dropping back by to give you ur gift V. Helping my dad out. Never stop being who you are. Happy birthday again."
+                    },
+                    {
+                        "name": "vikingdude78",
+                        "amount": 10000,
+                        "message": "Cheer10000"
+                    },
+                    {
+                        "name": "vikingdude78",
+                        "amount": 10000,
+                        "message": "Cheer10000"
+                    },
+                    {
+                        "name": "RLC1389",
+                        "amount": 10000,
+                        "message": "Cheer10000"
+                    },
+                    {
+                        "name": "AmaranthineMemories",
+                        "amount": 10000,
+                        "message": "cheer10000 never stop being you V"
+                    },
+                    {
+                        "name": "BadwolfTam",
+                        "amount": 10000,
+                        "message": "Cheer10000 90% is better than most..."
+                    }
+                ],
+                "monthly_top_cheers": [],
+                "30day_top_cheers": [
+                    {
+                        "name": "joXuahardylee",
+                        "amount": 10,
+                        "message": "ShowLove10 how are you Vicky? ??? I'm Happy to see you again"
+                    }
+                ],
+                "weekly_top_cheers": [],
+                "session_top_cheers": [
+                    {
+                        "name": "joXuahardylee",
+                        "amount": 10,
+                        "message": "ShowLove10 how are you Vicky? ??? I'm Happy to see you again"
+                    }
+                ],
+                "all_time_top_sub_gifters": [
+                    {
+                        "name": "RLC1389",
+                        "count": 2155
+                    },
+                    {
+                        "name": "SaBiN666999",
+                        "count": 711
+                    },
+                    {
+                        "name": "pedrodyffryn",
+                        "count": 659
+                    },
+                    {
+                        "name": "vikingdude78",
+                        "count": 618
+                    },
+                    {
+                        "name": "tyreseabraham19",
+                        "count": 598
+                    },
+                    {
+                        "name": "Gaveup_",
+                        "count": 484
+                    },
+                    {
+                        "name": "chainsofthought",
+                        "count": 363
+                    },
+                    {
+                        "name": "AmaranthineMemories",
+                        "count": 333
+                    },
+                    {
+                        "name": "PedroCavaleiro",
+                        "count": 278
+                    },
+                    {
+                        "name": "troyx66",
+                        "count": 250
+                    }
+                ],
+                "monthly_top_sub_gifters": [
+                    {
+                        "name": "lthe_muffin_manl",
+                        "count": 1
+                    }
+                ],
+                "weekly_top_sub_gifters": [],
+                "30day_top_sub_gifters": [
+                    {
+                        "name": "lthe_muffin_manl",
+                        "count": 1
+                    }
+                ],
+                "session_top_sub_gifters": [
+                    {
+                        "name": "lthe_muffin_manl",
+                        "count": 1
+                    }
+                ],
+                "most_recent_sub_gifter": {
+                    "name": "lthe_muffin_manl"
+                },
+                "session_sub_gifters": [
+                    {
+                        "name": "lthe_muffin_manl"
+                    }
+                ],
+                "session_most_recent_sub_gifter": {
+                    "name": "lthe_muffin_manl"
+                },
+                "all_time_top_sub_gifter": {
+                    "name": "RLC1389",
+                    "count": 2155
+                },
+                "monthly_top_sub_gifter": {
+                    "name": "lthe_muffin_manl",
+                    "count": 1
+                },
+                "weekly_top_sub_gifter": "",
+                "30day_top_sub_gifter": {
+                    "name": "lthe_muffin_manl",
+                    "count": 1
+                },
+                "session_top_sub_gifter": {
+                    "name": "lthe_muffin_manl",
+                    "count": 1
+                },
+                "monthly_top_subscriber": {
+                    "name": "QuietStorm90",
+                    "months": 61
+                },
+                "weekly_top_subscriber": {
+                    "name": "austros99",
+                    "months": 1
+                },
+                "30day_top_subscriber": {
+                    "name": "QuietStorm90",
+                    "months": 61
+                },
+                "session_top_subscriber": {
+                    "name": "QuietStorm90",
+                    "months": 61
+                },
+                "monthly_top_subscribers": [
+                    {
+                        "name": "QuietStorm90",
+                        "months": 61
+                    },
+                    {
+                        "name": "niksthekicks",
+                        "months": 61
+                    },
+                    {
+                        "name": "Tim_Volkihar",
+                        "months": 55
+                    },
+                    {
+                        "name": "tonimackerz",
+                        "months": 51
+                    },
+                    {
+                        "name": "StateOfRageNGrace",
+                        "months": 50
+                    },
+                    {
+                        "name": "metaltvtwitch",
+                        "months": 48
+                    },
+                    {
+                        "name": "DefinitelyNotBR",
+                        "months": 34
+                    },
+                    {
+                        "name": "mis0_13",
+                        "months": 23
+                    },
+                    {
+                        "name": "tokyoraven83",
+                        "months": 1
+                    },
+                    {
+                        "name": "LostBandit",
+                        "months": 1
+                    }
+                ],
+                "weekly_top_subscribers": [
+                    {
+                        "name": "austros99",
+                        "months": 1
+                    }
+                ],
+                "30day_top_subscribers": [
+                    {
+                        "name": "QuietStorm90",
+                        "months": 61
+                    },
+                    {
+                        "name": "niksthekicks",
+                        "months": 61
+                    },
+                    {
+                        "name": "HitmanptZ",
+                        "months": 60
+                    },
+                    {
+                        "name": "GiannisSatanas",
+                        "months": 57
+                    },
+                    {
+                        "name": "Radio_Hatice",
+                        "months": 55
+                    },
+                    {
+                        "name": "Tim_Volkihar",
+                        "months": 55
+                    },
+                    {
+                        "name": "tonimackerz",
+                        "months": 51
+                    },
+                    {
+                        "name": "tonimackerz",
+                        "months": 50
+                    },
+                    {
+                        "name": "StateOfRageNGrace",
+                        "months": 50
+                    },
+                    {
+                        "name": "metaltvtwitch",
+                        "months": 48
+                    }
+                ],
+                "session_top_subscribers": [
+                    {
+                        "name": "QuietStorm90",
+                        "months": 61
+                    },
+                    {
+                        "name": "niksthekicks",
+                        "months": 61
+                    },
+                    {
+                        "name": "HitmanptZ",
+                        "months": 60
+                    },
+                    {
+                        "name": "GiannisSatanas",
+                        "months": 57
+                    },
+                    {
+                        "name": "Radio_Hatice",
+                        "months": 55
+                    },
+                    {
+                        "name": "Tim_Volkihar",
+                        "months": 55
+                    },
+                    {
+                        "name": "tonimackerz",
+                        "months": 51
+                    },
+                    {
+                        "name": "tonimackerz",
+                        "months": 50
+                    },
+                    {
+                        "name": "StateOfRageNGrace",
+                        "months": 50
+                    },
+                    {
+                        "name": "metaltvtwitch",
+                        "months": 48
+                    }
+                ],
+                "_id": "54be3c8e505083ee78fae68ee0fed97c",
+                "priority": 10
+            }
+        },
+        "event_id": "evt_0846e73d9f54a465731b74bdb85ddf48"
+    }
+]
