@@ -1,5 +1,6 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using Streamlabs.SocketClient.InternalExtensions;
 
 namespace Streamlabs.SocketClient.Converters;
 
@@ -12,46 +13,38 @@ namespace Streamlabs.SocketClient.Converters;
 public class FlexibleObjectConverter<T> : JsonConverter<T>
     where T : class
 {
-    public override T? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
-    {
-        switch (reader.TokenType)
+    public override T? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) =>
+        reader.TokenType switch
         {
-            case JsonTokenType.StartObject or JsonTokenType.StartArray:
-                return JsonSerializer.Deserialize<T>(ref reader, options);
-            case JsonTokenType.String:
-            {
-                string? value = reader.GetString();
-                if (value == null)
-                {
-                    return null;
-                }
+            JsonTokenType.StartObject => JsonSerializer.Deserialize<T>(ref reader, options),
+            JsonTokenType.StartArray => JsonSerializer.Deserialize<T>(ref reader, options),
+            JsonTokenType.String => DeserializeString(ref reader, options),
+            _ => null,
+        };
 
-                string trimmed = value.Trim();
+    public override void Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options) =>
+        JsonSerializer.Serialize(writer, value, options);
 
-                bool isJsonObject = trimmed.Length > 0 && trimmed[0] == '{' && trimmed[^1] == '}';
-                bool isJsonArray = trimmed.Length > 0 && trimmed[0] == '[' && trimmed[^1] == ']';
-
-                if (isJsonObject || isJsonArray)
-                {
-                    try
-                    {
-                        return JsonSerializer.Deserialize<T>(trimmed, options);
-                    }
-                    catch (JsonException)
-                    {
-                        return null;
-                    }
-                }
-
-                break;
-            }
+    private static T? DeserializeString(ref Utf8JsonReader reader, JsonSerializerOptions options)
+    {
+        string? value = reader.GetString();
+        if (value is null)
+        {
+            return null;
         }
 
-        return null;
-    }
+        if (!value.IsJsonObjectOrArray())
+        {
+            return null;
+        }
 
-    public override void Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
-    {
-        JsonSerializer.Serialize(writer, value, options);
+        try
+        {
+            return JsonSerializer.Deserialize<T>(value.Trim(), options);
+        }
+        catch (JsonException)
+        {
+            return null;
+        }
     }
 }
