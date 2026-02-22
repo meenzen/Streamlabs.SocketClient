@@ -5,7 +5,7 @@ using Streamlabs.SocketClient;
 // Use "Microsoft.Extensions.Logging.Console" to get some nice console output.
 // You could also use a NullLogger if you don't want the client to log anything.
 // NullLoggerFactory.Instance.CreateLogger<StreamlabsClient>()
-using ILoggerFactory factory = LoggerFactory.Create(builder => builder.AddSimpleConsole());
+using var factory = LoggerFactory.Create(builder => builder.AddSimpleConsole());
 var logger = factory.CreateLogger<Program>();
 
 var options = new OptionsWrapper<StreamlabsOptions>(

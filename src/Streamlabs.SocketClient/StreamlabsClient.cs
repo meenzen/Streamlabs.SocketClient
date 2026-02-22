@@ -148,7 +148,7 @@ public sealed class StreamlabsClient : IStreamlabsClient
             );
         }
 
-        foreach (IStreamlabsEvent streamlabsEvent in streamlabsEvents)
+        foreach (var streamlabsEvent in streamlabsEvents)
         {
             Dispatch(streamlabsEvent);
         }
@@ -172,21 +172,21 @@ public sealed class StreamlabsClient : IStreamlabsClient
         switch (streamlabsEvent)
         {
             case DonationEvent donationEvent:
-                foreach (DonationMessage message in donationEvent.Messages)
+                foreach (var message in donationEvent.Messages)
                 {
                     OnDonation?.Invoke(this, message);
                 }
 
                 break;
             case BitsEvent bitsEvent:
-                foreach (BitsMessage message in bitsEvent.Messages)
+                foreach (var message in bitsEvent.Messages)
                 {
                     OnBits?.Invoke(this, message);
                 }
 
                 break;
             case RaidEvent raidEvent:
-                foreach (RaidMessage message in raidEvent.Messages)
+                foreach (var message in raidEvent.Messages)
                 {
                     OnRaid?.Invoke(this, message);
                 }
@@ -196,7 +196,7 @@ public sealed class StreamlabsClient : IStreamlabsClient
                 OnDonationDelete?.Invoke(this, donationDeleteEvent.Message);
                 break;
             case FollowEvent followEvent:
-                foreach (FollowMessage message in followEvent.Messages)
+                foreach (var message in followEvent.Messages)
                 {
                     OnFollow?.Invoke(this, message);
                 }
@@ -215,14 +215,14 @@ public sealed class StreamlabsClient : IStreamlabsClient
                 OnMuteVolume?.Invoke(this, muteVolumeEvent);
                 break;
             case SubMysteryGiftEvent subMysteryGiftEvent:
-                foreach (SubMysteryGiftMessage message in subMysteryGiftEvent.Messages)
+                foreach (var message in subMysteryGiftEvent.Messages)
                 {
                     OnSubMysteryGift?.Invoke(this, message);
                 }
 
                 break;
             case SubscriptionEvent subscriptionEvent:
-                foreach (SubscriptionMessage message in subscriptionEvent.Messages)
+                foreach (var message in subscriptionEvent.Messages)
                 {
                     OnSubscription?.Invoke(this, message);
                 }
@@ -264,10 +264,7 @@ public sealed class StreamlabsClient : IStreamlabsClient
         }
     }
 
-    public void Dispose()
-    {
-        _client.Dispose();
-    }
+    public void Dispose() => _client.Dispose();
 
     public async Task ConnectAsync()
     {

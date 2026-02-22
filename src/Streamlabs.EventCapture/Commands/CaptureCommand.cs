@@ -77,7 +77,7 @@ internal sealed class CaptureCommand : AsyncCommand, IDisposable
             _logger.LogWarning("Event is not valid JSON: {Json}", json);
         }
 
-        bool unexpected = false;
+        var unexpected = false;
         int? count = node?.AsArray().Count;
         if (count is not 1)
         {
@@ -98,9 +98,9 @@ internal sealed class CaptureCommand : AsyncCommand, IDisposable
             type = "unexpected";
         }
 
-        string filename = $"{DateTime.UtcNow.ToString("yyyy-MM-ddTHH-mm-ss-fff", CultureInfo.InvariantCulture)}.json";
-        string typeDirectory = Directory.CreateDirectory(Path.Combine(_directory.FullName, type)).FullName;
-        string path = Path.Combine(typeDirectory, filename);
+        var filename = $"{DateTime.UtcNow.ToString("yyyy-MM-ddTHH-mm-ss-fff", CultureInfo.InvariantCulture)}.json";
+        var typeDirectory = Directory.CreateDirectory(Path.Combine(_directory.FullName, type)).FullName;
+        var path = Path.Combine(typeDirectory, filename);
 
         _logger.LogInformation("Writing event: {{ type: \"{Type}\", filename: \"{Filename}\" }}", type, filename);
 

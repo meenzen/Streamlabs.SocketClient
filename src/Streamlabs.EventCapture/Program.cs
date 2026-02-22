@@ -7,7 +7,7 @@ using Streamlabs.EventCapture.Commands;
 using Streamlabs.EventCapture.Infrastructure;
 using Streamlabs.SocketClient.Extensions;
 
-DirectoryInfo directory = Directory.CreateDirectory("events");
+var directory = Directory.CreateDirectory("events");
 Console.WriteLine($"Output directory: {directory.FullName}");
 
 IConfiguration configuration = new ConfigurationBuilder()

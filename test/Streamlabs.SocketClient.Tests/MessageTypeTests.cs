@@ -58,7 +58,7 @@ public class MessageTypeTests
     public async Task MessageTypes_CanBeDeserialized(JsonFile file)
     {
         // Arrange
-        string json = file.GetJson();
+        var json = file.GetJson();
 
         // Act
         var messages = json.Deserialize();
@@ -75,8 +75,8 @@ public class MessageTypeTests
         // Arrange
         var options = new StreamlabsOptions();
         var client = new StreamlabsClient(_logger, new OptionsWrapper<StreamlabsOptions>(options));
-        using IMonitor<StreamlabsClient> sut = client.Monitor();
-        string json = file.GetJson();
+        using var sut = client.Monitor();
+        var json = file.GetJson();
 
         // Act
         client.Dispatch(json);
@@ -84,7 +84,7 @@ public class MessageTypeTests
         // Assert
         sut.Should().Raise(nameof(client.OnEventRaw));
         sut.Should().Raise(nameof(client.OnEvent));
-        string eventName = file.EventName ?? file.ExpectedType.Name.Replace("Event", string.Empty);
+        var eventName = file.EventName ?? file.ExpectedType.Name.Replace("Event", string.Empty);
         sut.Should().Raise($"On{eventName}");
     }
 
@@ -100,7 +100,7 @@ public class MessageTypeTests
             yield break;
         }
 
-        FileInfo[] files = directoryInfo.GetFiles("*.json", SearchOption.AllDirectories);
+        var files = directoryInfo.GetFiles("*.json", SearchOption.AllDirectories);
 
         if (files.Length == 0)
         {
@@ -110,7 +110,7 @@ public class MessageTypeTests
             yield break;
         }
 
-        foreach (FileInfo file in files)
+        foreach (var file in files)
         {
             yield return () => file.FullName;
         }
@@ -126,8 +126,8 @@ public class MessageTypeTests
         // Arrange
         var options = new StreamlabsOptions();
         var client = new StreamlabsClient(_logger, new OptionsWrapper<StreamlabsOptions>(options));
-        using IMonitor<StreamlabsClient> sut = client.Monitor();
-        string json = File.ReadAllText(filePath, Encoding.UTF8);
+        using var sut = client.Monitor();
+        var json = File.ReadAllText(filePath, Encoding.UTF8);
 
         // Act
         client.Dispatch(json);

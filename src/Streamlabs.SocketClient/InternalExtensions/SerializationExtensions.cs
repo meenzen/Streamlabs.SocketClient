@@ -17,13 +17,13 @@ internal static class SerializationExtensions
 
     public static IReadOnlyCollection<IStreamlabsEvent> Deserialize(this string json)
     {
-        string normalized = json.NormalizeTypeDiscriminators();
+        var normalized = json.NormalizeTypeDiscriminators();
         return JsonSerializer.Deserialize<IReadOnlyCollection<IStreamlabsEvent>>(normalized, Options) ?? Empty;
     }
 
     public static bool IsJsonObjectOrArray(this string value)
     {
-        string trimmed = value.Trim();
+        var trimmed = value.Trim();
         return trimmed switch
         {
             "" => false,

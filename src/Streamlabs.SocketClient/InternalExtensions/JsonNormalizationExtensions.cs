@@ -35,7 +35,7 @@ internal static class JsonNormalizationExtensions
 
     internal static string NormalizeTypeDiscriminators(this string json)
     {
-        using JsonDocument doc = JsonDocument.Parse(json);
+        using var doc = JsonDocument.Parse(json);
         return doc.RootElement.NormalizeTypeDiscriminators();
     }
 
@@ -47,7 +47,7 @@ internal static class JsonNormalizationExtensions
             jsonElement.Write(writer);
         }
 
-        byte[] bytes = stream.ToArray();
+        var bytes = stream.ToArray();
         return Encoding.UTF8.GetString(bytes);
     }
 
@@ -59,9 +59,7 @@ internal static class JsonNormalizationExtensions
                 writer.WriteStartObject();
 
                 // Here we force the type discriminator to be the first property in the object.
-                foreach (
-                    JsonProperty property in jsonElement.EnumerateObject().OrderBy(property => property.Name, Comparer)
-                )
+                foreach (var property in jsonElement.EnumerateObject().OrderBy(property => property.Name, Comparer))
                 {
                     writer.WritePropertyName(property.Name);
                     property.Value.Write(writer);
@@ -73,7 +71,7 @@ internal static class JsonNormalizationExtensions
             case JsonValueKind.Array:
                 writer.WriteStartArray();
 
-                foreach (JsonElement element in jsonElement.EnumerateArray())
+                foreach (var element in jsonElement.EnumerateArray())
                 {
                     element.Write(writer);
                 }

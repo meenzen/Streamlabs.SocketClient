@@ -1,13 +1,16 @@
 # EditorConfig is awesome: https://EditorConfig.org
 
+# top-most EditorConfig file
 root = true
 
+# All files
 [*]
 charset = utf-8
 end_of_line = lf
 indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
+max_line_length = 120
 
 # ReSharper properties
 resharper_arguments_anonymous_function = named
@@ -32,15 +35,31 @@ resharper_arrange_type_modifiers_highlighting = hint
 resharper_built_in_type_reference_style_for_member_access_highlighting = hint
 resharper_built_in_type_reference_style_highlighting = hint
 resharper_redundant_base_qualifier_highlighting = warning
-resharper_suggest_var_or_type_built_in_types_highlighting = hint
-resharper_suggest_var_or_type_elsewhere_highlighting = hint
-resharper_suggest_var_or_type_simple_types_highlighting = hint
+resharper_suggest_var_or_type_built_in_types_highlighting = none
+resharper_suggest_var_or_type_elsewhere_highlighting = none
+resharper_suggest_var_or_type_simple_types_highlighting = none
 resharper_web_config_module_not_resolved_highlighting = warning
 resharper_web_config_type_not_resolved_highlighting = warning
 resharper_web_config_wrong_module_highlighting = warning
 
-[*.{csproj,props,targets,xml,config}]
+# Verify
+[*.{received,verified}.{txt}]
+charset = utf-8-bom
+end_of_line = lf
+indent_size = unset
+indent_style = unset
+insert_final_newline = false
+tab_width = unset
+trim_trailing_whitespace = false
+
+[*.resx]
 indent_size = 2
+tab_width = 2
+max_line_length = 200
+
+[{*.resx,*.csproj,*.fsproj,*.props,*.targets}]
+indent_size = 2
+tab_width = 2
 
 # C# files
 [*.cs]
@@ -112,8 +131,8 @@ dotnet_remove_unnecessary_suppression_exclusions = none
 
 # var preferences
 csharp_style_var_elsewhere = false:silent
-csharp_style_var_for_built_in_types = false:suggestion
-csharp_style_var_when_type_is_apparent = true:suggestion
+csharp_style_var_for_built_in_types = false:silent
+csharp_style_var_when_type_is_apparent = true:silent
 
 # Expression-bodied members
 csharp_style_expression_bodied_accessors = true:silent
@@ -204,6 +223,10 @@ csharp_space_between_square_brackets = false
 csharp_preserve_single_line_blocks = true
 csharp_preserve_single_line_statements = true
 
+# Trailing comma preferences
+csharp_trailing_comma_in_multiline_lists = true
+csharp_trailing_comma_in_singleline_lists = false
+
 #### Naming styles ####
 
 # Naming rules
@@ -246,10 +269,92 @@ dotnet_naming_style.begins_with_i.required_suffix =
 dotnet_naming_style.begins_with_i.word_separator =
 dotnet_naming_style.begins_with_i.capitalization = pascal_case
 
-#### Analyzers ####
+# Analyzers
 
-# SonarAnalyzer - S1135: Track uses of "TODO" tags
+## SonarAnalyzer - S1135: Track uses of to-do tags
 dotnet_diagnostic.S1135.severity = suggestion
 
-# SonarAnalyzer - S1133: Deprecated code should be removed
+## Riok.Mapperly - Strict mappings
+dotnet_diagnostic.RMG012.severity = error # Unmapped target member
+dotnet_diagnostic.RMG020.severity = error # Unmapped source member
+dotnet_diagnostic.RMG037.severity = error # Unmapped target enum value
+dotnet_diagnostic.RMG038.severity = error # Unmapped source enum value
+
+# Roslynator
+
+roslynator_prefix_field_identifier_with_underscore = true
+
+## Enable/disable all refactorings
+roslynator_refactorings.enabled = true
+
+## Enable/disable all compiler diagnostic fixes
+roslynator_compiler_diagnostic_fixes.enabled = true
+
+## Use explicitly/implicitly typed array
+dotnet_diagnostic.rcs1014.severity = warning
+roslynator_array_creation_type_style = implicit
+roslynator_use_collection_expression = true
+
+## Use nameof operator
+dotnet_diagnostic.rcs1015.severity = warning
+
+## Use block body or expression body
+dotnet_diagnostic.rcs1016.severity = warning
+roslynator_body_style = expression
+
+## Add/remove accessibility modifiers
+dotnet_diagnostic.rcs1018.severity = warning
+roslynator_accessibility_modifiers = explicit
+
+## Order modifiers
+dotnet_diagnostic.rcs1019.severity = warning
+
+## Simplify Nullable<T> to T?
+dotnet_diagnostic.rcs1020.severity = warning
+
+## Use "" or 'string.Empty'
+dotnet_diagnostic.rcs1078.severity = warning
+roslynator_empty_string_style = field
+
+## Asynchronous method name should end with 'Async'
+dotnet_diagnostic.rcs1046.severity = warning
+
+## Non-asynchronous method name should not end with 'Async'
+dotnet_diagnostic.rcs1047.severity = warning
+
+## Use lambda expression instead of anonymous method
+dotnet_diagnostic.rcs1048.severity = warning
+
+## Include/omit parentheses when creating new object
+dotnet_diagnostic.rcs1050.severity = warning
+roslynator_object_creation_parentheses_style = omit
+
+## Use async/await when necessary
+dotnet_diagnostic.rcs1229.severity = warning
+
+## Avoid nested ?: operators
+dotnet_diagnostic.rcs1238.severity = warning
+
+## Normalize null check
+dotnet_diagnostic.rcs1248.severity = warning
+roslynator_null_check_style = pattern_matching
+
+## Use implicit/explicit object creation
+dotnet_diagnostic.rcs1250.severity = suggestion
+roslynator_use_var_instead_of_implicit_object_creation = true
+roslynator_object_creation_type_style = implicit
+
+## Format documentation comment summary
+dotnet_diagnostic.rcs1253.severity = warning
+roslynator_doc_comment_summary_style = multi_line
+
+## Use var keyword when possible
+dotnet_diagnostic.rcs1264.severity = warning
+roslynator_use_var = always
+
+# Mark members as static
+dotnet_diagnostic.CA1822.severity = warning
+dotnet_diagnostic.S2325.severity = none # already covered by CA1822
+
+# Remove deprecated code
 dotnet_diagnostic.S1133.severity = suggestion

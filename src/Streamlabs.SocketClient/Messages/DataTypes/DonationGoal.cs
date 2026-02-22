@@ -2,7 +2,8 @@ using System.Text.Json.Serialization;
 
 namespace Streamlabs.SocketClient.Messages.DataTypes;
 
-public sealed record DonationGoal {
+public sealed record DonationGoal
+{
     [JsonPropertyName("title")]
     public required string Title { get; init; }
 
