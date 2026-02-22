@@ -3,29 +3,13 @@ using Spectre.Console.Cli;
 
 namespace Streamlabs.EventCapture.Infrastructure;
 
-public sealed class TypeRegistrar : ITypeRegistrar
+public sealed class TypeRegistrar(IServiceCollection builder) : ITypeRegistrar
 {
-    private readonly IServiceCollection _builder;
+    public ITypeResolver Build() => new TypeResolver(builder.BuildServiceProvider());
 
-    public TypeRegistrar(IServiceCollection builder)
-    {
-        _builder = builder;
-    }
+    public void Register(Type service, Type implementation) => builder.AddSingleton(service, implementation);
 
-    public ITypeResolver Build()
-    {
-        return new TypeResolver(_builder.BuildServiceProvider());
-    }
-
-    public void Register(Type service, Type implementation)
-    {
-        _builder.AddSingleton(service, implementation);
-    }
-
-    public void RegisterInstance(Type service, object implementation)
-    {
-        _builder.AddSingleton(service, implementation);
-    }
+    public void RegisterInstance(Type service, object implementation) => builder.AddSingleton(service, implementation);
 
     public void RegisterLazy(Type service, Func<object> factory)
     {
@@ -34,6 +18,6 @@ public sealed class TypeRegistrar : ITypeRegistrar
             throw new ArgumentNullException(nameof(factory));
         }
 
-        _builder.AddSingleton(service, _ => factory());
+        builder.AddSingleton(service, _ => factory());
     }
 }

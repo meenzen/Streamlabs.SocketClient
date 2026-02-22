@@ -14,9 +14,7 @@ public class Worker(ILogger<Worker> logger, IStreamlabsClient client) : Backgrou
     }
 
     [SuppressMessage("Major Code Smell", "S1172:Unused method parameters should be removed")]
-    private void OnDonation(object? _, DonationMessage message)
-    {
+    private void OnDonation(object? _, DonationMessage message) =>
         // As you can see, messages are strongly typed and provide all the data you need.
         logger.LogInformation("Donation: {User} donated {Amount}", message.Name, message.FormattedAmount);
-    }
 }
