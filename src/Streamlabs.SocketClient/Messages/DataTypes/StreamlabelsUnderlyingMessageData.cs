@@ -7,16 +7,19 @@ namespace Streamlabs.SocketClient.Messages.DataTypes;
 public sealed record StreamlabelsUnderlyingMessageData : IHasMessageId, IHasPriority
 {
     [JsonPropertyName("donation_goal")]
-    public required string DonationGoal { get; init; }
+    [JsonConverter(typeof(FlexibleObjectConverter<DonationGoal>))]
+    public DonationGoal? DonationGoal { get; init; }
 
     [JsonPropertyName("most_recent_donator")]
     public required Donator MostRecentDonator { get; init; }
 
     [JsonPropertyName("session_most_recent_donator")]
-    public required string SessionMostRecentDonator { get; init; }
+    [JsonConverter(typeof(FlexibleObjectConverter<Donator>))]
+    public Donator? SessionMostRecentDonator { get; init; }
 
     [JsonPropertyName("session_donators")]
-    public required string SessionDonators { get; init; }
+    [JsonConverter(typeof(FlexibleObjectConverter<IReadOnlyCollection<Donator>>))]
+    public IReadOnlyCollection<Donator>? SessionDonators { get; init; }
 
     [JsonPropertyName("total_donation_amount")]
     public required DonationAmount TotalDonationAmount { get; init; }
@@ -37,31 +40,40 @@ public sealed record StreamlabelsUnderlyingMessageData : IHasMessageId, IHasPrio
     public required TopDonator AllTimeTopDonator { get; init; }
 
     [JsonPropertyName("monthly_top_donator")]
-    public required string MonthlyTopDonator { get; init; }
+    [JsonConverter(typeof(FlexibleObjectConverter<TopDonator>))]
+    public TopDonator? MonthlyTopDonator { get; init; }
 
     [JsonPropertyName("weekly_top_donator")]
-    public required string WeeklyTopDonator { get; init; }
+    [JsonConverter(typeof(FlexibleObjectConverter<TopDonator>))]
+    public TopDonator? WeeklyTopDonator { get; init; }
 
     [JsonPropertyName("30day_top_donator")]
-    public required string ThirtyDayTopDonator { get; init; }
+    [JsonConverter(typeof(FlexibleObjectConverter<TopDonator>))]
+    public TopDonator? ThirtyDayTopDonator { get; init; }
 
     [JsonPropertyName("session_top_donator")]
-    public required string SessionTopDonator { get; init; }
+    [JsonConverter(typeof(FlexibleObjectConverter<TopDonator>))]
+    public TopDonator? SessionTopDonator { get; init; }
 
     [JsonPropertyName("all_time_top_donators")]
-    public required IReadOnlyCollection<TopDonator> AllTimeTopDonators { get; init; }
+    [JsonConverter(typeof(FlexibleObjectConverter<IReadOnlyCollection<TopDonator>>))]
+    public IReadOnlyCollection<TopDonator>? AllTimeTopDonators { get; init; }
 
     [JsonPropertyName("monthly_top_donators")]
-    public required string MonthlyTopDonators { get; init; }
+    [JsonConverter(typeof(FlexibleObjectConverter<IReadOnlyCollection<TopDonator>>))]
+    public IReadOnlyCollection<TopDonator>? MonthlyTopDonators { get; init; }
 
     [JsonPropertyName("weekly_top_donators")]
-    public required string WeeklyTopDonators { get; init; }
+    [JsonConverter(typeof(FlexibleObjectConverter<IReadOnlyCollection<TopDonator>>))]
+    public IReadOnlyCollection<TopDonator>? WeeklyTopDonators { get; init; }
 
     [JsonPropertyName("30day_top_donators")]
-    public required string ThirtyDayTopDonators { get; init; }
+    [JsonConverter(typeof(FlexibleObjectConverter<IReadOnlyCollection<TopDonator>>))]
+    public IReadOnlyCollection<TopDonator>? ThirtyDayTopDonators { get; init; }
 
     [JsonPropertyName("session_top_donators")]
-    public required string SessionTopDonators { get; init; }
+    [JsonConverter(typeof(FlexibleObjectConverter<IReadOnlyCollection<TopDonator>>))]
+    public IReadOnlyCollection<TopDonator>? SessionTopDonators { get; init; }
 
     [JsonPropertyName("all_time_top_donations")]
     public required IReadOnlyCollection<TopDonationAmount> AllTimeTopDonations { get; init; }
@@ -133,7 +145,7 @@ public sealed record StreamlabelsUnderlyingMessageData : IHasMessageId, IHasPrio
     public required string SessionMostRecentMonthlyDonator { get; init; }
 
     [JsonPropertyName("cloudbot_counter_deaths")]
-    public required Counter CloudbotCounterDeaths { get; init; }
+    public Counter? CloudbotCounterDeaths { get; init; }
 
     [JsonPropertyName("monthly_subscriber_count")]
     public required Count MonthlySubscriberCount { get; init; }
