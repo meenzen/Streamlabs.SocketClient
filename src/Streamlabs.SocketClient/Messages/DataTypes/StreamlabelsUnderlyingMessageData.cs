@@ -7,8 +7,8 @@ namespace Streamlabs.SocketClient.Messages.DataTypes;
 public sealed record StreamlabelsUnderlyingMessageData : IHasMessageId, IHasPriority
 {
     [JsonPropertyName("donation_goal")]
-    [JsonConverter(typeof(FlexibleObjectConverter<StreamlabelsUnderlyingMessageDonationGoal>))]
-    public StreamlabelsUnderlyingMessageDonationGoal? DonationGoal { get; init; }
+    [JsonConverter(typeof(FlexibleObjectConverter<DonationGoal>))]
+    public DonationGoal? DonationGoal { get; init; }
 
     [JsonPropertyName("most_recent_donator")]
     public required Donator MostRecentDonator { get; init; }
