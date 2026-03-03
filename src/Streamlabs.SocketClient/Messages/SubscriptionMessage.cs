@@ -5,6 +5,9 @@ namespace Streamlabs.SocketClient.Messages;
 
 public sealed record SubscriptionMessage : IStreamlabsMessage, IHasName, IHasDisplayName, IHasEmotes, IHasMessageId
 {
+    [JsonPropertyName("type")]
+    public string? Type { get; init; }
+
     [JsonPropertyName("name")]
     public required string Name { get; init; }
 
@@ -27,8 +30,19 @@ public sealed record SubscriptionMessage : IStreamlabsMessage, IHasName, IHasDis
     [JsonPropertyName("sub_plan")]
     public required string SubPlan { get; init; }
 
+    /// <summary>
+    /// It appears the streamlabs now sends the sub plan in camelCase as well, but it's always empty.
+    /// This property is marked as obsolete and should not be used.
+    /// </summary>
+    [JsonPropertyName("subPlan")]
+    [Obsolete("Might be empty or null. Use SubPlan instead.")]
+    public string? SubPlanCamelCase { get; init; }
+
+    [JsonPropertyName("priority")]
+    public int? Priority { get; init; }
+
     [JsonPropertyName("sub_plan_name")]
-    public required string SubPlanName { get; init; }
+    public string? SubPlanName { get; init; }
 
     /// <summary>
     /// The type of subscription.
@@ -60,5 +74,5 @@ public sealed record SubscriptionMessage : IStreamlabsMessage, IHasName, IHasDis
 
     [JsonPropertyName("event_id")]
     [Obsolete("Use MessageId instead.")]
-    public string EventId { get; init; } = string.Empty;
+    public string? EventId { get; init; } = string.Empty;
 }

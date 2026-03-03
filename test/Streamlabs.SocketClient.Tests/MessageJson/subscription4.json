@@ -1,0 +1,28 @@
+[
+  {
+    "type": "subscription",
+    "for": "twitch_account",
+    "message": [
+      {
+        "message": "",
+        "emotes": "",
+        "subscriber_twitch_id": "683834515",
+        "name": "radio_hatice",
+        "display_name": "Radio_Hatice",
+        "sub_plan": "3000",
+        "subPlan": "3000",
+        "months": 56,
+        "sub_type": "resub",
+        "type": "resub",
+        "streak_months": null,
+        "gifter": null,
+        "gifter_twitch_id": null,
+        "gifter_display_name": null,
+        "_id": "628c724a11a0494f8f0bb5f0acaf8aee",
+        "event_id": "b6aecd06bb6d468fb45ffae7623c584d",
+        "priority": 10
+      }
+    ],
+    "event_id": "evt_cfb6879116adb0cebfb1f71ff2a14b05"
+  }
+]

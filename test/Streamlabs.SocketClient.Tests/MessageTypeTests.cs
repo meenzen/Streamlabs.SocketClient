@@ -35,6 +35,7 @@ public class MessageTypeTests
         yield return () => new JsonFile("bits.json", typeof(BitsEvent));
         yield return () => new JsonFile("bits2.json", typeof(BitsEvent));
         yield return () => new JsonFile("donation.json", typeof(DonationEvent));
+        yield return () => new JsonFile("donation1.json", typeof(DonationEvent));
         yield return () => new JsonFile("donationDelete.json", typeof(DonationDeleteEvent));
         yield return () => new JsonFile("follow.json", typeof(FollowEvent));
         yield return () => new JsonFile("muteVolume.json", typeof(MuteVolumeEvent));
@@ -49,6 +50,8 @@ public class MessageTypeTests
         yield return () => new JsonFile("subscription.json", typeof(SubscriptionEvent));
         yield return () => new JsonFile("subscription2.json", typeof(SubscriptionEvent));
         yield return () => new JsonFile("subscription3.json", typeof(SubscriptionEvent));
+        yield return () => new JsonFile("subscription4.json", typeof(SubscriptionEvent));
+        yield return () => new JsonFile("subscription5.json", typeof(SubscriptionEvent));
         yield return () =>
             new JsonFile("subscriptionPlaying.json", typeof(SubscriptionPlayingEvent), "SubscriptionPlaying");
     }
