@@ -50,7 +50,7 @@ public sealed record DonationMessage
     public required string From { get; init; }
 
     [JsonPropertyName("from_user_id")]
-    [JsonConverter(typeof(FlexibleObjectConverter<long>))]
+    [JsonConverter(typeof(FlexibleStructConverter<long>))]
     public long? FromUserId { get; init; }
 
     [JsonPropertyName("donation_currency")]
