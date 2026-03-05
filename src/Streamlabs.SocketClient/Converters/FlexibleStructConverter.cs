@@ -66,7 +66,7 @@ public class FlexibleStructConverter<T> : JsonConverter<T?>
 
         try
         {
-            return JsonSerializer.Deserialize<T>(value.Trim(), options);
+            return JsonSerializer.Deserialize<T>(value!.Trim(), options);
         }
         catch (JsonException)
         {
