@@ -11,7 +11,6 @@ namespace Streamlabs.SocketClient.Converters;
 /// </summary>
 /// <typeparam name="T">The reference type to deserialize into.</typeparam>
 public class FlexibleObjectConverter<T> : JsonConverter<T>
-    where T : class
 {
     public override T? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) =>
         reader.TokenType switch
@@ -19,7 +18,7 @@ public class FlexibleObjectConverter<T> : JsonConverter<T>
             JsonTokenType.StartObject => JsonSerializer.Deserialize<T>(ref reader, options),
             JsonTokenType.StartArray => JsonSerializer.Deserialize<T>(ref reader, options),
             JsonTokenType.String => DeserializeString(ref reader, options),
-            _ => null,
+            _ => default,
         };
 
     public override void Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options) =>
@@ -30,12 +29,12 @@ public class FlexibleObjectConverter<T> : JsonConverter<T>
         string? value = reader.GetString();
         if (value is null)
         {
-            return null;
+            return default;
         }
 
         if (!value.IsJsonObjectOrArray())
         {
-            return null;
+            return default;
         }
 
         try
@@ -44,7 +43,7 @@ public class FlexibleObjectConverter<T> : JsonConverter<T>
         }
         catch (JsonException)
         {
-            return null;
+            return default;
         }
     }
 }

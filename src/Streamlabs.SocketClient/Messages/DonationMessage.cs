@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using Streamlabs.SocketClient.Converters;
 using Streamlabs.SocketClient.Messages.Abstractions;
 using Streamlabs.SocketClient.Messages.DataTypes;
 
@@ -49,7 +50,8 @@ public sealed record DonationMessage
     public required string From { get; init; }
 
     [JsonPropertyName("from_user_id")]
-    public required string? FromUserId { get; init; }
+    [JsonConverter(typeof(FlexibleObjectConverter<long>))]
+    public long? FromUserId { get; init; }
 
     [JsonPropertyName("donation_currency")]
     [Obsolete("Use Currency instead.")]

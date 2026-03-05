@@ -1,0 +1,28 @@
+[
+  {
+    "type": "subscription",
+    "for": "twitch_account",
+    "message": [
+      {
+        "message": "",
+        "emotes": "",
+        "subscriber_twitch_id": "534662350",
+        "name": "drumdoos",
+        "display_name": "drumdoos",
+        "sub_plan": "1000",
+        "subPlan": "1000",
+        "months": 1,
+        "sub_type": "subgift",
+        "type": "subgift",
+        "streak_months": 1,
+        "gifter": "etilenomiope",
+        "gifter_twitch_id": "412117302",
+        "gifter_display_name": "EtilenoMiope",
+        "_id": "33bbf33078e96132ccf2b1b803d20dfc",
+        "event_id": "d83003775c3566acaedf1b654c21e5ce",
+        "priority": 10
+      }
+    ],
+    "event_id": "evt_896dcf6f3aa2705dd4c48bf5a8f3c053"
+  }
+]
