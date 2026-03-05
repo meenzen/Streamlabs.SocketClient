@@ -59,7 +59,7 @@ public class FlexibleStructConverter<T> : JsonConverter<T?>
             return decimalValue as T?;
         }
 
-        if (!value.IsJsonObjectOrArray())
+        if (!value!.IsJsonObjectOrArray())
         {
             return null;
         }

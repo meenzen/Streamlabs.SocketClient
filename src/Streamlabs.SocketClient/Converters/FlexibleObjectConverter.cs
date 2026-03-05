@@ -33,7 +33,7 @@ public class FlexibleObjectConverter<T> : JsonConverter<T>
             return null;
         }
 
-        if (!value.IsJsonObjectOrArray())
+        if (!value!.IsJsonObjectOrArray())
         {
             return null;
         }

@@ -1,3 +1,4 @@
+using System.Text.Json;
 using System.Text.Json.Serialization;
 using Streamlabs.SocketClient.Converters;
 using Streamlabs.SocketClient.Messages.Abstractions;
@@ -143,9 +144,6 @@ public sealed record StreamlabelsUnderlyingMessageData : IHasMessageId, IHasPrio
 
     [JsonPropertyName("session_most_recent_monthly_donator")]
     public required string SessionMostRecentMonthlyDonator { get; init; }
-
-    [JsonPropertyName("cloudbot_counter_deaths")]
-    public Counter? CloudbotCounterDeaths { get; init; }
 
     [JsonPropertyName("monthly_subscriber_count")]
     public required Count MonthlySubscriberCount { get; init; }
@@ -369,4 +367,10 @@ public sealed record StreamlabelsUnderlyingMessageData : IHasMessageId, IHasPrio
 
     [JsonPropertyName("priority")]
     public long Priority { get; init; }
+
+    /// <summary>
+    /// Any additional properties returned by the API that are not explicitly defined in this class.
+    /// </summary>
+    [JsonExtensionData]
+    public Dictionary<string, JsonElement>? ExtensionData { get; init; }
 }
