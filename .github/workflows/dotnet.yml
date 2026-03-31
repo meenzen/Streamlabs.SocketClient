@@ -41,7 +41,7 @@ jobs:
       - name: Test
         run: dotnet test --no-build --report-trx --coverage --coverage-output-format cobertura --coverage-output cobertura.xml --results-directory TestResults
       - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v6
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
