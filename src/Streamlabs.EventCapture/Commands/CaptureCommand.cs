@@ -8,21 +8,13 @@ using Streamlabs.SocketClient;
 
 namespace Streamlabs.EventCapture.Commands;
 
-internal sealed class CaptureCommand : AsyncCommand, IDisposable
+internal sealed class CaptureCommand(DirectoryInfo directory, IStreamlabsClient client, ILogger<CaptureCommand> logger)
+    : AsyncCommand,
+        IDisposable
 {
-    private readonly DirectoryInfo _directory;
-    private readonly IStreamlabsClient _client;
-    private readonly ILogger<CaptureCommand> _logger;
     private CancellationTokenSource? _cancellationTokenSource;
 
-    public CaptureCommand(DirectoryInfo directory, IStreamlabsClient client, ILogger<CaptureCommand> logger)
-    {
-        _directory = directory;
-        _client = client;
-        _logger = logger;
-    }
-
-    public override async Task<int> ExecuteAsync(CommandContext context, CancellationToken cancellationToken)
+    protected override async Task<int> ExecuteAsync(CommandContext context, CancellationToken cancellationToken)
     {
         _cancellationTokenSource = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
         cancellationToken = _cancellationTokenSource.Token;
@@ -42,9 +34,9 @@ internal sealed class CaptureCommand : AsyncCommand, IDisposable
                     ctx.SpinnerStyle(Color.Blue);
                     ctx.Spinner(Spinner.Known.BouncingBar);
 
-                    _client.OnEventRaw += (_, json) => ClientOnOnEventRaw(json);
+                    client.OnEventRaw += (_, json) => ClientOnOnEventRaw(json);
 
-                    await _client.ConnectAsync();
+                    await client.ConnectAsync();
 
                     ctx.Status("Listening for events, press Ctrl+C to exit.");
 
@@ -57,9 +49,9 @@ internal sealed class CaptureCommand : AsyncCommand, IDisposable
                         // Ignore
                     }
 
-                    _logger.LogInformation("Stopping...");
+                    logger.LogInformation("Stopping...");
 
-                    await _client.DisconnectAsync();
+                    await client.DisconnectAsync();
                 }
             );
 
@@ -74,7 +66,7 @@ internal sealed class CaptureCommand : AsyncCommand, IDisposable
 
         if (node is null)
         {
-            _logger.LogWarning("Event is not valid JSON: {Json}", json);
+            logger.LogWarning("Event is not valid JSON: {Json}", json);
         }
 
         var unexpected = false;
@@ -82,14 +74,14 @@ internal sealed class CaptureCommand : AsyncCommand, IDisposable
         if (count is not 1)
         {
             unexpected = true;
-            _logger.LogWarning("Event has unexpected object count: {Count} - {Json}", count, json);
+            logger.LogWarning("Event has unexpected object count: {Count} - {Json}", count, json);
         }
 
         string? type = node?[0]?["type"]?.GetValue<string>();
 
         if (type is null)
         {
-            _logger.LogWarning("Event has no type: {Json}", json);
+            logger.LogWarning("Event has no type: {Json}", json);
             type = "unknown";
         }
 
@@ -99,10 +91,10 @@ internal sealed class CaptureCommand : AsyncCommand, IDisposable
         }
 
         var filename = $"{DateTime.UtcNow.ToString("yyyy-MM-ddTHH-mm-ss-fff", CultureInfo.InvariantCulture)}.json";
-        var typeDirectory = Directory.CreateDirectory(Path.Combine(_directory.FullName, type)).FullName;
+        var typeDirectory = Directory.CreateDirectory(Path.Combine(directory.FullName, type)).FullName;
         var path = Path.Combine(typeDirectory, filename);
 
-        _logger.LogInformation("Writing event: {{ type: \"{Type}\", filename: \"{Filename}\" }}", type, filename);
+        logger.LogInformation("Writing event: {{ type: \"{Type}\", filename: \"{Filename}\" }}", type, filename);
 
         File.WriteAllText(path, json, new UTF8Encoding());
     }
@@ -110,6 +102,6 @@ internal sealed class CaptureCommand : AsyncCommand, IDisposable
     public void Dispose()
     {
         _cancellationTokenSource?.Dispose();
-        _client.Dispose();
+        client.Dispose();
     }
 }
