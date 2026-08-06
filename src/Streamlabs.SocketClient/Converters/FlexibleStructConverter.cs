@@ -29,6 +29,11 @@ public class FlexibleStructConverter<T> : JsonConverter<T?>
     private static T? DeserializeString(ref Utf8JsonReader reader, JsonSerializerOptions options)
     {
         string? value = reader.GetString();
+        if (value is null)
+        {
+            return null;
+        }
+
         if (string.IsNullOrWhiteSpace(value))
         {
             return null;
@@ -59,14 +64,14 @@ public class FlexibleStructConverter<T> : JsonConverter<T?>
             return decimalValue as T?;
         }
 
-        if (!value!.IsJsonObjectOrArray())
+        if (!value.IsJsonObjectOrArray())
         {
             return null;
         }
 
         try
         {
-            return JsonSerializer.Deserialize<T>(value!.Trim(), options);
+            return JsonSerializer.Deserialize<T>(value.Trim(), options);
         }
         catch (JsonException)
         {
