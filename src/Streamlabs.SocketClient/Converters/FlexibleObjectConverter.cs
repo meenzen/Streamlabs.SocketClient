@@ -28,19 +28,24 @@ public class FlexibleObjectConverter<T> : JsonConverter<T>
     private static T? DeserializeString(ref Utf8JsonReader reader, JsonSerializerOptions options)
     {
         string? value = reader.GetString();
+        if (value is null)
+        {
+            return null;
+        }
+
         if (string.IsNullOrWhiteSpace(value))
         {
             return null;
         }
 
-        if (!value!.IsJsonObjectOrArray())
+        if (!value.IsJsonObjectOrArray())
         {
             return null;
         }
 
         try
         {
-            return JsonSerializer.Deserialize<T>(value!.Trim(), options);
+            return JsonSerializer.Deserialize<T>(value.Trim(), options);
         }
         catch (JsonException)
         {
