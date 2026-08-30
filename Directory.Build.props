@@ -28,7 +28,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup Condition="!$(MSBuildProjectName.Contains('Test'))">
-    <PackageReference Include="Roslynator.Analyzers" Version="4.15.0">
+    <PackageReference Include="Roslynator.Analyzers" Version="4.16.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
