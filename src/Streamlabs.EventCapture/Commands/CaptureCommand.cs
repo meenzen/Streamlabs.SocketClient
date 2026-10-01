@@ -14,7 +14,7 @@ internal sealed class CaptureCommand(DirectoryInfo directory, IStreamlabsClient 
 {
     private CancellationTokenSource? _cancellationTokenSource;
 
-    protected override async Task<int> ExecuteAsync(CommandContext context, CancellationToken cancellationToken)
+    public override async Task<int> ExecuteAsync(CommandContext context, CancellationToken cancellationToken)
     {
         _cancellationTokenSource = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
         cancellationToken = _cancellationTokenSource.Token;
