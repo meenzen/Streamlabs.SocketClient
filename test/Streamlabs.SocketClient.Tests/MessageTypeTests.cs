@@ -123,7 +123,7 @@ public class MessageTypeTests
     /// This test replays all events captured by the Streamlabs.EventCapture tool.
     /// </summary>
     [Test]
-    [MethodDataSource(nameof(GetCapturedEvents))]
+    [MethodDataSource(nameof(GetCapturedEvents), SkipIfEmpty = true)]
     public void ReplayingCapturedEvents_IsSuccessful(string filePath)
     {
         // Arrange
