@@ -21,7 +21,7 @@
     <PackageReference Include="System.Text.Json" Version="10.0.15" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="PolySharp" Version="1.16.0">
+    <PackageReference Include="PolySharp" Version="1.17.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
