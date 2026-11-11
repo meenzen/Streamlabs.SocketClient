@@ -5,5 +5,38 @@
   ],
   "ignorePresets": [
     ":ignoreModulesAndTests"
+  ],
+  "packageRules": [
+    {
+      "description": "Keep .NET runtime packages on the major version matching their target framework. Major upgrades are done manually when adding/changing target frameworks.",
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["Microsoft.Extensions.*", "System.*"],
+      "matchCurrentVersion": "/^8\\./",
+      "allowedVersions": "/^8\\./"
+    },
+    {
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["Microsoft.Extensions.*", "System.*"],
+      "matchCurrentVersion": "/^9\\./",
+      "allowedVersions": "/^9\\./"
+    },
+    {
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["Microsoft.Extensions.*", "System.*"],
+      "matchCurrentVersion": "/^10\\./",
+      "allowedVersions": "/^10\\./"
+    },
+    {
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["Microsoft.Extensions.*", "System.*"],
+      "matchCurrentVersion": "/^11\\./",
+      "allowedVersions": "/^11\\./"
+    },
+    {
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["Microsoft.Extensions.*", "System.*"],
+      "matchCurrentVersion": "/^12\\./",
+      "allowedVersions": "/^12\\./"
+    }
   ]
 }
